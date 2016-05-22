@@ -1,0 +1,47 @@
+ <link rel="stylesheet" href="css/conteudos.css">
+<table style="width:100%">
+    <tr>
+        <td>
+            <div class="titulo page-collumn">
+                {{ titulo }}
+            </div>
+
+        </td>
+    </tr> 
+    <tr>
+        <td>
+            <div class="row page-collumn equipa-nav">
+                <div ng-repeat="c in conteudo" class="conteudo col-md-6  col-sm-6 col-xs-12">
+                    <div class="row">
+                        <div class="titulo-conteudo col-md-12 col-sm-12 col-xs-12">
+                            {{c.titulo}}
+                        </div>
+                        <img class="img-conteudo col-md-4 col-sm-42 col-xs-4" ng-src="{{ c.foto }}"></img>  
+                        <div class="resumo-conteudo col-md-8 col-sm-8 col-xs-8">
+                            {{c.resumo}}
+                        </div>
+                        <div class="col-md-12 col-sm-12 col-xs-12 teste">
+                            <img src="img/icons/sabermais.png" class="sabermais-conteudo" ng-click="showMore($index)" }}>
+                        </div>
+                    </div>
+                
+                
+                </div>
+            </div>            
+        </td>
+    </tr> 
+</table>
+
+<div class="conteudo-todo" ng-hide="contentSelected == -1">
+    <div class="close" ng-click="showNoMore()"><img src="img/icons/close.png" class="close-img"></div>
+    <div class="titulo-conteudo-grande col-md-12 col-sm-12 col-xs-12">
+        {{ conteudo[contentSelected].titulo }}
+    </div>
+    <img class="img-conteudo col-md-4 col-sm-42 col-xs-4" ng-src="{{ conteudo[contentSelected].foto }}"></img>  
+    <div class="resumo-conteudo col-md-8 col-sm-8 col-xs-8">
+        {{ conteudo[contentSelected].texto}}
+    </div>
+    <a class="arrow next" ng-click="showNext()"></a>
+    <a class="arrow previous" ng-click="showPrevious()"></a>
+</div>
+

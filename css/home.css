@@ -1,0 +1,124 @@
+#box-servicos{
+ 
+    height: 250px;
+    position:relative;
+}
+
+.box-servico{
+    
+    width: 25%;
+    height: 250px;
+    border: 1px solid orange;
+    display: inline-block;
+    float:left;
+    
+}
+
+.box-servico-hover{
+    
+    width: 50%;
+    height: 250px;
+    border: 1px solid orange;
+    display: inline-block;
+    float:left;
+    
+}
+
+.box-servico-nothover{
+    
+    width: 16.66%;
+    height: 250px;
+    border: 1px solid orange;
+    display: inline-block;
+    float:left;
+    
+}
+
+.referencia{
+    float:right;
+    font-size: 14;
+}
+
+
+/**MAPA**/
+
+.map-container{
+    border-top: 2px solid orange;
+    height: 300px;
+}
+
+.angular-google-map-container { 
+    
+    height: 450px; 
+
+}
+
+.icon-contacts{
+    
+    height:20px;
+    
+} 
+
+.titulo-home{
+    font-size: 28px;
+    color:orange;
+    width: 95%;
+    padding-top:10px;
+    padding-bottom:20px;
+    padding-left:5%;
+    text-align: center;
+}
+
+.quemsomos-section{
+    overflow: hidden;
+    position: relative;
+}
+
+.quemsomos-img{
+    height: 100%;
+    float:left;
+    margin-right: 20px;
+}
+
+.quemsomos-text{
+}
+
+.tecnicas-row{
+    overflow: hidden;
+}
+
+.tecnicas{
+    margin-bottom:10px;
+    background-clip: padding-box;
+    display:inline-block; 
+    border: 5px solid transparent;
+    background-color: white;
+/*    width: 40%;
+    margin-right:10px;
+    margin-left:10px;
+    float:left;
+    position:relative;*/
+    font-size: 20px;
+}
+
+.tecnicas-detalhes{
+    margin-bottom:10px;
+    margin-left 10%;
+    margin-top:10px;
+    width: 100%;
+    font-size:17px;
+    overflow: 
+}
+
+.tecnica-detalhe{
+    text-align: left;
+}
+
+.tecnica-nome{
+    vertical-align: middle;    
+}
+
+.tecnica-main{
+    display: flex;
+    align-items: center;
+}

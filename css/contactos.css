@@ -1,0 +1,18 @@
+
+.angular-google-map-container { 
+    
+    height: 300px; 
+
+}
+
+.icon-contacts{
+    
+    height:20px;
+    
+} 
+
+textarea.form-control {
+    display: inline-block;
+ height: 100%;
+ width: 100%;
+}

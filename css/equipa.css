@@ -1,0 +1,65 @@
+.image-big{
+    
+    border: 0px solid orange;   
+}
+
+.imgSmall{
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    filter: grayscale(100%);
+    width: 100px;
+}
+
+
+/** circlos com fotos*/
+.selected{
+    border: 3px solid orange;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.hover{
+    border: 5px solid orange;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
+.terapeuta-button{
+    
+    margin: auto;
+}
+
+
+
+/****
+PHOTO SLIDE
+***/
+
+.slide {
+    width: 100%;
+    max-width: 300px;
+}
+
+
+
+/****
+CV
+****/
+.itemcv-basico{
+    padding: 5px;
+}
+
+
+.sabermais-conteudo{
+    float: right;
+    height: 30px;
+    padding-bottom: 5px;
+}

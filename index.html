@@ -1,0 +1,170 @@
+<html ng-app="App" lang="en-us">
+
+<head>
+    <title>Facility Monitor</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/libs/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/upbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/photoslider.css">
+   
+	
+    <!-- Libraries -->
+    <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
+    <script src="js/libs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/libs/loadsh.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-resource.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-md5.js"></script>
+    <script type="text/javascript" src="js/libs/angular-base64-upload.js"></script>
+    <script type="text/javascript" src="js/libs/TweenMax.min.js"></script>
+    <script type="text/javascript" src="js/libs/angular-promise-tracker.js"></script>
+    <script type="text/javascript" src="js/libs/angular-animate.min.js"></script>
+	<script type="text/javascript" src="js/libs/angular-touch.min.js"></script>
+	<script type="text/javascript" src="js/libs/angular-sanitize.min.js"></script>
+    
+    <!--Google Maps Libs-->
+    <script type="text/javascript" src="js/libs/angular-simple-logger.js"></script>
+    <script type="text/javascript" src="js/libs/angular-google-maps.min.js"></script>
+    <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
+    
+    <!-- angular scripts -->
+    <script src="js/App.js"></script>
+    <script src="js/routes.js"></script>
+
+    <!-- angular Page controllers -->
+    <script src="js/controllers/MainController.js"></script>
+    <script src="js/controllers/HomeController.js"></script>
+    <script src="js/controllers/ServicosController.js"></script>
+    <script src="js/controllers/EquipaController.js"></script>
+    <script src="js/controllers/EspacoController.js"></script>
+    <script src="js/controllers/FormacaoController.js"></script>
+    <script src="js/controllers/TestemunhosController.js"></script>
+    <script src="js/controllers/DestaquesController.js"></script>
+    <script src="js/controllers/ContactosController.js"></script>
+    <script src="js/controllers/FormController.js"></script>
+    
+
+    <!-- angular Features controllers -->
+    <script src="js/controllers/PhotoSliderController.js"></script>
+
+    <!-- angular servicesk-->
+    <script src="js/services/dataService.js"></script>
+</head>
+
+<body>
+    
+    <div style="width:100%" ng-controller="MainController">
+        <header class="header" ng-show="path == '' ">
+            <img src="img/logo.jpg" class='header-img'>
+        </header>                    
+        <nav id="upbar" ng-class="{ 'navbar': path == '', 'navbar-no-header': path != '' }" class="navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand"><div class="r-navabar">R</div>' Equilibrus</a>
+                </div>
+<!-- Collect the nav links, forms, and other content for toggling -->
+              
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="active"><a ui-sref="/">Home</a></li>
+                        <li><a ui-sref="equipa">Equipa</a></li>
+                        <li class="dropdown"> 
+                            <a data-toggle="dropdown" class="dropdown-toggle">Serviços <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a ui-sref="musculoEsqueletica">Ft. Músculo-Esquelética</a></li>
+                                <li><a ui-sref="neuroMuscular">Ft. Neuromuscular</a></li>
+                                <li><a ui-sref="cardioRespiratoria">Ft. Cardiorrespiratória</a></li>
+                                <li><a ui-sref="saudeMulher">Saúde da Mulher</a></li>
+                                <li><a ui-sref="saudeCrianca">Saúde da Criança</a></li>
+                                <li><a ui-sref="saudeIdoso">Saúde do Idoso</a></li>
+                                <li><a ui-sref="desporto">Ft. no Desporto</a></li>
+                                <li><a ui-sref="postura">Ft. nas Alterações Posturais</a></li>      
+                                <li><a ui-sref="nutricao"><strong>Nutrição</strong></a></li>
+                            </ul>
+                        </li>
+                    
+                        <li><a ui-sref="espaco">Espaço</a></li>   
+                        <li><a ui-sref="formacao">Formação & Ivestigação</a></li>        
+                        <!--<li><a ui-sref="testemunhos">Testemunhos</a></li>-->
+                        <li><a ui-sref="destaques">Destaques</a></li>    
+                        <li><a ui-sref="contactos">Contactos</a></li>
+        
+                    </ul>   
+    
+                </div>
+            </div>   
+        </nav>    
+        
+  
+
+    
+        <div class="main" ui-view = "">   </div>
+
+        
+        <footer class="footer">
+
+            <div class="container" id="footer-container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-3 col-md-3">
+                        <h4 class="line3 center standard-h4title">
+                            <span> Links uteis</span>
+                        </h4>
+
+                        <ul class="footer-links">
+                            <li> <a href="#">link1</a></li>
+                            <li> <a href="#">link2</a></li>
+                            <li> <a href="#">link3</a></li>
+                            <li> <a href="#">link4</a></li>
+                        </ul>   
+                    </div>
+
+
+                    <div class="col-xs-12 col-sm-3 col-md-3">                
+                        <h4 class="line3 center standard-h4title">
+                            <span> Rede Social</span>
+                        </h4>    
+
+                        <ul>        
+                            <p>Rua da Clinica<br>numero 9999</p>        
+                        </ul>
+                    </div>
+
+
+                    <div class="col-xs-12 col-sm-3 col-md-3">                
+                        <h4 class="line3 center standard-h4title">
+                            <span> Parcerias</span>
+                        </h4>    
+
+                        <ul>
+                            <p>Rua da Clinica<br>numero 9999</p>                                   
+                        </ul>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-3 col-md-3">                
+                        <h4 class="line3 center standard-h4title">
+                            <span> Localizaçao</span>
+                        </h4>
+                        <ul> 
+                            <p>Rua da Clinica<br>numero 9999</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+    </div>   
+ 
+</body>
+    
+
+</html>

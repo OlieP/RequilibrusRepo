@@ -1,0 +1,15 @@
+TODO
+
+Menu e Separadores
+-> Fix ao menu quando a janela é pequena (o botão aparece bem mas quando se carrega nele o conteudo aparece com caixa transparente.)
+
+Página de 'Destaques' e 'Formação e Ivestigação':
+-> aparecem por ordem cronologica (SERVIDOR).
+-> Colocar o fundo da página escuro quando se abre conteudo
+
+Página de Contactos:
+-> Acrescentar um form de contacto
+
+Página de Equipa:
+-> Imagem e conteudo de cada terapeuta para ser reformatado.
+
