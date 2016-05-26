@@ -3,7 +3,7 @@ ROUTES
 ****************************/
 App.config(function ($stateProvider, $urlRouterProvider) {
 
-    $urlRouterProvider.otherwise('/');
+   // $urlRouterProvider.otherwise('/');
 
     $stateProvider.state('/', {
             url: '/',
@@ -69,18 +69,6 @@ App.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'ServicosController',
             data: {
             }
-        }).state('saudeIdoso', {
-            url: 'saude-idoso',
-            templateUrl: 'views/servico/servicos-si.html',
-            controller: 'ServicosController',
-            data: {
-            }
-        }).state('desporto', {
-            url: 'desporto',
-            templateUrl: 'views/servico/servicos-d.html',
-            controller: 'ServicosController',
-            data: {
-            }
         }).state('cardioRespiratoria', {
             url: '/cardio-respiratoria',
             templateUrl: 'views/servico/servicos-cr.html',
@@ -102,6 +90,19 @@ App.config(function ($stateProvider, $urlRouterProvider) {
         }).state('nutricao', {
             url: '/nutricao',
             templateUrl: 'views/servico/servicos-n.html',
+            controller: 'ServicosController',
+            data: {
+            }
+        })
+        .state('desporto', {
+            url: 'desporto',
+            templateUrl: 'views/servico/servicos-d.html',
+            controller: 'ServicosController',
+            data: {
+            }
+        }).state('saudeIdoso', {
+            url: 'saude-idoso',
+            templateUrl: 'views/servico/servicos-si.html',
             controller: 'ServicosController',
             data: {
             }

@@ -1,4 +1,3 @@
-
 CREATE ROLE "requilibriusAdmin" LOGIN
   ENCRYPTED PASSWORD 'md5de5656f557df9ccba1770aaf767de5fb'
   SUPERUSER INHERIT NOCREATEDB NOCREATEROLE NOREPLICATION;--pass=requilibrius
@@ -47,7 +46,7 @@ CREATE SEQUENCE tecnicaDetalhe_id_seq;
 CREATE TABLE tecnicaDetalhe (
     id smallint PRIMARY KEY DEFAULT nextval('tecnicaDetalhe_id_seq'),
     item varchar(250),
-    entidade_id smallint
+	tecnica_id smallint
 );
 ALTER SEQUENCE tecnicaDetalhe_id_seq OWNED BY tecnicaDetalhe.id;
 
@@ -59,6 +58,18 @@ CREATE TABLE funcionario (
     equipa char(2)
 );
 ALTER SEQUENCE funcionario_id_seq OWNED BY funcionario.id;
+
+DROP TABLE IF EXISTS cvitem;
+CREATE SEQUENCE cvitem_id_seq;
+CREATE TABLE cvitem (
+    id smallint PRIMARY KEY DEFAULT nextval('cvitem_id_seq'),
+    funcionario_ID smallint ,
+    seq int,
+	field varchar(40),
+	content varchar(500),
+	FOREIGN KEY (funcionario_ID) REFERENCES funcionario(id)
+);
+ALTER SEQUENCE cvitem_id_seq OWNED BY cvitem.id;
 
 DROP TABLE IF EXISTS img;
 CREATE SEQUENCE img_id_seq;
@@ -85,16 +96,3 @@ CREATE TABLE contact (
 );
 ALTER SEQUENCE contact_id_seq OWNED BY contact.id;
 
-
-
-DROP TABLE IF EXISTS cvitem;
-CREATE SEQUENCE cvitem_id_seq;
-CREATE TABLE cvitem (
-    id smallint PRIMARY KEY DEFAULT nextval('cvitem_id_seq'),
-    funcionario_ID smallint ,
-    seq int,
-	field varchar(40),
-	content varchar(500),
-	FOREIGN KEY (funcionario_ID) REFERENCES funcionario(id)
-);
-ALTER SEQUENCE cvitem_id_seq OWNED BY cvitem.id;

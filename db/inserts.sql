@@ -91,13 +91,41 @@ INSERT INTO cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM
 INSERT INTO cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM funcionario WHERE nome = 'João Rocha Vaz'), 130, 'Interesses Científicos', 'Coordenação Muscular');
 INSERT INTO cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM funcionario WHERE nome = 'João Rocha Vaz'), 140, 'Interesses Científicos', 'Variabilidade');
 
---SELECT QUERY
-SELECT id, funcionario_id ,seq , field, content FROM cvitem ORDER BY funcionario_id, seq;
 
 
 
 
+--tecnicas
+INSERT INTO tecnica (nome) VALUES ('Reintegração/readaptação da actividade desportiva/técnica despostiva');
+INSERT INTO tecnica (nome) VALUES ('Terapia Manual com técnicas de mobilização dos tecidos e das articulações');
+INSERT INTO tecnica (nome) VALUES ('Terapia pelo Movimento e Exercício');
+INSERT INTO tecnica (nome) VALUES ('Técnicas de imobilização e contenção selectiva');
+INSERT INTO tecnica (nome) VALUES ('Meios de compensação e substituição');
+INSERT INTO tecnica (nome) VALUES ('Electroterapia');
+INSERT INTO tecnica (nome) VALUES ('Educação e aconselhamento');
 
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Diversas formas de massagem', 2);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Técnicas de mobilização articular e tecidular', 2);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Cyriax', 2);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Maitland', 2);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Kaltenborn', 2);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Mulligan', 2);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('McKenzie   ', 2);
 
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Exercícios terapêuticos', 3);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Reeducação sensorio-motora', 3);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Treino funcional e treino de força muscular', 3);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Métodos de reeducação da postura - Reeducação Postural Global (R.P.G.) - técnicas de estimulação', 3);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Facilitação e inibição neuromuscular', 3);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Técnicas de relaxamento, entre outras', 3);
 
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Ligaduras funcionais', 4);
+
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Aparelhos externos como próteses e ortóteses', 5);
+
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Programas de prevenção e avaliação do risco de lesões na dança, no desporto e de quedas em individuos seniores', 7);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Desenvolver melhores capacidades de actuação face às situações particulares decorrentes da incapacidade', 7);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Minimizar as consequências da incapacidade', 7);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Alcançar uma melhor integração', 7);
+INSERT INTO tecnica (item, tecnica_id) VALUES ('Adoptar estilos de vida saudáveis. Educação para a saúd', 7);
 

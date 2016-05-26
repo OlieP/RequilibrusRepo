@@ -65,7 +65,7 @@
 	
 	function get_tecnica($dbconn){
         
-        $query = "SELECT * FROM tecnica";
+        $query = "SELECT * FROM tecnica ORDER by id ASC";
 		$query_response = pg_query($dbconn,$query);
 		$counter = 0;
 		$tecnica = [];
@@ -181,9 +181,8 @@
 		}	
 		return $img;
 	}
-
     function get_detalhes($dbconn, $entidade_id){
-	    $query = "SELECT * FROM tecnicaDetalhe WHERE entidade_id = ".$entidade_id.";";
+	    $query = "SELECT * FROM tecnicaDetalhe WHERE entidade_id = ".$entidade_id." ORDER BY id;";
         
 		$query_response = pg_query($dbconn,$query);
 		$counter = 0;
@@ -199,7 +198,7 @@
 		}
 		return $detalhes;
 	}
-
+	
     function save_contact($dbconn, $email, $nome, $apelido, $telefone, $descricao, $motivo){
         
         $query = "INSERT INTO contact(
@@ -215,5 +214,4 @@
     }
 	
 	
-
 ?>

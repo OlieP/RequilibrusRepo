@@ -1,6 +1,0 @@
-(SELECT id, nome, equipa 
-FROM funcionario) f
-INNER JOIN 
-(SELECT field varchar content 
-FROM cvitem ORDER BY funcionario_ID, seq ASC) cv
-ON f.id = cv.funcionario_ID;
