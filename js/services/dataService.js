@@ -2,7 +2,7 @@ App.service('dataService', ['$http', function($http){
 				
 	this.getEquipa = function(){
         
-		return $http.get('http://localhost/www/Requilibrius/RequilibrusRepo/php/access.php', {params: {funcao: 'get_equipa'}});
+		return $http.get('php/access.php', {params: {funcao: 'get_equipa'}});
         /*
         return equipa = [{
                     id:1,

@@ -1,4 +1,4 @@
- App.controller('MainController', ['$scope', '$location',function ($scope, $location) {
+﻿ App.controller('MainController', ['$scope', '$location',function ($scope, $location) {
     
     $scope.path = $location.path();
     console.log($scope.path);
@@ -60,7 +60,6 @@
             $scope.mn = $(".navbar");
             $scope.mns = "navbar-scrolled";
             $scope.hdr = $('.header').height();    
-            console.log($(this).scrollTop());
             if( $(this).scrollTop() > $scope.hdr ) {
                 $scope.mn.addClass($scope.mns);
             } else {
