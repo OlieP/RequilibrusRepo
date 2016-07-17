@@ -33,7 +33,7 @@ App.controller('PhotoSliderController', function ($scope) {
             $scope.direction = 'right';
             $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
         };
-    }).animation('.slide-animation', function () {
+    })/**.animation('.slide-animation', function () {
         return {
             beforeAddClass: function (element, className, done) {
                 var scope = element.scope();
@@ -67,4 +67,4 @@ App.controller('PhotoSliderController', function ($scope) {
                 }
             }
         };
-    });
+    })**/;

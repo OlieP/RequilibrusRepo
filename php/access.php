@@ -16,6 +16,8 @@
 	}elseif( $funcao == 'get_section' ){
 		$pagina = $_GET['pagina'] ? $_GET['pagina'] : $_POST['pagina'];
 		get_section($dbconn, $page);
+	}elseif( $funcao == 'get_espaco' ){
+		get_espaco($dbconn);
 	}
 	pg_close($dbconn);
 ?>

@@ -23,13 +23,22 @@ INSERT INTO funcionario (nome, equipa) VALUES ('', 'ad');
 INSERT INTO funcionario (nome, equipa) VALUES ('', 'nu');
 
 --Imagem
-INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO.png', 'CO', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Carolina Oliveira'));
-INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO.png', 'CO', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Raúl Oliveira'));
-INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV.png', 'JV', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'João Rocha Vaz'));
-INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS.png', 'AS', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Andreia Schlechter'));
-INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA.png', 'AA', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Ana Azevedo'));
-INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS.png', 'FS', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Fátima Sancho'));
-INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP.png', 'DP', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'David Pires'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/1.jpg', 'CO', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Carolina Oliveira'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/1.jpg', 'CO', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Raúl Oliveira'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/1.jpg', 'JV', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'João Rocha Vaz'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/1.jpg', 'AS', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Andreia Schlechter'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/1.jpg', 'AA', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Ana Azevedo'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/1.jpg', 'FS', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Fátima Sancho'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/1.jpg', 'DP', '', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'David Pires'));
+ 
+ 
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/main.jpg', 'CO', 'main', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Carolina Oliveira'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/main.jpg', 'CO', 'main', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Raúl Oliveira'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/main.jpg', 'JV', 'main', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'João Rocha Vaz'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/main.jpg', 'AS', 'main', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Andreia Schlechter'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/main.jpg', 'AA', 'main', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Ana Azevedo'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/main.jpg', 'FS', 'main', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'Fátima Sancho'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/main.jpg', 'DP', 'main', 'funcionario', (SELECT id FROM funcionario WHERE nome = 'David Pires'));
  
 --CV
 INSERT INTO cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM funcionario WHERE nome = 'Raúl Oliveira'), 10 , 'Formação', 'Doutoramento em Ciências da Motricidade, na especialidade de Ciências da Fisioterapia – Faculdade de Motricidade Humana, UL');

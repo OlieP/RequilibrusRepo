@@ -36,7 +36,7 @@
         <tr>
             <td >
                 <div class="row page-collumn equipa-nav">
-                    <div ng-repeat-start="t in equipa" class="col-md-2  col-sm-2 col-xs-2 " ng-if="$index % 2 === 0" ng-init="group = equipa.slice($index, $index + 2)" ng-repeat-end>
+                    <div ng-repeat-start="t in equipa" class="col-md-3 col-sm-3 col-xs-3 " ng-if="$index % 2 === 0" ng-init="group = equipa.slice($index, $index + 2)" ng-repeat-end>
                          <div class="row">
                             <div ng-repeat="terapeuta in group" class="col-md-6 col-sm-12 col-xs-12" ng-animate="custom">
                                 <img 
@@ -45,7 +45,7 @@
                                 ng-click="changeTerapeuta(terapeuta.id);" 
                                 ng-mouseover="hoverTerapeuta(terapeuta.id);" 
                                 ng-mouseleave="undoHoverTerapeuta(terapeuta.id)" 
-                                ng-src="{{ terapeuta.img[0].path }}">
+                                ng-src="{{ terapeuta.mainImg[0].path }}">
                                 </img>
                                 {{terapeuta.nome}}
                             </div>

@@ -38,6 +38,24 @@
 		return $destaques;
 	}
 	
+	function get_espaco($dbconn){
+		
+		$dir = '../img/espaco';
+		$files = array_diff(scandir($dir), array('.', '..'));
+		$files[2] = "img/espaco/".$files[2];
+		$string = implode(" img/espaco/",$files);
+		$file_list = explode(" ",$string);
+		$nbr_files = count($file_list);
+		$files_to_send = [];
+		for( $i = 0; $i < $nbr_files; $i++){
+			$files_to_send[$i]['image'] = $file_list[$i];
+			$files_to_send[$i]['description'] = '';
+		}
+		echo json_encode($files_to_send);
+		return $files_to_send;
+		
+	}
+	
 	function get_formacao($dbconn){
 		$query = "SELECT * FROM formacao";
 		$query_response = pg_query($dbconn,$query);
@@ -59,7 +77,7 @@
 				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
 			}
 		}
-		
+		echo json_encode($formacao);
 		return $formacao;
 	}
 	
@@ -97,6 +115,8 @@
 			$equipa[$counter]['id'] = $row['id'];
 			$equipa[$counter]['nome'] = $row['nome'];
 			$equipa[$counter]['equipa'] = $row['equipa'];			
+			//get main image
+			$equipa[$counter]['mainImg'] = get_main_img($dbconn, 'funcionario', $equipa[$counter]['id']);
 			//get associated images 
 			$equipa[$counter]['img'] = get_img($dbconn, 'funcionario', $equipa[$counter]['id']);
 			//get associated CV itemsn
@@ -181,6 +201,27 @@
 		}	
 		return $img;
 	}
+	
+	function get_main_img($dbconn, $entidade, $entidade_id){
+	    $query = "SELECT * FROM img WHERE entidade = '".$entidade."' AND entidade_id = ".$entidade_id." AND descricao = 'main';";
+        
+		$query_response = pg_query($dbconn,$query);
+		$counter = 0;
+		$img = [];
+		while($row = @pg_fetch_array ($query_response,$counter,PGSQL_BOTH))
+		{
+			$img[$counter]['path'] = $row['path'];
+			$img[$counter]['nome'] = $row['nome'];
+			$img[$counter]['id'] = $row['id'];
+			$img[$counter]['descricao'] = $row['descricao'];
+			$counter++;//proxima medicao da tabela SQL
+			if($counter==pg_num_rows($query_response)){
+				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
+			}
+		}	
+		return $img;
+	}
+	
     function get_detalhes($dbconn, $entidade_id){
 	    $query = "SELECT * FROM tecnicaDetalhe WHERE entidade_id = ".$entidade_id." ORDER BY id;";
         

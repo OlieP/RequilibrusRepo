@@ -7,6 +7,7 @@ App.controller('EquipaController', ['$scope', 'dataService', function ($scope, d
     dataService.getEquipa().then(function(response) {
 
         $scope.equipa = response.data;
+        console.log($scope.equipa);
         $scope.$watch('terapeutaMain', function() {
             $scope.slides = $scope.terapeutaMain.img;
 
