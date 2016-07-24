@@ -103,12 +103,8 @@
             <td>
                 <div class="page-collumn row tecnicas-row">
                     <div class="page-collumn row tecnicas-row">
-                        <div ng-repeat-start="tecnica in tecnicas" 
-                             ng-if="($index % 2 === 0)" 
-                             ng-init=" group = tecnicas.slice($index, $index + 2)" 
-                             ng-repeat-end>
-                                <div class="row">
-                                    <div ng-repeat="tec in group" 
+                        
+                                    <div ng-repeat="tec in tecnicas" 
                                          class="tecnicas col-md-6 col-sm-12 col-xs-12" 
                                          ng-animate="custom">
                                         <div class="row">
@@ -131,7 +127,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                         </div>
                     </div>                    
                 </div>
