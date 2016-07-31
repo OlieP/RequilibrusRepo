@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="css/servicos.css">
+<div>
+    <table style="width:100%">
+        <tr>
+            <td>
+                <div class="titulo page-collumn">
+                    {{ titulo }}
+                </div>      
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="text page-collumn row">
+                    <div class="col-xs-12 col-sm-4 col-md-4">
+                        {{mainPhoto}}
+                    </div>
+                    <div class="col-xs-12 col-sm-8 col-md-8">                    
+                        <div>
+                            {{ mainText }}
+                        </div>
+                        <ul ng-repeat="item in mainList">
+                            <li>{{ item.texto }}</li>
+                        </ul>
+                    </div>
+                </div>
+            </td>
+        </tr>
+    </table>
+<div>

@@ -122,3 +122,8 @@
     display: flex;
     align-items: center;
 }
+
+.go-to-service{
+    
+    width: 50px;
+}

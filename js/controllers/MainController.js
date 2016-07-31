@@ -1,7 +1,6 @@
-﻿ App.controller('MainController', ['$scope', '$location',function ($scope, $location) {
+ App.controller('MainController', ['$scope', '$location',function ($scope, $location) {
     
     $scope.path = $location.path();
-    console.log($scope.path);
      
      //inicializa header 
      if($scope.path == ''){

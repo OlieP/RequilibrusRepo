@@ -125,6 +125,66 @@
 		return $equipa;
 	}
 	
+		function get_servico($dbconn){
+	
+		$query = "SELECT * FROM requilib_website.servico";
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
+		$counter = 0;
+		$servico = [];
+		while($row = mysql_fetch_array($query_response))
+		{
+			$servico[$counter]['id'] = $row['id'];
+			$servico[$counter]['pagina'] = $row['pagina'];
+			$servico[$counter]['titulo'] = $row['titulo'];
+			$servico[$counter]['texto'] = $row['texto'];
+			
+			//get associated items
+			$servico[$counter]['items'] = get_servico_items($dbconn, $servico[$counter]['id']);
+			
+			$counter++;//proxima medicao da tabela SQL
+			if($counter==pg_num_rows($query_response)){
+				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
+			}
+		}
+		
+		echo json_encode(utf8ize($servico));
+		return $servico;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	function get_servico_items($dbconn, $servico_id){
+        
+        $query = "SELECT * FROM requilib_website.servico_item WHERE servico_id = '".$servico_id."' ORDER BY seq asc;";
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
+		$rowNbr = 0;
+		$item = [];
+		
+		//ALTERAR
+		$current_field = '';
+		while($row=  mysql_fetch_array($query_response))
+		{
+			$item[$rowNbr]['id'] = $row['id'];
+			$item[$rowNbr]['seq'] = $row['seq'];
+			$item[$rowNbr]['texto'] = $row['texto'];
+			$item[$rowNbr]['servico_id'] = $row['servico_id'];
+			$rowNbr++;
+			if($rowNbr==pg_num_rows($query_response)){
+				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
+			}
+		}
+		return $item;
+	}
+	
 	function get_cvitem($dbconn, $func_id){
         
         $query = "SELECT * FROM requilib_website.cvitem WHERE funcionario_id = '".$func_id."' ORDER BY seq asc;";

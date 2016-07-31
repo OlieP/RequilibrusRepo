@@ -138,3 +138,51 @@ INSERT INTO requilib_website.tecnicaDetalhe (item, tecnica_id) VALUES ('Minimiza
 INSERT INTO requilib_website.tecnicaDetalhe (item, tecnica_id) VALUES ('Alcançar uma melhor integração', 7);
 INSERT INTO requilib_website.tecnicaDetalhe (item, tecnica_id) VALUES ('Adoptar estilos de vida saudáveis. Educação para a saúd', 7);
 
+
+
+
+--Serviços
+INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('ap', 'Fisioterapia nas Alteração Posturais', '');
+INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('d', 'Fisioterapia no Desporto', '');
+INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('me', 'Fisioterapia Musculo-esquelética ', '');
+INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('n', 'Nutrição', '');
+INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('nm', 'Fisioterapia Neuro-muscular', '');
+INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('sc', 'Saúde da Criança', '');
+INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('sm', 'Saúde da Mulher', '');
+INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('si', 'Saúde do Idoso', '');
+INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('cr', 'Fisioterapia Cardio-rrespiratória', '');
+
+
+
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 1, 'Avaliação de pré-época / Screening de atletas. Programa de prevenção de lesões e gestão do risco de lesão. Aconselhamento de atletas, treinadores e preparadores físicos.', (SELECT id FROM requilib_website.servico WHERE pagina = 'd'));
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 1, 'Avaliação e tratamento de lesões especificas da prática desportiva.', (SELECT id FROM requilib_website.servico WHERE pagina = 'd'));
+
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 1, '', (SELECT id FROM requilib_website.servico WHERE pagina = 'ap'));
+
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 1, 'Disfunções da coluna vertebral', (SELECT id FROM requilib_website.servico WHERE pagina = 'me'));
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 2, 'Altgierações posturais (exemplo: hipercifose dorsal, hiperlordose lombar, rectificação lombar, horizontalização do sacro, escolioses) e/ ou dores na coluna vertebral', (SELECT id FROM requilib_website.servico WHERE pagina = 'me'));
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 3, 'Torcicolos congénitos (crianças)Lesões cápsulo-ligamentares e articulares (anca, joelho, tornozelo/pé, ombro, cotovelo e ante-braço, punho e mão)', (SELECT id FROM requilib_website.servico WHERE pagina = 'me'));
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 4, 'Lesões cápsulo-ligamentares e articulares (anca, joelho, tornozelo/pé, ombro, cotovelo e ante-braço, punho e mão)', (SELECT id FROM requilib_website.servico WHERE pagina = 'me'));
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 5, 'Lesões musculo-tendinosas; Lesões agudas, sub-agudas e crónicas', (SELECT id FROM requilib_website.servico WHERE pagina = 'me'));
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 6, 'Fisioterapia pós- fracturas e outras lesões osteo-articulares', (SELECT id FROM requilib_website.servico WHERE pagina = 'me'));
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 7, 'Fisioterapia pós cirurgias ortopédicas (ex. cirurgia aos meniscos e/ou ligamentos do joelho, prótese da anca, prótese do joelho; cirurgias reparadoras do ombro) ', (SELECT id FROM requilib_website.servico WHERE pagina = 'me'));
+
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 1, '', (SELECT id FROM requilib_website.servico WHERE pagina = 'n'));
+
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 1, '', (SELECT id FROM requilib_website.servico WHERE pagina = 'nm'));
+
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 1, 'Avaliação e intervenção nos desvios e perturbações do desenvolvimento da criança', (SELECT id FROM requilib_website.servico WHERE pagina = 'sc'));
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 2, 'Fisioterapia em condições neuro-musculo-esqueléticas das crianças (exemplos: torcicolo congénito,  Lesões do plexo braquial,  status pós-fracturas e traumatismos)', (SELECT id FROM requilib_website.servico WHERE pagina = 'sc'));
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 3, 'Fisioterapia em condições respiratórias das crianças – Fisioterapia respiratória pediátrica', (SELECT id FROM requilib_website.servico WHERE pagina = 'sc'));
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 4, 'Massagem do bébé', (SELECT id FROM requilib_website.servico WHERE pagina = 'sc'));
+
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 1, 'https://pt-pt.facebook.com/fatima.sancho.9', (SELECT id FROM requilib_website.servico WHERE pagina = 'sm'));
+
+
+
+
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 1, 'Aconselhamento e promoção da autonomia na marcha e actividades funcionais', (SELECT id FROM requilib_website.servico WHERE pagina = 'si'));
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 2, 'Programas de exercícios de mobilidade funcional global, treino de equilibrio e prevenção de quedas', (SELECT id FROM requilib_website.servico WHERE pagina = 'si'));
+
+
+INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 1, '', (SELECT id FROM requilib_website.servico WHERE pagina = 'cr'));

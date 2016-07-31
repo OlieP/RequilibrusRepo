@@ -5,13 +5,24 @@ App.service('dataService', ['$http', function($http){
 		return $http.get('php/access.php', {params: {funcao: 'get_equipa'}});
 	};
     
+    this.getServico = function(){
+        
+		return $http.get('php/access.php', {params: {funcao: 'get_servico'}});
+	};
+    
     this.getEspaco = function(){
         
 		return $http.get('php/access.php', {params: {funcao: 'get_espaco'}});
 	};
     
+    this.sendContact = function(message){
+		return $http.post('http://localhost/www/Requilibrius/RequilibrusRepo/php/sendForm.php', message);
+    };
     
-    	this.getTestemunhos = function(){
+    
+    
+    //deprecated
+    this.getTestemunhos = function(){
 		//return $http.get('http://localhost:9192/getListEntities');
         return testemunhos = {'big': [
                                     {
@@ -218,13 +229,6 @@ App.service('dataService', ['$http', function($http){
                             },
                         ]
 	}; 
-    
-    
-    
-    
-    this.sendContact = function(message){
-		return $http.post('http://localhost/www/Requilibrius/RequilibrusRepo/php/sendForm.php', message);
-    };
-	
+    	
 
 }]);

@@ -77,17 +77,37 @@
         <tr>
             <td>
                 <div id="box-servicos" ng-mouseleave="unhoverServicos()" class="page-collumn">
-                    <div class="box-servico transicao" ng-class="{ 'box-servico-hover': servicoHover == 1, 'box-servico-nothover': servicoHover != 1 && servicoHover != 0 }" ng-mouseover="hoverServico(1);" style="background-image: url('./img/servicos/servico1.jpg');">
-                        <div class="text">Músculo-Esquelética</div>
+                    <div class="box-servico transicao" ng-class="{ 'box-servico-hover': servicoHover == 1, 'box-servico-nothover': servicoHover != 1 && servicoHover != 0 }" ng-mouseover="hoverServico(1);" style="background-image: url('./img/servicos/servico1.jpg');" ng-click="hoverServico(1);">
+                        <div class="text">
+                            Músculo-Esquelética
+                        </div>
+                        <div class="close">
+                            <img ui-sref="musculoEsqueletica" src="img/icons/sabermais.png" class="go-to-service">
+                        </div>
                     </div>
-                    <div class="box-servico transicao" ng-class="{ 'box-servico-hover': servicoHover == 2, 'box-servico-nothover': servicoHover != 2 && servicoHover != 0 }" ng-mouseover="hoverServico(2);" style="background-image: url('./img/servicos/servico1.jpg');">
-                        <div class="text">Ft. no Desporto</div>
+                    <div class="box-servico transicao" ng-class="{ 'box-servico-hover': servicoHover == 2, 'box-servico-nothover': servicoHover != 2 && servicoHover != 0 }" ng-mouseover="hoverServico(2);" style="background-image: url('./img/servicos/servico1.jpg');" ng-click="hoverServico(2);">
+                        <div class="text">
+                            Ft. no Desporto
+                        </div>
+                        <div class="close">
+                            <img ui-sref="desporto" src="img/icons/sabermais.png" class="go-to-service">
+                        </div>
                     </div>
-                    <div class="box-servico transicao" ng-class="{ 'box-servico-hover': servicoHover == 3, 'box-servico-nothover': servicoHover != 3 && servicoHover != 0 }" ng-mouseover="hoverServico(3);" style="background-image: url('./img/servicos/servico1.jpg');">
-                        <div class="text">Saúde da Mulher</div>
+                    <div class="box-servico transicao" ng-class="{ 'box-servico-hover': servicoHover == 3, 'box-servico-nothover': servicoHover != 3 && servicoHover != 0 }" ng-mouseover="hoverServico(3);" style="background-image: url('./img/servicos/servico1.jpg');" ng-click="hoverServico(3);">
+                        <div class="text">
+                            Saúde da Mulher
+                        </div>
+                        <div class="close">
+                            <img ui-sref="saudeMulher" src="img/icons/sabermais.png" class="go-to-service">
+                        </div>
                     </div>
-                    <div class="box-servico transicao" ng-class="{ 'box-servico-hover': servicoHover == 4, 'box-servico-nothover': servicoHover != 4 && servicoHover != 0 }" ng-mouseover="hoverServico(4);" style="background-image: url('./img/servicos/servico1.jpg');">
-                        <div class="text">Saúde da Criança</div>
+                    <div class="box-servico transicao" ng-class="{ 'box-servico-hover': servicoHover == 4, 'box-servico-nothover': servicoHover != 4 && servicoHover != 0 }" ng-mouseover="hoverServico(4);" style="background-image: url('./img/servicos/servico1.jpg');" ng-click="hoverServico(4);">
+                        <div class="text">
+                            Saúde da Criança
+                        </div>
+                        <div class="close">
+                            <img ui-sref="saudeCrianca" src="img/icons/sabermais.png" class="go-to-service">
+                        </div>
                     </div>
                 </div>
             </td>

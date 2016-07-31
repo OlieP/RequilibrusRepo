@@ -18,6 +18,8 @@
 		get_section($dbconn, $page);
 	}elseif( $funcao == 'get_espaco' ){
 		get_espaco($dbconn);
+	}elseif( $funcao == 'get_servico' ){
+		get_servico($dbconn);
 	}
 	pg_close($dbconn);
 ?>

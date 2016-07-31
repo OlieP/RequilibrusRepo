@@ -30,6 +30,16 @@ CREATE TABLE requilib_website.tecnicaDetalhe (
 	tecnica_id smallint
 );
 
+DROP TABLE IF EXISTS requilib_website.servico;
+CREATE TABLE requilib_website.servico (
+    id smallint AUTO_INCREMENT PRIMARY KEY,
+    pagina varchar(100),
+    titulo varchar(100),
+    texto varchar(100),
+);
+x
+
+
 DROP TABLE IF EXISTS requilib_website.funcionario;
 CREATE TABLE requilib_website.funcionario (
     id smallint AUTO_INCREMENT PRIMARY KEY,
