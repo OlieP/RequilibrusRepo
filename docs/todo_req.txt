@@ -17,19 +17,19 @@ Home:
 	- Saude da criança
 - Novas imagens para as formas de intervenção
 
-Equipa
+Equipa:
 - Susbtitui foto de grupo
 - Reformatar conteude a apoarecer no CV. (mais conteudo escondido)
 - Faltam fotos de todas a gente.
 
-Espaço
+Espaço:
 - Conteudo para ginásio e Gabinetes
 
-Destaques/Formação e investigação
+Destaques/Formação e investigação:
 - Reformatar look das caixas
 - Arranjar conteudo
 
-Serviços
+Serviços:
 - Faltam imagens para todos os serviços.
 - Faltam conteudos para:
 	- neuromuscular
