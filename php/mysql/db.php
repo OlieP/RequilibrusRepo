@@ -204,7 +204,7 @@
 	}
 	
 	
-		function get_section($dbconn, $pagina){
+	function get_section($dbconn, $pagina){
         
         $query = "SELECT * FROM requilib_website.section WHERE pagina = '".$pagina."'";
 		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
