@@ -13,5 +13,12 @@ App.directive('servicoTemplate', function () {
         },
        
     };
-        
+
+});
+
+    
+App.directive('resizeSmallImg', function() {
+    return function(scope, element, attrs) {
+        $scope.resizeElement(element);//alterar o tamanho de cada ng-repeat. colocar " resize-small-img" como atributo do div com ng-repeat
+    };
 });

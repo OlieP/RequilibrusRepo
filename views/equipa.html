@@ -69,7 +69,7 @@
                         </span>
                     </div>
                     <div class="images col-xs-4 col-sm-4 col-md-4" ng-controller="PhotoSliderController">
-                        <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+                        <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage "
                              ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
                              ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.path}}" style="padding:0 auto">
 
