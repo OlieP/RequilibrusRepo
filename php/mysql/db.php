@@ -76,7 +76,7 @@
 			$counter++;//proxima medicao da tabela SQL
 		
 		}
-		echo json_encode(utf8ize($formacao);
+		echo json_encode(utf8ize($formacao));
 		return $formacao;
 	}
 	
@@ -142,9 +142,6 @@
 			$servico[$counter]['items'] = get_servico_items($dbconn, $servico[$counter]['id']);
 			
 			$counter++;//proxima medicao da tabela SQL
-			if($counter==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
 		}
 		
 		echo json_encode(utf8ize($servico));
@@ -178,9 +175,6 @@
 			$item[$rowNbr]['texto'] = $row['texto'];
 			$item[$rowNbr]['servico_id'] = $row['servico_id'];
 			$rowNbr++;
-			if($rowNbr==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
 		}
 		return $item;
 	}

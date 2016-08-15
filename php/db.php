@@ -2,24 +2,28 @@
 	function connect_db(){		
 		
 		//Criar ligaçao à base de dados
-		$serverDB="localhost";
-		$portDB="5432";
-		$nameDB="Requilibrius";
-		$usernameDB="requilibriusAdmin";
-		$passDB="requilibrius";
-		$dbconn = pg_connect("host=".$serverDB." port=".$portDB." dbname=".$nameDB."
-							  user=".$usernameDB." password=".$passDB)
-				  or die('Nao foi possivel estabelecer ligacao com: ' . pg_last_error());
+		$serverDB="requilibrius.pt";//"requilibrius.pt";
+		$portDB="3306";
+		$nameDB="requilib_website";
+		$usernameDB="requilib_admin";//"requilib_user";
+		$passDB="R'equilibrius1";
+		
+		$dbconn=mysql_connect($serverDB.":".$portDB,$usernameDB,$passDB,$nameDB);
+		if (mysqli_connect_errno())
+		 {
+			echo "Failed to connect to MariaDB: " . mysqli_connect_error();
+		 }
+ 
 		return $dbconn;
 	}
 	
 	function get_destaque($dbconn){
 		
-		$query = "SELECT * FROM destaque";
-		$query_response = pg_query($dbconn,$query);
+		$query = "SELECT * FROM requilib_website.destaque";
+		$query_response =  mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = 0;
 		$destaques = [];
-		while($row = pg_fetch_array ($query_response,$counter,PGSQL_BOTH))
+		while($row=  mysql_fetch_array($query_response))
 		{
 			$destaques[$counter]['id'] = $row['id'];
 			$destaques[$counter]['titulo'] = $row['titulo'];
@@ -29,12 +33,9 @@
 			
 			//get associated images
 			$destaques[$counter]['img'] = get_img($dbconn, 'destaque', $destaques[$counter]['id']);
-			
-			$counter++;//proxima medicao da tabela SQL
-			if($counter==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
 		}
+		
+		echo json_encode(utf8ize($destaques));
 		return $destaques;
 	}
 	
@@ -50,18 +51,18 @@
 		for( $i = 0; $i < $nbr_files; $i++){
 			$files_to_send[$i]['image'] = $file_list[$i];
 			$files_to_send[$i]['description'] = '';
-		}
-		echo json_encode($files_to_send);
+		}		
+		echo json_encode(utf8ize($files_to_send));
 		return $files_to_send;
 		
 	}
 	
 	function get_formacao($dbconn){
-		$query = "SELECT * FROM formacao";
-		$query_response = pg_query($dbconn,$query);
+		$query = "SELECT * FROM requilib_website.formacao";
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = 0;
 		$formacao = [];
-		while($row = pg_fetch_array ($query_response,$counter,PGSQL_BOTH))
+		while($row=  mysql_fetch_array($query_response))
 		{
 			$formacao[$counter]['id'] = $row['id'];
 			$formacao[$counter]['titulo'] = $row['titulo'];
@@ -73,21 +74,19 @@
 			$formacao[$counter]['img'] = get_img($dbconn, 'formacao', $formacao[$counter]['id']);
 			
 			$counter++;//proxima medicao da tabela SQL
-			if($counter==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
+		
 		}
-		echo json_encode($formacao);
+		echo json_encode(utf8ize($formacao));
 		return $formacao;
 	}
 	
 	function get_tecnica($dbconn){
         
-        $query = "SELECT * FROM tecnica ORDER by id ASC";
-		$query_response = pg_query($dbconn,$query);
+        $query = "SELECT * FROM requilib_website.tecnica ORDER by id ASC";
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = 0;
 		$tecnica = [];
-		while($row = @pg_fetch_array ($query_response,$counter,PGSQL_BOTH))
+		while($row=  mysql_fetch_array($query_response))
 		{
 			$tecnica[$counter]['id'] = $row['id'];
 			$tecnica[$counter]['nome'] = $row['nome'];
@@ -97,20 +96,19 @@
 			$tecnica[$counter]['detalhes'] = get_detalhes($dbconn, $tecnica[$counter]['id']);
 			
 			$counter++;//proxima medicao da tabela SQL
-			if($counter==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
+			
 		}
-		
+		echo json_encode(utf8ize($tecnica));
 		return $tecnica;
 	}
 	
 	function get_equipa($dbconn){
-		$query = "SELECT * FROM funcionario";
-		$query_response = pg_query($dbconn,$query);
+	
+		$query = "SELECT * FROM requilib_website.funcionario";
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = 0;
 		$equipa = [];
-		while($row = pg_fetch_array ($query_response,$counter,PGSQL_BOTH))
+		while($row = mysql_fetch_array($query_response))
 		{
 			$equipa[$counter]['id'] = $row['id'];
 			$equipa[$counter]['nome'] = $row['nome'];
@@ -121,23 +119,19 @@
 			$equipa[$counter]['img'] = get_img($dbconn, 'funcionario', $equipa[$counter]['id']);
 			//get associated CV itemsn
 			$equipa[$counter]['cv'] = get_cvitem($dbconn, $equipa[$counter]['id']);//wrong name 'cv'
-			
 			$counter++;//proxima medicao da tabela SQL
-			if($counter==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
 		}
-		echo json_encode($equipa);
+		echo json_encode(utf8ize($equipa));
 		return $equipa;
 	}
 	
-	function get_servico($dbconn){
-		
-		$query = "SELECT * FROM servico";
-		$query_response = pg_query($dbconn,$query);
+		function get_servico($dbconn){
+	
+		$query = "SELECT * FROM requilib_website.servico";
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = 0;
 		$servico = [];
-		while($row = pg_fetch_array ($query_response,$counter,PGSQL_BOTH))
+		while($row = mysql_fetch_array($query_response))
 		{
 			$servico[$counter]['id'] = $row['id'];
 			$servico[$counter]['pagina'] = $row['pagina'];
@@ -148,58 +142,54 @@
 			$servico[$counter]['items'] = get_servico_items($dbconn, $servico[$counter]['id']);
 			
 			$counter++;//proxima medicao da tabela SQL
-			if($counter==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
 		}
-		echo json_encode($servico);
+		
+		echo json_encode(utf8ize($servico));
 		return $servico;
 	}
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	function get_servico_items($dbconn, $servico_id){
         
-        $query = "SELECT * FROM servico_item WHERE servico_id = '".$servico_id."' ORDER BY seq asc;";
-		$query_response = pg_query($dbconn,$query);
+        $query = "SELECT * FROM requilib_website.servico_item WHERE servico_id = '".$servico_id."' ORDER BY seq asc;";
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$rowNbr = 0;
 		$item = [];
 		
-		while($row = @pg_fetch_array ($query_response,$rowNbr,PGSQL_BOTH))
+		//ALTERAR
+		$current_field = '';
+		while($row=  mysql_fetch_array($query_response))
 		{
-
 			$item[$rowNbr]['id'] = $row['id'];
 			$item[$rowNbr]['seq'] = $row['seq'];
 			$item[$rowNbr]['texto'] = $row['texto'];
 			$item[$rowNbr]['servico_id'] = $row['servico_id'];
 			$rowNbr++;
-			if($rowNbr==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
 		}
 		return $item;
 	}
-		
 	
 	function get_cvitem($dbconn, $func_id){
         
-        $query = "SELECT * FROM cvitem WHERE funcionario_id = '".$func_id."' ORDER BY seq asc;";
-		$query_response = pg_query($dbconn,$query);
+        $query = "SELECT * FROM requilib_website.cvitem WHERE funcionario_id = '".$func_id."' ORDER BY seq asc;";
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = -1;//couner++ antes de adicionar primeiro
 		$rowNbr = 0;
 		$cv = [];
 		
 		//ALTERAR
 		$current_field = '';
-		while($row = @pg_fetch_array ($query_response,$rowNbr,PGSQL_BOTH))
+		while($row=  mysql_fetch_array($query_response))
 		{
 			if( $current_field != $row['field']){
 				$current_field = $row['field'];
@@ -209,20 +199,18 @@
 			}
 			array_push($cv[$counter]['content'],$row['content']);	
 			$rowNbr++;
-			if($rowNbr==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
 		}
 		return $cv;
 	}
 	
-	function get_section($dbconn, $pagina){
+	
+		function get_section($dbconn, $pagina){
         
-        $query = "SELECT * FROM section WHERE pagina = '".$pagina."'";
-		$query_response = pg_query($dbconn,$query);
+        $query = "SELECT * FROM requilib_website.section WHERE pagina = '".$pagina."'";
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = 0;
 		$section = [];
-		while($row = @pg_fetch_array ($query_response,$counter,PGSQL_BOTH))
+		while($row=  mysql_fetch_array($query_response))
 		{
 			$section[$counter]['id'] = $row['id'];
 			$section[$counter]['alt_id'] = $row['alt_id'];
@@ -233,78 +221,72 @@
 			$section[$counter]['img'] = get_img($dbconn, 'section', $tecnica[$counter]['id']);
 			
 			$counter++;//proxima medicao da tabela SQL
-			if($counter==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
 		}
 		return $section;
 	}
 	
+	
+	
+	
+	//Private functions
 	function get_img($dbconn, $entidade, $entidade_id){
-	    $query = "SELECT * FROM img WHERE entidade = '".$entidade."' AND entidade_id = ".$entidade_id.";";
+	    $query = "SELECT * FROM requilib_website.img WHERE entidade = '".$entidade."' AND entidade_id = ".$entidade_id.";";
         
-		$query_response = pg_query($dbconn,$query);
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = 0;
 		$img = [];
-		while($row = @pg_fetch_array ($query_response,$counter,PGSQL_BOTH))
+		while($row=  mysql_fetch_array($query_response))
 		{
 			$img[$counter]['path'] = $row['path'];
 			$img[$counter]['nome'] = $row['nome'];
 			$img[$counter]['id'] = $row['id'];
 			$img[$counter]['descricao'] = $row['descricao'];
 			$counter++;//proxima medicao da tabela SQL
-			if($counter==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
 		}	
 		return $img;
 	}
 	
 	function get_main_img($dbconn, $entidade, $entidade_id){
-	    $query = "SELECT * FROM img WHERE entidade = '".$entidade."' AND entidade_id = ".$entidade_id." AND descricao = 'main';";
+	    $query = "SELECT * FROM requilib_website.img WHERE entidade = '".$entidade."' AND entidade_id = ".$entidade_id." AND descricao = 'main';";
         
-		$query_response = pg_query($dbconn,$query);
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = 0;
 		$img = [];
-		while($row = @pg_fetch_array ($query_response,$counter,PGSQL_BOTH))
+		while($row=  mysql_fetch_array($query_response))
 		{
 			$img[$counter]['path'] = $row['path'];
 			$img[$counter]['nome'] = $row['nome'];
 			$img[$counter]['id'] = $row['id'];
 			$img[$counter]['descricao'] = $row['descricao'];
 			$counter++;//proxima medicao da tabela SQL
-			if($counter==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
 		}	
 		return $img;
 	}
 	
     function get_detalhes($dbconn, $entidade_id){
-	    $query = "SELECT * FROM tecnicaDetalhe WHERE entidade_id = ".$entidade_id." ORDER BY id;";
+	    $query = "SELECT * FROM requilib_website.tecnicaDetalhe WHERE entidade_id = ".$entidade_id." ORDER BY id;";
         
-		$query_response = pg_query($dbconn,$query);
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = 0;
 		$detalhes = [];
-		while($row = @pg_fetch_array ($query_response,$counter,PGSQL_BOTH))
+		while($row=  mysql_fetch_array($query_response))
 		{
 			$detalhes[$counter]['id'] = $row['id'];
 			$detalhes[$counter]['detalhe'] = $row['item'];
 			$counter++;//proxima medicao da tabela SQL
-			if($counter==pg_num_rows($query_response)){
-				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
-			}
 		}
 		return $detalhes;
 	}
 	
+	
+	//Inserts
     function save_contact($dbconn, $email, $nome, $apelido, $telefone, $descricao, $motivo){
         
         $query = "INSERT INTO contact(
 						email, nome, apelido, telefone, descricao, motivo)
 						VALUES ('".$email."', '".$nome."', '".$apelido."', '".$telefone."', '".$descricao."', '".$motivo."');";
 		echo "<br>query:<br>".$query."<br>";
-		$query_response = pg_query($dbconn,$query);
+		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		if (!$query_response) {
 		 echo "\nErro a inserir dados.<br>";
 		}else{
@@ -312,5 +294,20 @@
 		}
     }
 	
+	
+	
+	
+	//aux fuunctions
+	//http://stackoverflow.com/questions/19361282/why-would-json-encode-returns-an-empty-string
+	function utf8ize($d) {
+	 if (is_array($d)) {
+	 foreach ($d as $k => $v) {
+	 $d[$k] = utf8ize($v);
+	 }
+	 } else if (is_string ($d)) {
+	 return utf8_encode($d);
+	 }
+	 return $d;
+	}
 	
 ?>

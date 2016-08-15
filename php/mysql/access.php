@@ -21,5 +21,5 @@
 	}elseif( $funcao == 'get_servico' ){
 		get_servico($dbconn);
 	}
-	mysqli_close($dbconn);
+	mysql_close($dbconn);
 ?>

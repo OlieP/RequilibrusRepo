@@ -35,9 +35,9 @@ CREATE TABLE requilib_website.servico (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     pagina varchar(100),
     titulo varchar(100),
-    texto varchar(100),
+    texto varchar(100)
 );
-x
+
 
 
 DROP TABLE IF EXISTS requilib_website.funcionario;
@@ -78,3 +78,11 @@ CREATE TABLE requilib_website.contact (
 	motivo varchar(10)
 );
 
+DROP TABLE IF EXISTS requilib_website.servico_item;
+CREATE TABLE requilib_website.servico?item (
+    id smallint AUTO_INCREMENT PRIMARY KEY,
+    seq smallint,
+	texto varchar(200),
+	servico_id int
+
+);

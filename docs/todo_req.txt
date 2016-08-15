@@ -1,15 +1,39 @@
 TODO
 
-Menu e Separadores
--> Fix ao menu quando a janela é pequena (o botão aparece bem mas quando se carrega nele o conteudo aparece com caixa transparente.)
 
-Página de 'Destaques' e 'Formação e Ivestigação':
--> aparecem por ordem cronologica (SERVIDOR).
--> Colocar o fundo da página escuro quando se abre conteudo
+Index:
+- Melhorar imagem inicial 
 
-Página de Contactos:
--> Acrescentar um form de contacto
+Footer:
+- Link/imagem para facebook
+- Colocar Links uteis
 
-Página de Equipa:
--> Imagem e conteudo de cada terapeuta para ser reformatado.
 
+Home:
+- Arranjar imagens para a caixa serviços:
+	- Musculo-esqueletica
+	- Ft no desporto
+	- Saude da mulher
+	- Saude da criança
+- Novas imagens para as formas de intervenção
+
+Equipa
+- Susbtitui foto de grupo
+- Reformatar conteude a apoarecer no CV. (mais conteudo escondido)
+- Faltam fotos de todas a gente.
+
+Espaço
+- Conteudo para ginásio e Gabinetes
+
+Destaques/Formação e investigação
+- Reformatar look das caixas
+- Arranjar conteudo
+
+Serviços
+- Faltam imagens para todos os serviços.
+- Faltam conteudos para:
+	- neuromuscular
+	- cardio
+	- saude da mulher
+	- Alterações posturais
+	- Nutrição

@@ -1,14 +1,3 @@
-/*
-RAÚL OLIVEIRA (1)
-FÁTIMA SANCHO (2)
-ANA AZEVEDO (3)
-DAVID PIRES (4)
-ANDREIA SCHLECHTER (5)
-CAROLINA OLIVEIRA (6)
-JOÃO ROCHA VAZ (7)
-*/
-
---Funcoinarios
 INSERT INTO requilib_website.funcionario (nome, equipa) VALUES ('Raúl Oliveira', 'ft');
 INSERT INTO requilib_website.funcionario (nome, equipa) VALUES ('Fátima Sancho', 'ft');
 INSERT INTO requilib_website.funcionario (nome, equipa) VALUES ('Ana Azevedo', 'ft');
@@ -22,7 +11,6 @@ INSERT INTO requilib_website.funcionario (nome, equipa) VALUES ('', 'ad');
 INSERT INTO requilib_website.funcionario (nome, equipa) VALUES ('', 'ad');
 INSERT INTO requilib_website.funcionario (nome, equipa) VALUES ('', 'nu');
 
---Imagem
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/1.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/1.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/1.jpg', 'JV', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
@@ -31,7 +19,22 @@ INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) 
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/1.jpg', 'FS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/1.jpg', 'DP', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
  
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/2.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/2.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/2.jpg', 'JV', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/2.jpg', 'AS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Andreia Schlechter'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/2.jpg', 'AA', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Ana Azevedo'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/2.jpg', 'FS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/2.jpg', 'DP', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
  
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/3.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/3.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/3.jpg', 'JV', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/3.jpg', 'AS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Andreia Schlechter'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/3.jpg', 'AA', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Ana Azevedo'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/3.jpg', 'FS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/3.jpg', 'DP', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
+  
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/main.jpg', 'CO', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/main.jpg', 'CO', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/main.jpg', 'JV', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
@@ -40,7 +43,7 @@ INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) 
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/main.jpg', 'FS', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/main.jpg', 'DP', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
  
---CV
+
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'), 10 , 'Formação', 'Doutoramento em Ciências da Motricidade, na especialidade de Ciências da Fisioterapia – Faculdade de Motricidade Humana, UL');
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'), 20 , 'Formação', 'Mestrado em Desenvolvimento Motor (1999) – Faculdade de Motricidade Humana, UL');
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'), 30 , 'Formação', 'Curso de Fisioterapia (1982) – Escola Superior de Saúde de Alcoitão');
@@ -101,10 +104,6 @@ INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'), 140, 'Interesses Científicos', 'Variabilidade');
 
 
-
-
-
---tecnicas
 INSERT INTO requilib_website.tecnica (nome) VALUES ('Reintegração/readaptação da actividade desportiva/técnica despostiva');
 INSERT INTO requilib_website.tecnica (nome) VALUES ('Terapia Manual com técnicas de mobilização dos tecidos e das articulações');
 INSERT INTO requilib_website.tecnica (nome) VALUES ('Terapia pelo Movimento e Exercício');
@@ -141,7 +140,6 @@ INSERT INTO requilib_website.tecnicaDetalhe (item, tecnica_id) VALUES ('Adoptar 
 
 
 
---Serviços
 INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('ap', 'Fisioterapia nas Alteração Posturais', '');
 INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('d', 'Fisioterapia no Desporto', '');
 INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('me', 'Fisioterapia Musculo-esquelética ', '');

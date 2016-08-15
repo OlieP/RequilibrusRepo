@@ -46,7 +46,9 @@
         }
     });
 
+    
      
+   
      	 
      //PARALLAX
     $(window).scroll(function() {
