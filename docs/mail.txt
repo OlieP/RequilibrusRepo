@@ -1,0 +1,35 @@
+Boa tarde Terapeuta Rául, Terapeuta João Váz, Terapeuta Ana Azevedo e Terapeura Carolina Oliveira
+
+Estive já a fazer as modificações sugeridas. O texto para a equipa e missão ficaram muito melhor e mais resumidos.
+Vou passar a dizer conteudos que são necessários:
+
+Neste momento existem páginas de serviço sem qualquer conteudo, entre eles:
+	- neuromuscular
+	- Cárdio-respiratoria
+	- Saúde da mulher
+	- Alterações posturais
+	- Nutrição
+
+Os restantes serviços já têm exemplos de condições clinicas associadas nas sas páginas. Seria importante pensarmos nas condições clínicas para os serviços que não têm  conteudo e num pequeno paragrafo para todos os serviços.
+
+A informação resumida dos fisioterapeuras na página "equipa" estava demasiado longa em alguns casos. Talvez seja melhor a informação resumida ser um texto informativo sobre o terapeuta, e quando se clica no botão "+" essta informação é substituida pela "CV". O texto pode consistir em 2 ou 3 paragrafos breves, com informações como, onde estudou, há quanto tempo está na clinica, qual a area de especialização, etc. No site já está refletida esta alteração.
+
+Para o footer também é preciso definirmos os links para as aréas "Link úteis" e "Parcerias".
+
+Ainda são necessárias algumas fotografias:
+	- 1 Foto de grupo (convém tirar várias para se escolher a melhor)
+	- Fotos de rosto:
+		- 1 David
+		- 1 Raúl
+	- Fotos para as páginas dos serviços:
+		- 1 Foto para Músculo-Esquelética
+		- 1 Foto para Ft do desporto
+		- 1 Foto para Saúda da mulher
+		- 1 Foto para Saúde da criança
+		- 1 Foto para Nerumuscular
+		- 1 Foto para Cardio-respiratoria
+		- 1 Foto para Saúde no idoso
+		- 1 Foto para Ft. nas alterações postorais
+		
+Uma coisa que ainda tenho que integrar na página principal é uma aréa para os destaques recentes.
+		
