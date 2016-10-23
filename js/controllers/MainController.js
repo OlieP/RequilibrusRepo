@@ -4,6 +4,7 @@
      
      //inicializa header 
      if($scope.path == ''){
+         console.log(window.innerHeight+'px');
         $('body').css('padding-top', window.innerHeight+'px');
         $('header').css('height', window.innerHeight+'px');       
      }else{

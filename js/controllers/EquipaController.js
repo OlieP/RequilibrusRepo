@@ -20,7 +20,8 @@ App.controller('EquipaController', ['$scope', 'dataService', function ($scope, d
         $scope.changeTerapeuta = function(index){
             $scope.terapeutaBefore = $scope.terapeutaMain;
             $scope.terapeutaMain  = $scope.equipa[index - 1];
-            $scope.terapeutaSelected = index;          
+            $scope.terapeutaSelected = index;      
+            console.log($scope.terapeutaMain);
         };   
 
         $scope.hoverTerapeuta = function(index){

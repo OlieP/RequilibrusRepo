@@ -2,7 +2,7 @@
 	function connect_db(){		
 		
 		//Criar ligaçao à base de dados
-		$serverDB="requilibrius.pt";//"requilibrius.pt";
+		$serverDB="localhost";//"requilibrius.pt";
 		$portDB="3306";
 		$nameDB="requilib_website";
 		$usernameDB="requilib_admin";//"requilib_user";
@@ -11,7 +11,7 @@
 		$dbconn=mysql_connect($serverDB.":".$portDB,$usernameDB,$passDB,$nameDB);
 		if (mysqli_connect_errno())
 		 {
-			echo "Failed to connect to MariaDB: " . mysqli_connect_error();
+			echo "Failed to connect to Database: " . mysqli_connect_error();
 		 }
  
 		return $dbconn;
@@ -104,7 +104,7 @@
 	
 	function get_equipa($dbconn){
 	
-		$query = "SELECT * FROM requilib_website.funcionario";
+		$query = "SELECT * FROM requilib_website.funcionario WHERE nome <> ''";
 		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = 0;
 		$equipa = [];
@@ -113,6 +113,7 @@
 			$equipa[$counter]['id'] = $row['id'];
 			$equipa[$counter]['nome'] = $row['nome'];
 			$equipa[$counter]['equipa'] = $row['equipa'];			
+			$equipa[$counter]['resumo'] = $row['resumo'];			
 			//get main image
 			$equipa[$counter]['mainImg'] = get_main_img($dbconn, 'funcionario', $equipa[$counter]['id']);
 			//get associated images 
@@ -204,7 +205,7 @@
 	}
 	
 	
-	function get_section($dbconn, $pagina){
+		function get_section($dbconn, $pagina){
         
         $query = "SELECT * FROM requilib_website.section WHERE pagina = '".$pagina."'";
 		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
@@ -263,8 +264,8 @@
 		return $img;
 	}
 	
-    function get_detalhes($dbconn, $entidade_id){
-	    $query = "SELECT * FROM requilib_website.tecnicaDetalhe WHERE entidade_id = ".$entidade_id." ORDER BY id;";
+    function get_detalhes($dbconn, $tecnica_id){
+	    $query = "SELECT * FROM requilib_website.tecnicaDetalhe WHERE tecnica_id = ".$tecnica_id." ORDER BY id;";
         
 		$query_response = mysql_query($query, $dbconn) or die(mysql_error());
 		$counter = 0;

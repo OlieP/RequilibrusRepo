@@ -74,11 +74,13 @@
     position: relative;
 }
 
+
 .quemsomos-img{
     height: 100%;
     float:left;
     margin-right: 20px;
 }
+
 
 .quemsomos-text{
 }
@@ -107,7 +109,7 @@
     margin-top:10px;
     width: 100%;
     font-size:17px;
-    overflow: 
+    list-style-type:none;
 }
 
 .tecnica-detalhe{

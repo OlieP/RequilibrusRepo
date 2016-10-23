@@ -12,12 +12,12 @@
                                 <img src="img/icons/fisioterapia.png">
                             </div>
                             <div class="quemsomos-text text">
-                                <div>
+                                <p>
                               A Fisioterapia "centra-se na análise e avaliação do movimento e da postura, baseadas na estrutura e função do corpo; utilizando modalidades educativas e terapêuticas específicas, com base, essencialmente, no movimento, nas terapias manipulativas, e em meios físicos naturais, com a finalidade de promoção da saúde e prevenção da doença, da deficiência, da incapacidade e da inadaptação, e de tratar, habilitar ou reabilitar utentes/clientes com disfunções de natureza física, mental, de desenvolvimento ou outras, incluindo a dor, com o objectivo de os ajudar a atingir a máxima funcionalidade e qualidade de vida." 
-                                </div>
-                                <div class="referencia">
+                                </p>
+                                <p class="referencia">
     <strong>Ministério da Saúde (Decreto-Lei nº 261/93, de 24 de Julho)</strong>
-                                </div>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -28,16 +28,15 @@
                                 <img src="img/icons/fisioterapia.png">
                             </div>-->
                             <div class="quemsomos-text text">
-                                <p>
-                                Pretendemos centrar a nossa intervenção – prevenção, aconselhamento, avaliação, tratamento e/ou reabilitação funcional – nas necessidades de saúde das pessoas no âmbito da Fisioterapia, procurando prestar serviços de qualidade, personalizados e humanizados.
-                                </p>
-                                <p>
-        Gostamos de estar sempre actualizados e queremos evoluir de forma a poder integrar na nossa intervenção, as melhores “práticas” de Fisioterapia assentes na investigação mais recente.
-                                </p>
-                                <p>
-        Pretendemos ainda promover a investigação clinica aplicada em parceria com centros de investigação universitária nacionais e internacionais.
-        Temos uma equipa de Fisioterapeutas especializados em diversas áreas para intervir desde o recém-nascido e a criança ao indivíduo sénior, passando por grupos específicos como bailarinos, atletas/desportistas quer de competição quer de lazer e mulheres grávidas.
-                                </p>
+                                  <p>
+    Promover a prestação de serviços de Fisioterapia com a melhor qualidade, de forma personalizada e humana para optimizar a intervenção nas suas diferentes componentes relacionadas com a prevenção, aconselhamento, avaliação, tratamento e/ou reabilitação funcional das pessoas.
+                                    </p>
+                                    <p>
+    Garantir a excelência dos nossos serviços através de uma intervenção responsável e autónoma, baseada nas melhores práticas clínicas actuais da Fisioterapia.
+                                    </p>
+                                    <p>
+    Fomentar a investigação clínica aplicada, em parceria com centros de investigação científica nacionais e internacionais.
+                                    </p>
                             </div>
                         </div>
                     </div>
@@ -56,12 +55,25 @@
         </tr> 
          <tr>
             <td>
-                <div class="page-collumn row">
-                    <div class="col-md-6 col-sm-12 col-xs-12">
-                        <img class="image-big" src="img/equipa/groupPhoto.jpg" alt="foto de grupo">
+                <div class="img-centered-div page-collumn row">
+                    <div class="col-md-5 col-sm-12 col-xs-12">
+                        <img class="img-centered" src="img/equipa/groupPhoto.jpg" alt="foto de grupo">
                     </div>
-                    <div class="text col-md-6 col-sm-12 col-xs-12">
-                   Gabinete privádo de serviços de Fisioterapia e de Saúde. A área da Fisioterapia actua em em condições orto-traumatológicatras e em lesões desportivas, em problemas da coluna vertebral, em Pediatria e na Saúde da Mulher (preparação de pré-parto, pós-parto, incontinência urinária feminina e masculina), assim como na Geriatria (programas de prevenção de quedas e de mobilidade global), contando ainda com o serviço de Fisioterapia ao domícilio. Há ainda a colaboração com outros profissionais, Nutricionista, de modo a garantir aos utentes uma valência vasta e dirigida às suas necessidades específicas.
+                    <div class="text col-md-7 col-sm-12 col-xs-12">
+                        <p>
+    Somos uma equipa de profissionais de saúde especializados e de referência no sector privado na prestação de serviços de Fisioterapia e de Saúde. Trabalhamos em diversas áreas como:
+                            <ul style="list-style-type:none"> 
+                                <li>Condições Neuro-músculo-esqueléticas,</li>
+                                <li>Lesões desportivas,</li>
+                                <li>Pediatria,</li>
+                                <li>Saúde da Mulher (preparação de pré-parto, pós-parto, incontinência urinária feminina e masculina),</li>
+                                <li>Geriatria (programas de prevenção de quedas e de mobilidade global),</li>
+                                <li>Serviço ao Domicílio.</li>
+                            </ul>
+                        </p>
+                        <p>
+    Esta equipa tem a colaboração de profissionais de saúde na área da nutrição, garantindo aos utentes uma vasta valência e dirigida às necessidades específicas de cada indivíduo.
+                        </p>
                     </div>
                 </div>    
             </td>
@@ -122,32 +134,29 @@
         <tr>
             <td>
                 <div class="page-collumn row tecnicas-row">
-                    <div class="page-collumn row tecnicas-row">
-                        
-                                    <div ng-repeat="tec in tecnicas" 
-                                         class="tecnicas col-md-6 col-sm-12 col-xs-12" 
-                                         ng-animate="custom">
-                                        <div class="row">
-                                            <div ng-click="show2 = !show2" class="tecnica-main">
-                                                    <div class="col-md-3 col-sm-3 col-xs-3">
-                                                       <img class="img-circle imgSmall" ng-src="{{ tec.foto }}"/>
-                                                    </div>
-                                                    <div  class="col-md-9 col-sm-9 col-xs-9" class="tecnica-nome">
-                                                        {{ tec.nome }}
-                                                    </div>
+                            <div ng-repeat="tec in tecnicas" 
+                                 class="tecnicas col-md-6 col-sm-12 col-xs-12" 
+                                 ng-animate="custom">
+                                <div class="row">
+                                    <div ng-click="show2 = !show2" class="tecnica-main">
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                               <img class="img-circle imgSmall" ng-src="{{ tec.img[0].path }}"/>
                                             </div>
-                                            <div class="tecnicas-detalhes col-md-12 col-sm-12 col-xs-12" 
-                                                 ng-init="(show2 = false)" 
-                                                 ng-show="show2  && (tec.detalhes != '')"> 
-                                                <ul>
-                                                    <li ng-repeat="d in tec.detalhes" class="tecnica-detalhe">
-                                                        {{ d }}
-                                                    </li>
-                                                </ul>
+                                            <div  class="col-md-9 col-sm-9 col-xs-9" class="tecnica-nome">
+                                                {{ tec.nome }}
                                             </div>
-                                        </div>
                                     </div>
-                        </div>
+                                    <div class="tecnicas-detalhes col-md-12 col-sm-12 col-xs-12" 
+                                         ng-init="(show2 = false)" 
+                                         ng-show="show2  && (tec.detalhes != '')"> 
+                                        <ul style="list-style-type:none;">
+                                            <li ng-repeat="d in tec.detalhes" class="tecnica-detalhe">
+                                                {{ d.detalhe }}
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                     </div>                    
                 </div>
             </td>

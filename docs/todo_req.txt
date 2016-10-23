@@ -1,7 +1,10 @@
 TODO
 
+Geral:
+- Melhorar apresentação geral,
+- Tamanho de letra demasiado pequeno em tlm na vertical...
 
-Index:
+Imagem INICIAL:
 - Melhorar imagem inicial 
 
 Footer:
@@ -10,24 +13,27 @@ Footer:
 
 
 Home:
-- Arranjar imagens para a caixa serviços:
+- Imagens para a caixa serviços:
 	- Musculo-esqueletica
 	- Ft no desporto
 	- Saude da mulher
 	- Saude da criança
-- Novas imagens para as formas de intervenção
+- Novas imagens para as formas de intervenção ??
+- Reduzir tamanho dos textos,
+- Repensar
 
 Equipa:
-- Susbtitui foto de grupo
+- Foto de grupo
 - Reformatar conteude a apoarecer no CV. (mais conteudo escondido)
-- Faltam fotos de todas a gente.
+- Repensar Fotos.
 
 Espaço:
-- Conteudo para ginásio e Gabinetes
+- Conteudo para ginásio e Gabinetes?
+- Novas Fotos
 
 Destaques/Formação e investigação:
 - Reformatar look das caixas
-- Arranjar conteudo
+- Conteudo
 
 Serviços:
 - Faltam imagens para todos os serviços.
@@ -37,3 +43,22 @@ Serviços:
 	- saude da mulher
 	- Alterações posturais
 	- Nutrição
+	
+	
+	
+IMAGENS EM FALTA:
+- 1 Foto de grupo (convém tirar várias)
+- Fotos de rosto:
+	- 1 David
+	- 1 Raúl
+- Novas Fotos do Epaço(As atuais têm a data na imagem)
+		
+- Fotos para usar nos serviços:
+	- 1 Foto para  Músculo-Esquelética
+	- 1 Foto para Ft do desporto
+	- 1 Foto para Saúda da mulher
+	- 1 Foto para Saúde da criança
+	- 1 Foto para Nerumuscular
+	- 1 Foto para Cardio-respiratoria
+	- 1 Foto para Saúde no idoso
+	- 1 Foto para Ft. nas alterações postorais

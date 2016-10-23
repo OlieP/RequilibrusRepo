@@ -91,7 +91,6 @@
 		{
 			$tecnica[$counter]['id'] = $row['id'];
 			$tecnica[$counter]['nome'] = $row['nome'];
-			
 			//get associated images
 			$tecnica[$counter]['img'] = get_img($dbconn, 'tecnica', $tecnica[$counter]['id']);
 			$tecnica[$counter]['detalhes'] = get_detalhes($dbconn, $tecnica[$counter]['id']);
@@ -101,12 +100,12 @@
 				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
 			}
 		}
-		
+		echo json_encode($tecnica);
 		return $tecnica;
 	}
 	
 	function get_equipa($dbconn){
-		$query = "SELECT * FROM funcionario";
+		$query = "SELECT * FROM funcionario WHERE nome <> ''";
 		$query_response = pg_query($dbconn,$query);
 		$counter = 0;
 		$equipa = [];
@@ -115,6 +114,7 @@
 			$equipa[$counter]['id'] = $row['id'];
 			$equipa[$counter]['nome'] = $row['nome'];
 			$equipa[$counter]['equipa'] = $row['equipa'];			
+			$equipa[$counter]['resumo'] = $row['resumo'];			
 			//get main image
 			$equipa[$counter]['mainImg'] = get_main_img($dbconn, 'funcionario', $equipa[$counter]['id']);
 			//get associated images 
@@ -283,8 +283,8 @@
 		return $img;
 	}
 	
-    function get_detalhes($dbconn, $entidade_id){
-	    $query = "SELECT * FROM tecnicaDetalhe WHERE entidade_id = ".$entidade_id." ORDER BY id;";
+    function get_detalhes($dbconn, $tecnica_id){
+	    $query = "SELECT * FROM tecnicaDetalhe WHERE tecnica_id = ".$tecnica_id." ORDER BY id;";
         
 		$query_response = pg_query($dbconn,$query);
 		$counter = 0;

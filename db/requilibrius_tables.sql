@@ -1,5 +1,16 @@
+DROP TABLE IF EXISTS requilib_website.tecnicaDetalhe;
+DROP TABLE IF EXISTS requilib_website.servico;
+DROP TABLE IF EXISTS requilib_website.funcionario;
+DROP TABLE IF EXISTS requilib_website.cvitem;
 
 DROP TABLE IF EXISTS requilib_website.formacao;
+DROP TABLE IF EXISTS requilib_website.servico_item;
+DROP TABLE IF EXISTS requilib_website.img;
+DROP TABLE IF EXISTS requilib_website.contact;
+DROP TABLE IF EXISTS requilib_website.destaque;
+DROP TABLE IF EXISTS requilib_website.tecnica;
+
+
 CREATE TABLE requilib_website.formacao (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     titulo varchar(50),
@@ -8,7 +19,6 @@ CREATE TABLE requilib_website.formacao (
     data_in date
 );
 
-DROP TABLE IF EXISTS requilib_website.destaque;
 CREATE TABLE requilib_website.destaque (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     titulo varchar(50),
@@ -17,20 +27,18 @@ CREATE TABLE requilib_website.destaque (
     data_in date
 );
 
-DROP TABLE IF EXISTS requilib_website.tecnica;
 CREATE TABLE requilib_website.tecnica (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     nome varchar(100)
 );
 
-DROP TABLE IF EXISTS requilib_website.tecnicaDetalhe;
+
 CREATE TABLE requilib_website.tecnicaDetalhe (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     item varchar(250),
 	tecnica_id smallint
 );
 
-DROP TABLE IF EXISTS requilib_website.servico;
 CREATE TABLE requilib_website.servico (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     pagina varchar(100),
@@ -40,14 +48,13 @@ CREATE TABLE requilib_website.servico (
 
 
 
-DROP TABLE IF EXISTS requilib_website.funcionario;
 CREATE TABLE requilib_website.funcionario (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     nome varchar(50),
-    equipa char(2)
+    equipa char(2),
+    resumo varchar(500)
 );
 
-DROP TABLE IF EXISTS requilib_website.cvitem;
 CREATE TABLE requilib_website.cvitem (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     funcionario_ID smallint ,
@@ -57,7 +64,6 @@ CREATE TABLE requilib_website.cvitem (
 	FOREIGN KEY (funcionario_ID) REFERENCES funcionario(id)
 );
 
-DROP TABLE IF EXISTS requilib_website.img;
 CREATE TABLE requilib_website.img (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     path varchar(100),
@@ -67,7 +73,7 @@ CREATE TABLE requilib_website.img (
     entidade_id smallint
 );
 
-DROP TABLE IF EXISTS requilib_website.contact;
+
 CREATE TABLE requilib_website.contact (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     email varchar(50),
@@ -78,7 +84,6 @@ CREATE TABLE requilib_website.contact (
 	motivo varchar(10)
 );
 
-DROP TABLE IF EXISTS requilib_website.servico_item;
 CREATE TABLE requilib_website.servico?item (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     seq smallint,

@@ -55,6 +55,12 @@ footer{
 }
 
 
+.img-centered-div  { display: -ms-flex; display: -webkit-flex; display: flex; }
+.img-centered-div >div { flex:1;}
+.img-centered{
+    width:100%;
+}
+
     
 .no-paddings{
     

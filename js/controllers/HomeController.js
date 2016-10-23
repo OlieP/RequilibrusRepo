@@ -1,8 +1,11 @@
 App.controller('HomeController', ['$scope', 'dataService',function ($scope,dataService) {
     
     //getDATA
-    $scope.tecnicas = dataService.getTecnicas();
+   dataService.getTecnicas().then(function(response) {
+        $scope.tecnicas = response.data;    
+    });
     
+    console
     //Services
     $scope.servicoHover = 0;
     $scope.hoverServico = function(servicoId){
