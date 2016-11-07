@@ -1,4 +1,4 @@
-App.controller('ServicosController', ['$scope', 'dataService', '$location', function ($scope, dataService, $location) {
+App.controller('ServicosController', ['$scope', 'dataService', '$location', '$sce', '$timeout', function ($scope, dataService, $location, $sce, $timeout) {
     
     $('body').scrollTop(0);
     $scope.path = $location.path();
@@ -8,14 +8,13 @@ App.controller('ServicosController', ['$scope', 'dataService', '$location', func
         $scope.set_content();
     });
     
-    
     $scope.set_content = function(){
         switch($scope.path) {
             case '/alteracoes-posturais':
                 $scope.get_service_content('ap');
                 break;
-            case '/cardio-respiratoria':
-                $scope.get_service_content('cr');
+            case '/danca':
+                $scope.get_service_content('fd');
                 break;
             case '/desporto':
                 $scope.get_service_content('d');
@@ -37,11 +36,16 @@ App.controller('ServicosController', ['$scope', 'dataService', '$location', func
                 break;
             case '/saude-mulher':
                 $scope.get_service_content('sm');
+                break; 
+            case '/fisioterapia-domicilio':
+                $scope.get_service_content('do');
                 break;
             default:
                 break;
         }
     }
+    
+    
     $scope.get_service_content = function($pagina){
 
         var servicosNbr = $scope.servicos.length;

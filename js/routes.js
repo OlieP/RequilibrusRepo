@@ -69,9 +69,9 @@ App.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'ServicosController',
             data: {
             }
-        }).state('cardioRespiratoria', {
-            url: '/cardio-respiratoria',
-            templateUrl: 'views/servico/servicos-cr.html',
+        }).state('fisioterapiaDanca', {
+            url: '/danca',
+            templateUrl: 'views/servico/servicos-fd.html',
             controller: 'ServicosController',
             data: {
             }
@@ -103,6 +103,12 @@ App.config(function ($stateProvider, $urlRouterProvider) {
         }).state('saudeIdoso', {
             url: '/saude-idoso',
             templateUrl: 'views/servico/servicos-si.html',
+            controller: 'ServicosController',
+            data: {
+            }
+        }).state('fisioterapiaDomicilio', {
+            url: '/fisioterapia-domicilio',
+            templateUrl: 'views/servico/servicos-do.html',
             controller: 'ServicosController',
             data: {
             }

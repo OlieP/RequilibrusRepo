@@ -1,14 +1,15 @@
 DROP TABLE IF EXISTS requilib_website.tecnicaDetalhe;
 DROP TABLE IF EXISTS requilib_website.servico;
-DROP TABLE IF EXISTS requilib_website.funcionario;
 DROP TABLE IF EXISTS requilib_website.cvitem;
 
 DROP TABLE IF EXISTS requilib_website.formacao;
 DROP TABLE IF EXISTS requilib_website.servico_item;
 DROP TABLE IF EXISTS requilib_website.img;
+DROP TABLE IF EXISTS requilib_website.video;
 DROP TABLE IF EXISTS requilib_website.contact;
 DROP TABLE IF EXISTS requilib_website.destaque;
 DROP TABLE IF EXISTS requilib_website.tecnica;
+DROP TABLE IF EXISTS requilib_website.funcionario;
 
 
 CREATE TABLE requilib_website.formacao (
@@ -52,7 +53,7 @@ CREATE TABLE requilib_website.funcionario (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     nome varchar(50),
     equipa char(2),
-    resumo varchar(500)
+    resumo text
 );
 
 CREATE TABLE requilib_website.cvitem (
@@ -73,6 +74,15 @@ CREATE TABLE requilib_website.img (
     entidade_id smallint
 );
 
+CREATE TABLE requilib_website.video (
+    id smallint AUTO_INCREMENT PRIMARY KEY,
+    url varchar(100),
+    type varchar(10),
+    nome varchar(50),
+    descricao varchar(100),
+    entidade varchar(30),
+    entidade_id smallint
+);
 
 CREATE TABLE requilib_website.contact (
     id smallint AUTO_INCREMENT PRIMARY KEY,
@@ -84,7 +94,7 @@ CREATE TABLE requilib_website.contact (
 	motivo varchar(10)
 );
 
-CREATE TABLE requilib_website.servico?item (
+CREATE TABLE requilib_website.servico_item (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     seq smallint,
 	texto varchar(200),

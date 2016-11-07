@@ -132,7 +132,7 @@
 	}
 	
 	
-			function get_servico($dbconn){
+	function get_servico($dbconn){
 	
 		$query = "SELECT * FROM servico";
 		$query_response = pg_query($dbconn,$query);
@@ -148,6 +148,12 @@
 			//get associated items
 			$servico[$counter]['items'] = get_servico_items($dbconn, $servico[$counter]['id']);
 			
+			//get associated images
+			$equipa[$counter]['img'] = get_img($dbconn, 'servico', $servico[$counter]['id']);
+
+			//get associated videos
+			$equipa[$counter]['video'] = get_video($dbconn, 'servico', $servico[$counter]['id']);
+
 			$counter++;//proxima medicao da tabela SQL
 			if($counter==pg_num_rows($query_response)){
 				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
@@ -262,6 +268,28 @@
 		}	
 		return $img;
 	}
+	
+	function get_video($dbconn, $entidade, $entidade_id){
+	    $query = "SELECT * FROM video WHERE entidade = '".$entidade."' AND entidade_id = ".$entidade_id.";";
+        
+		$query_response = pg_query($dbconn,$query);
+		$counter = 0;
+		$img = [];
+		while($row = @pg_fetch_array ($query_response,$counter,PGSQL_BOTH))
+		{
+			$img[$counter]['url'] = $row['url'];
+			$img[$counter]['type'] = $row['type'];
+			$img[$counter]['nome'] = $row['nome'];
+			$img[$counter]['id'] = $row['id'];
+			$img[$counter]['descricao'] = $row['descricao'];
+			$counter++;//proxima medicao da tabela SQL
+			if($counter==pg_num_rows($query_response)){
+				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
+			}
+		}	
+		return $img;
+	}
+	
 	
 	function get_main_img($dbconn, $entidade, $entidade_id){
 	    $query = "SELECT * FROM img WHERE entidade = '".$entidade."' AND entidade_id = ".$entidade_id." AND descricao = 'main';";
