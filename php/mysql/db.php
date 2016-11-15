@@ -17,7 +17,7 @@
 		return $dbconn;
 	}
 	
-	function get_destaque($dbconn){
+	function get_all_destaques($dbconn){
 		
 		$query = "SELECT * FROM requilib_website.destaque";
 		$query_response =  mysql_query($query, $dbconn) or die(mysql_error());
@@ -28,11 +28,18 @@
 			$destaques[$counter]['id'] = $row['id'];
 			$destaques[$counter]['titulo'] = $row['titulo'];
 			$destaques[$counter]['resumo'] = $row['resumo'];
-			$destaques[$counter] ['texto'] = $row['texto'];
+			$destaques[$counter] ['texto'] = $row['texto'];			
+			$destaques[$counter] ['creation_dt'] = $row['creation_dt'];			
+			$destaques[$counter] ['destaque_dt'] = $row['destaque_dt'];			
+			$destaques[$counter] ['top_flag'] = $row['top_flag'];			
 			//$destaques[$counter]['data_in'] = $row['data_in'];
-			
+
 			//get associated images
 			$destaques[$counter]['img'] = get_img($dbconn, 'destaque', $destaques[$counter]['id']);
+			
+			//get associated videos
+			$destaques[$counter]['video'] = get_video($dbconn, 'destaque', $destaques[$counter]['id']);
+			$counter++;
 		}
 		
 		echo json_encode(utf8ize($destaques));
@@ -254,7 +261,7 @@
 		return $img;
 	}
 	
-		function get_video($dbconn, $entidade, $entidade_id){
+	function get_video($dbconn, $entidade, $entidade_id){
 	    $query = "SELECT * FROM video WHERE entidade = '".$entidade."' AND entidade_id = ".$entidade_id.";";
         
 		$query_response = mysql_query($query, $dbconn) or die(mysql_error());

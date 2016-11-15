@@ -5,8 +5,8 @@
 	//Ligacao a base de dados
 	$dbconn = connect_db();	
 	$funcao = $_GET['funcao'] ? $_GET['funcao'] : $_POST['funcao'];
-	if( $funcao == 'get_destaques' ){
-		get_destaque($dbconn);
+	if( $funcao == 'get_all_destaques' ){
+		get_all_destaques($dbconn);
 	}elseif( $funcao == 'get_formacao' ){
 		get_formacao($dbconn);
 	}elseif( $funcao == 'get_tecnicas' ){

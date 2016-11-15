@@ -14,6 +14,25 @@
     
 }
 
+.box-servico1{
+    background-color: #fef190;
+}
+
+.box-servico2{
+    background-color: #ffbb40;
+}
+
+.box-servico3{
+    background-color: #ff880c;
+}
+
+.box-servico4{
+    background-color: #cf3401;
+}
+
+.transicao { transition: all 0.4s ease-in-out; }
+.transicao-video { transition: all 0.4s ease-in-out; }
+
 .box-servico-hover{
     
     width: 50%;
@@ -21,7 +40,6 @@
     border: 1px solid orange;
     display: inline-block;
     float:left;
-    
 }
 
 .box-servico-nothover{
@@ -32,6 +50,44 @@
     display: inline-block;
     float:left;
     
+}
+
+.servico-video-hover{
+    width: 0%;
+    float:right;
+    background-color: black;
+    margin-top:20px;
+    margin-bottom:20px;
+    height: 210px;
+}
+
+.servico-video-hover{
+    margin: 2%;
+    width: 40%;
+    float:right;
+    background-color: darkblue;
+}
+
+.go-to-service{
+    width: 40px;
+}
+
+.servico-text{
+    padding-top:10px;
+    padding-left:7%;
+    float:left;
+    font-size:50;
+    font-weight: bold;
+    color:darkblue;
+    text-align: left
+}
+
+.servico-text-hover{
+    width: 50%;
+}
+
+.servico-text-nothover{
+    width: 100%;
 }
 
 .referencia{
@@ -81,12 +137,13 @@
     margin-right: 20px;
 }
 
-
-.quemsomos-text{
-}
-
 .tecnicas-row{
     overflow: hidden;
+}
+
+.servicos-go-to{
+    width: 100%;
+    height: 10px;
 }
 
 .tecnicas{
@@ -95,11 +152,11 @@
     display:inline-block; 
     border: 5px solid transparent;
     background-color: white;
-/*    width: 40%;
-    margin-right:10px;
-    margin-left:10px;
-    float:left;
-    position:relative;*/
+    /*  width: 40%;
+        margin-right:10px;
+        margin-left:10px;
+        float:left;
+        position:relative;*/
     font-size: 20px;
 }
 
@@ -125,7 +182,3 @@
     align-items: center;
 }
 
-.go-to-service{
-    
-    width: 50px;
-}

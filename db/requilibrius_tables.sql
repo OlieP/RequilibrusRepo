@@ -22,10 +22,12 @@ CREATE TABLE requilib_website.formacao (
 
 CREATE TABLE requilib_website.destaque (
     id smallint AUTO_INCREMENT PRIMARY KEY,
-    titulo varchar(50),
-    resumo varchar(250),
+    titulo varchar(100),
+    resumo varchar(500),
     texto text,
-    data_in date
+	top_flag boolean,
+    creation_dt date,
+	destaque_dt date
 );
 
 CREATE TABLE requilib_website.tecnica (
@@ -44,7 +46,7 @@ CREATE TABLE requilib_website.servico (
     id smallint AUTO_INCREMENT PRIMARY KEY,
     pagina varchar(100),
     titulo varchar(100),
-    texto varchar(100)
+    texto varchar
 );
 
 
@@ -76,10 +78,10 @@ CREATE TABLE requilib_website.img (
 
 CREATE TABLE requilib_website.video (
     id smallint AUTO_INCREMENT PRIMARY KEY,
-    url varchar(100),
+    url varchar,
     type varchar(10),
-    nome varchar(50),
-    descricao varchar(100),
+    nome varchar(100),
+    descricao varchar(200),
     entidade varchar(30),
     entidade_id smallint
 );

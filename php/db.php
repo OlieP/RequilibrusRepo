@@ -13,7 +13,7 @@
 		return $dbconn;
 	}
 	
-	function get_destaque($dbconn){
+	function get_all_destaques($dbconn){
 		
 		$query = "SELECT * FROM destaque";
 		$query_response = pg_query($dbconn,$query);
@@ -30,11 +30,15 @@
 			//get associated images
 			$destaques[$counter]['img'] = get_img($dbconn, 'destaque', $destaques[$counter]['id']);
 			
+			//get associated videos
+			$destaques[$counter]['video'] = get_video($dbconn, 'destaque', $destaques[$counter]['id']);
+
 			$counter++;//proxima medicao da tabela SQL
 			if($counter==pg_num_rows($query_response)){
 				break;	//para a execução do ciclo para que não haja erro quando $counter>numero de linhas na tabela
 			}
 		}
+		echo json_encode($destaques);
 		return $destaques;
 	}
 	

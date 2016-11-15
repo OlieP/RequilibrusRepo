@@ -50,15 +50,11 @@
     
                     </div>
                     <div class="col-xs-12 col-sm-8 col-md-8">                    
-                        <div>
-                            {{ mainText }}
+                        <div class="text" ng-bind-html="mainText">
                         </div>
                         <ul ng-repeat="item in mainList">
                             <li>{{ item.texto }}</li>
                         </ul>
-                    </div>
-                    <div class="videogular-container col-xs-12 col-sm-12 col-md-12">
-                              
                     </div>
                 </div>
             </td>

@@ -56,7 +56,7 @@ App.controller('ServicosController', ['$scope', 'dataService', '$location', '$sc
             if($pagina == $scope.servicos[i].pagina){
                 $scope.titulo =  $scope.servicos[i].titulo;
                 $scope.mainPhoto =  $scope.servicos[i].titulo;
-                $scope.mainText =  $scope.servicos[i].texto;
+                $scope.mainText = '<p>' + $scope.servicos[i].texto.replace(new RegExp('<br>','g'), '<p></p>') + '</p>';
                 $scope.mainList =  $scope.servicos[i].items;
                 
                 console.log($scope.titulo);

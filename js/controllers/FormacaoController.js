@@ -1,24 +1,21 @@
-App.controller('FormacaoController', ['$scope', 'dataService', function ($scope, dataService) {
+App.controller('FormacaoController', ['$scope', '$sce', 'dataService', function ($scope, $sce, dataService) {
         
     $scope.titulo = "Apoio à comunidade e Investigação";
     $scope.contentSelected = -1;       
     $scope.conteudo = dataService.getFormacao();
     $scope.contedoSize = $scope.conteudo.length;
-    
-    
-    
+    console.log($scope.conteudo[1].video[0].type);
     
     $scope.showMore = function(index){
+
         $scope.contentSelected = index;
         document.body.style.overflow="hidden";
-        console.log($scope.contentSelected);
        // $('.teste').openDOMWindow({ eventType:'click', loader:1, loaderImagePath:'animationProcessing.gif', loaderHeight:16, loaderWidth:17 });
     }
     $scope.showNoMore = function(){
         document.body.style.overflowY="visible";
         document.body.style.overflowX="hidden";
         $scope.contentSelected = -1;
-        console.log($scope.contentSelected);
     }
     
     $scope.showNext = function(){    

@@ -11,61 +11,6 @@ INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('', 'ad'
 INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('', 'ad', '');
 INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('', 'ad', '');
 
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/1.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/1.jpg', 'RO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/1.jpg', 'JV', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/1.jpg', 'AS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Andreia Schlechter'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/1.jpg', 'AA', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Ana Azevedo'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/1.jpg', 'FS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/1.jpg', 'DP', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DF/1.jpg', 'DF', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Diogo Ferreira'));
- 
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/2.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/2.jpg', 'RO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/2.jpg', 'JV', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/2.jpg', 'AS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Andreia Schlechter'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/2.jpg', 'AA', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Ana Azevedo'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/2.jpg', 'FS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/2.jpg', 'DP', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
- 
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/3.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/3.jpg', 'RO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/3.jpg', 'JV', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/3.jpg', 'AS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Andreia Schlechter'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/3.jpg', 'AA', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Ana Azevedo'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/3.jpg', 'FS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/3.jpg', 'DP', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
-  
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/main.jpg', 'CO', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/main.jpg', 'RO', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/main.jpg', 'JV', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/main.jpg', 'AS', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Andreia Schlechter'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/main.jpg', 'AA', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Ana Azevedo'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/main.jpg', 'FS', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/main.jpg', 'DP', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DF/main.jpg', 'DF', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Diogo Ferreira'));
-
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/desporto.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Reintegração/readaptação da actividade desportiva/técnica despostiva'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/TM.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Terapia Manual com técnicas de mobilização dos tecidos e das articulações'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/TE.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Terapia pelo Movimento e Exercício'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/TI.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Técnicas de imobilização e contenção selectiva'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/MC.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Meios de compensação e substituição'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/electroterapia.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Electroterapia'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/educacao.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Educação e aconselhamento'));
-
-
-
-
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia nas Alteração Posturais', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'ap'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('https://www.youtube.com/watch?v=_tyszHg96KI', 'mp4', '', 'Fisioterapia no Desporto', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'd '));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia musculo-esquelética', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'me'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Nutrição', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'n '));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia neuro-muscular', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'nm'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Saúde na criança', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'sc'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Saúde na Mulher', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'sm'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Saúde no Idoso', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'si'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia na dança', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'fd'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Domicílio', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'do'));
 
 
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'), 10 , 'Formação', 'Doutoramento em Ciências da Motricidade, na especialidade de Ciências da Fisioterapia – Faculdade de Motricidade Humana, UL');
@@ -159,7 +104,7 @@ INSERT INTO requilib_website.tecnicaDetalhe (item, tecnica_id) VALUES ('Programa
 INSERT INTO requilib_website.tecnicaDetalhe (item, tecnica_id) VALUES ('Desenvolver melhores capacidades de actuação face às situações particulares decorrentes da incapacidade', 7);
 INSERT INTO requilib_website.tecnicaDetalhe (item, tecnica_id) VALUES ('Minimizar as consequências da incapacidade', 7);
 INSERT INTO requilib_website.tecnicaDetalhe (item, tecnica_id) VALUES ('Alcançar uma melhor integração', 7);
-INSERT INTO requilib_website.tecnicaDetalhe (item, tecnica_id) VALUES ('Adoptar estilos de vida saudáveis. Educação para a saúd', 7);
+INSERT INTO requilib_website.tecnicaDetalhe (item, tecnica_id) VALUES ('Adoptar estilos de vida saudáveis. Educação para a saúde.', 7);
 
 
 
@@ -167,7 +112,7 @@ INSERT INTO requilib_website.tecnicaDetalhe (item, tecnica_id) VALUES ('Adoptar 
 INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('ap', 'Fisioterapia nas Alteração Posturais', '');
 INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('d', 'Fisioterapia no Desporto', '');
 INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('me', 'Fisioterapia Musculo-esquelética ', '');
-INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('n', 'Nutrição', '');
+INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('n', 'Nutrição', 'Acompanhamento alimentar personalizado, direcionado para os objetivos do atleta ou pessoa ativa, de qualquer idade. A abordagem prática é baseada em evidência científica, procurando ajustar-se às características individuais (idade, sexo, composição corporal, condicionantes clínicas, etc) e ao contexto da pessoa (modalidade, disponibilidade/horários de trabalho, cultura e preferências alimentares, etc).<br>Em todas as sessões é realizada avaliação antropométrica (peso, altura, perímetros, pregas cutâneas ou bioimpedância), permitindo monitorizar resultados que, juntamente com o feedback individual, serão considerados para uma otimização contínua da alimentação/plano alimentar.<br>Entre cada avaliação presencial é disponibilizado apoio via e-mail ou plataformas sociais para esclarecimento de dúvidas.');
 INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('nm', 'Fisioterapia Neuro-muscular', '');
 INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('sc', 'Saúde da Criança', '');
 INSERT INTO requilib_website.servico (pagina, titulo, texto) VALUES ('sm', 'Saúde da Mulher', '');
@@ -221,3 +166,118 @@ INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 5, 
 
 INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 1, 'Avaliação, tratamento e aconselhamento na área músculo-esquelética em situações onde o utente, por diversos motivos, não tem autonomia para se deslocar ao gabinete de Fisioterapia.', (SELECT id FROM requilib_website.servico WHERE pagina = 'do'));
 INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 2, 'Educação do utente ou cuidadores para uma maior autonomia funcional.', (SELECT id FROM requilib_website.servico WHERE pagina = 'do'));
+
+
+
+
+
+
+
+INSERT INTO requilib_website.destaque 
+	(titulo, 
+	resumo, 
+	texto,
+	top_flag, 
+	creation_dt, 
+	destaque_dt) 
+VALUES (
+	'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle.', 
+	'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle.', 
+	'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle', 
+	true, 
+	now(),
+	to_date('2016-10-03', 'YYYY-MM-DD')
+);
+
+INSERT INTO requilib_website.destaque 
+	(titulo, 
+	resumo, 
+	texto,
+	top_flag, 
+	creation_dt, 
+	destaque_dt) 
+VALUES (
+	'Diogo Rocha e Miguel Oliveira Vencem 3º Campionato Nacional de Paddle', 
+	'Diogo Rocha e Miguel Oliveira Vencem 3º Campionato Nacional de Paddle.', 
+	'Diogo Rocha e Miguel Oliveira Vencem 3º Campionato Nacional de Paddle.', 
+	true, 
+	now(),
+	to_date('2016-10-03', 'YYYY-MM-DD')
+);
+
+
+--IMAGENS
+
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/1.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/1.jpg', 'RO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/1.jpg', 'JV', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/1.jpg', 'AS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Andreia Schlechter'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/1.jpg', 'AA', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Ana Azevedo'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/1.jpg', 'FS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/1.jpg', 'DP', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DF/1.jpg', 'DF', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Diogo Ferreira'));
+ 
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/2.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/2.jpg', 'RO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/2.jpg', 'JV', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/2.jpg', 'AS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Andreia Schlechter'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/2.jpg', 'AA', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Ana Azevedo'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/2.jpg', 'FS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/2.jpg', 'DP', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
+ 
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/3.jpg', 'CO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/3.jpg', 'RO', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/3.jpg', 'JV', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/3.jpg', 'AS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Andreia Schlechter'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/3.jpg', 'AA', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Ana Azevedo'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/3.jpg', 'FS', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/3.jpg', 'DP', '', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
+  
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/main.jpg', 'CO', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/RO/main.jpg', 'RO', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/JV/main.jpg', 'JV', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AS/main.jpg', 'AS', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Andreia Schlechter'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/AA/main.jpg', 'AA', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Ana Azevedo'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/FS/main.jpg', 'FS', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DP/main.jpg', 'DP', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/DF/main.jpg', 'DF', 'main', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Diogo Ferreira'));
+
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/desporto.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Reintegração/readaptação da actividade desportiva/técnica despostiva'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/TM.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Terapia Manual com técnicas de mobilização dos tecidos e das articulações'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/TE.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Terapia pelo Movimento e Exercício'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/TI.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Técnicas de imobilização e contenção selectiva'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/MC.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Meios de compensação e substituição'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/electroterapia.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Electroterapia'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/educacao.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Educação e aconselhamento'));
+
+
+
+
+
+
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia nas Alteração Posturais', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'ap'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('https://www.youtube.com/watch?v=_tyszHg96KI', 'mp4', '', 'Fisioterapia no Desporto', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'd '));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia musculo-esquelética', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'me'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Nutrição', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'n '));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia neuro-muscular', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'nm'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Saúde na criança', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'sc'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Saúde na Mulher', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'sm'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Saúde no Idoso', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'si'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia na dança', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'fd'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Domicílio', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'do'));
+
+INSERT INTO requilib_website.video (
+	url, 
+	type, 
+	nome, 
+	descricao, 
+	entidade, 
+	entidade_id
+) VALUES (
+	'link', 
+	'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle', 
+	'https://www.youtube.com/watch?v=WUquTU96v6Y', 
+	'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle.', 
+	'destaque', 
+	(SELECT id FROM requilib_website.destaque WHERE titulo = 'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle.')
+);
