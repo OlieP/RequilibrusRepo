@@ -80,6 +80,7 @@ footer{
 
 
 .page-collumn{
+     
     margin-bottom:10px;
     margin-top:10px;
     text-align: center;
@@ -88,6 +89,22 @@ footer{
     margin-left:5%;
     margin-right:5%;
     
+}
+
+.page-collumn-special{
+
+   display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
+     -webkit-flex-wrap: wrap;
+     -ms-flex-wrap: wrap;
+     flex-wrap: wrap;
+}
+
+.page-cell{
+    display: -webkit-flex;
+     display: -ms-flexbox;
+     display: flex;
 }
 
 .two-col { 
@@ -125,11 +142,19 @@ footer{
 }
 
 .text{
-    text-align: justify;
+     text-align: justify;
    /** text-indent: 3em;**/
     font-size: 20;
-    
 }
+
+.text-centered{
+    display: flex;
+    justify-content: center; 
+    text-align: justify;
+    flex-direction: column;
+    font-size: 20;
+}
+
 
 /**must be bellow .page-collumn**/
 .subtitulo{

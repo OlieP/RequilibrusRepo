@@ -3,37 +3,45 @@
 <div>
     <table style="width:100%">
         <tr>
-            <td colspan="2" class="titulo">Espaço</td>
+            <td colspan="2" class="titulo">
+                <div class="titulo page-collumn">
+                    Espaço
+                </div>
+            </td>
         </tr>
 
         <tr clas="row">  
-            <td ng-controller="PhotoSliderController" class="col-md-6 col-sm-6 col-xs-6">
-                <div class="page-collumn" ng-show="slides.length > 0">
-                    <div class="container slider image-big">
-                        <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
-                             ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
-                             ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}" style="padding:0 auto">
-                        <a class="arrow-espaco arrow prev" ng-click="nextSlide()"></a>
-                        <a class="arrow-espaco arrow next" ng-click="prevSlide()"></a>
-                        <nav class="nav-photo-slider">
-                            <div class="wrapper">
-                                <div class="dots">
-                                    <div class="dot" ng-repeat="slide in slides">
-                                        <a ng-class="{'active':isCurrentSlideIndex($index)}"
-                                           ng-click="setCurrentSlideIndex($index);" ng-src="{{slide.image}}">
-                                            {{slide.description}}
-                                        </a>
+            <td>
+                <div class="page-collumn page-collumn-special row">
+                    <div ng-controller="PhotoSliderController" class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="page-collumn" ng-show="slides.length > 0">
+                            <div class="container slider image-big">
+                                <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+                                     ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+                                     ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}" style="padding:0 auto">
+                                <a class="arrow-espaco arrow prev" ng-click="nextSlide()"></a>
+                                <a class="arrow-espaco arrow next" ng-click="prevSlide()"></a>
+                                <nav class="nav-photo-slider">
+                                    <div class="wrapper">
+                                        <div class="dots">
+                                            <div class="dot" ng-repeat="slide in slides">
+                                                <a ng-class="{'active':isCurrentSlideIndex($index)}"
+                                                   ng-click="setCurrentSlideIndex($index);" ng-src="{{slide.image}}">
+                                                    {{slide.description}}
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
+                                </nav>
                             </div>
-                        </nav>
+                        </div>
                     </div>
-                </div>
-            </td>
 
-            <td class="col-md-6 col-sm-6 col-xs-6">
-                <div class="page-collumn text">    
-                    O espaço é constituido por quatro gabinetes individuais, uma sala comum (equipada com marquesas e os mais variados equipamentos necessários a reabilitação física), uma sala reservada à àrea da Saúde da Mulher, uma recepção, uma casa de banho para uso público e uma área reservada aos profissionais.         
+                    <div class="page-cell col-md-6 col-sm-6 col-xs-12">
+                        <div class="text-centered">    
+                                O espaço é constituido por quatro gabinetes individuais, uma sala comum (equipada com marquesas e os mais variados equipamentos necessários a reabilitação física), uma sala reservada à àrea da Saúde da Mulher, uma recepção, uma casa de banho para uso público e uma área reservada aos profissionais.      
+                        </div>
+                    </div>
                 </div>
             </td>
         </tr>
