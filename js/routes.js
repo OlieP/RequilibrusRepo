@@ -38,10 +38,13 @@ App.config(function ($stateProvider, $urlRouterProvider) {
             data: {
             }
         }).state('destaques', {
-            url: '/destaques',
+            url: '/destaques:destaques_id?destaque_id',
             templateUrl: 'views/conteudos.html',
             controller: 'DestaquesController',
             data: {
+            },
+            params: {
+                destaque_id: null
             }
         }).state('contactos', {
             url: '/contactos',

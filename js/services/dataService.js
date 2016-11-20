@@ -19,6 +19,11 @@ App.service('dataService', ['$http', function($http){
         
 		return $http.get('php/access.php', {params: {funcao: 'get_all_destaques'}});
 	};
+    
+    this.getTopDestaques = function(){
+        
+		return $http.get('php/access.php', {params: {funcao: 'get_all_destaques'}});
+	};
          
     this.getTecnicas = function(){
 		return $http.get('php/access.php', {params: {funcao: 'get_tecnicas'}})

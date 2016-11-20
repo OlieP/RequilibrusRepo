@@ -28,16 +28,19 @@
     cursor: pointer;
     background: url(../assets/img/blank.gif) no-repeat;
 }
+
+
+
 .arrow.prev {
     opacity: 0.6;
-    left: 50px;
+    left: 25px;
     background-image: url(../assets/img/paddle_prev_999.png);
     transition: 0.2s linear all;
 }
 
 .arrow.next {
     opacity: 0.6;
-    right: 50px;
+    right: 25px;
     background-image: url(../assets/img/paddle_next_999.png);
     transition: 0.2s linear all;
 }

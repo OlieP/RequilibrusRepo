@@ -8,14 +8,13 @@
 
         <tr clas="row">  
             <td ng-controller="PhotoSliderController" class="col-md-6 col-sm-6 col-xs-6">
-                <div class="page-collumn">
+                <div class="page-collumn" ng-show="slides.length > 0">
                     <div class="container slider image-big">
                         <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
                              ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
                              ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}" style="padding:0 auto">
-
-                        <a class="arrow prev" ng-click="nextSlide()"></a>
-                        <a class="arrow next" ng-click="prevSlide()"></a>
+                        <a class="arrow-espaco arrow prev" ng-click="nextSlide()"></a>
+                        <a class="arrow-espaco arrow next" ng-click="prevSlide()"></a>
                         <nav class="nav-photo-slider">
                             <div class="wrapper">
                                 <div class="dots">

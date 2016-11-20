@@ -125,7 +125,7 @@
     text-align: center;
 }
 
-.quemsomos-section{
+.section{
     overflow: hidden;
     position: relative;
 }
@@ -182,3 +182,103 @@
     align-items: center;
 }
 
+
+
+
+
+.destaque-container{
+   cursor: pointer;
+}
+
+.titulo-destaque{
+    font-size: 24px;
+    color: orange;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-family: lato-regular;
+}
+
+.img-destaque{
+    
+}
+
+.resumo-destaque{
+    text-align: justify;
+    text-indent: 2em;
+    border-left: -10px;
+    
+}
+
+.sabermais-destaque{
+    float: right;
+    height: 30px;
+    padding-bottom: 5px;
+}
+
+
+
+.arrow-container {
+    align-items: stretch;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: 15px;
+    margin-left: 15px;
+    position: relative;
+}
+
+
+.arrow-destaque {
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(../assets/img/blank.gif) no-repeat;
+}
+/*
+
+
+.arrow-container{
+    align-items: stretch;
+    text-align: center;
+    display: inline-block;
+ vertical-align: middle;
+}
+
+.arrow-destaque {
+    position: absolute;
+    vertical-align: middle;
+    z-index: 1002;
+    display: block;
+    top: 50%;
+    width: 36px;
+    height: 71px;
+    outline: none;
+    cursor: pointer;
+    background: url(../assets/img/blank.gif) no-repeat;
+}
+*/
+
+
+.arrow-destaque.prev {
+    opacity: 0.8;
+    background-image: url(../assets/img/paddle_prev_999.png);
+    transition: 0.2s linear all;
+}
+
+.arrow-destaque.next {
+    opacity: 0.8;
+    background-image: url(../assets/img/paddle_next_999.png);
+    transition: 0.2s linear all;
+}
+
+.arrow-destaque.prev:hover {
+    opacity: 1;
+    background-image: url(../assets/img/paddle_prev_fff.png);
+}
+
+.arrow-destaque.next:hover {
+    opacity: 1;
+    background-image: url(../assets/img/paddle_next_fff.png);
+}

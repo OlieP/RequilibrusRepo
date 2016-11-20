@@ -36,3 +36,9 @@ App.directive('resizeSmallImg', function() {
         $scope.resizeElement(element);//alterar o tamanho de cada ng-repeat. colocar " resize-small-img" como atributo do div com ng-repeat
     };
 });
+
+App.filter("trustUrl", ['$sce', function ($sce) {
+     return function (recordingUrl) {
+        return $sce.trustAsResourceUrl(recordingUrl);
+     };
+}]);

@@ -357,7 +357,7 @@ INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecn
 
 
 INSERT INTO video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia nas Alteração Posturais', 'servico', (SELECT id FROM servico WHERE pagina = 'ap'));
-INSERT INTO video (url, type, nome, descricao, entidade, entidade_id) VALUES ('https://www.youtube.com/watch?v=_tyszHg96KI', 'mp4', '', 'Fisioterapia no Desporto', 'servico', (SELECT id FROM servico WHERE pagina = 'd '));
+INSERT INTO video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.webm', 'mp4', '', 'Fisioterapia no Desporto', 'servico', (SELECT id FROM servico WHERE pagina = 'd '));
 INSERT INTO video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia musculo-esquelética', 'servico', (SELECT id FROM servico WHERE pagina = 'me'));
 INSERT INTO video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Nutrição', 'servico', (SELECT id FROM servico WHERE pagina = 'n '));
 INSERT INTO video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia neuro-muscular', 'servico', (SELECT id FROM servico WHERE pagina = 'nm'));

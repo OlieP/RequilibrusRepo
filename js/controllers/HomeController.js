@@ -2,10 +2,39 @@ App.controller('HomeController', ['$scope', 'dataService',function ($scope,dataS
     
     //getDATA
    dataService.getTecnicas().then(function(response) {
-        $scope.tecnicas = response.data;    
+        $scope.tecnicas = response.data;      
     });
     
-    console
+    dataService.getTopDestaques().then(function(response) {
+        
+        $scope.destaques = response.data;
+        console.log($scope.destaques);
+        $scope.destaqueIndex = 0;
+        
+         $scope.setCurrentSlideIndex = function (index) {
+            $scope.direction = (index > $scope.destaqueIndex) ? 'left' : 'right';
+            $scope.destaqueIndex = index;
+        };
+
+        $scope.isCurrentSlideIndex = function (index) {            
+            return $scope.destaqueIndex === index;
+        };
+
+        $scope.prevDestaque = function () {
+            $scope.direction = 'left';
+            $scope.destaqueIndex = ($scope.destaqueIndex < $scope.destaques.length - 1) ? ++$scope.destaqueIndex : 0;
+        };
+
+        $scope.nextDestaque = function () {
+            $scope.direction = 'right';
+            $scope.destaqueIndex = ($scope.destaqueIndex > 0) ? --$scope.destaqueIndex : $scope.destaques.length - 1;
+        };
+         
+    });
+    
+    
+    
+    
     //Services
     $scope.servicoHover = 0;
     $scope.hoverServico = function(servicoId){
@@ -22,6 +51,10 @@ App.controller('HomeController', ['$scope', 'dataService',function ($scope,dataS
     }
     
     $scope.showMoreFlag = [false,false,false,false];
+    
+    
+    
+    
     //Map
     $scope.map = { center: { latitude: 38.68450896, longitude: -9.31698292 }, 
                    zoom: 15,

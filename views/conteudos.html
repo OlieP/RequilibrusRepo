@@ -54,11 +54,14 @@
         <iframe width="320" height="240" 
                 ng-src="{{ sce.trustAsResourceUrl(conteudo[contentSelected].video[0].url) }}" 
         </iframe>
-        -->        
          <iframe width="480" height="360" 
                  style="display:block;margin: 0 auto;"
                 ng-src="{{ sce.trustAsResourceUrl(conteudo[contentSelected].video[0].url) }}" 
         </iframe>
+        -->
+        <video width="480" height="360" style="display:block;margin: 0 auto;" type="video/webm" controls controls="controls" name="Video Name" 
+                               src="videos/small.webm">
+        </video>
     </div>
 <!--
     <a class="arrow next" ng-click="showNext()"></a>

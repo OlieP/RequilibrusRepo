@@ -11,43 +11,31 @@
         </tr>
         <tr>
             <td>
-                <div class="text page-collumn row">
-                    <div class="col-xs-12 col-sm-4 col-md-4">
-                        
-                        
-                         <div ng-controller="VideoController as controller">
-                            <div class="videogular-container">
-                                <videogular vg-player-ready="controller.onPlayerReady($API)" vg-complete="controller.onCompleteVideo()" vg-theme="controller.config.theme.url">
-                                <vg-media vg-src="controller.config.sources"
-                                vg-tracks="controller.config.tracks">
-                                </vg-media>
-                                <vg-controls>
-                                <vg-play-pause-button></vg-play-pause-button>
-                                <vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
-                                <vg-scrub-bar>
-                                <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-                                </vg-scrub-bar>
-                                <vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
-                                <vg-volume>
-                                <vg-mute-button></vg-mute-button>
-                                <vg-volume-bar></vg-volume-bar>
-                                </vg-volume>
-                                <vg-fullscreen-button></vg-fullscreen-button>
-                                </vg-controls>
-                                <vg-overlay-play></vg-overlay-play>
-                                <vg-buffering></vg-buffering>
-                                <vg-poster vg-url='controller.config.plugins.poster'></vg-poster>
-                                </videogular>
-                            </div>
-                            <div class="playlist">
-                                <ul>
-                                <li><a ng-click="controller.setVideo(0)">Pale Blue Dot</a></li>
-                                <li><a ng-click="controller.setVideo(1)">Big Buck Bunny</a></li>
-                                </ul>
+                <div class="text page-collumn row" style="min-height: 100px;">
+                    <div ng-controller="PhotoSliderController" class="col-xs-12 col-sm-4 col-md-4">
+                        <div class="page-collumn" ng-show="slides.length > 0">
+                            <div class="container slider image-big">
+                                <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
+                                     ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
+                                     ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}" style="padding:0 auto">
+
+                                <a class="arrow prev" ng-click="nextSlide()"></a>
+                                <a class="arrow next" ng-click="prevSlide()"></a>
+                                <nav class="nav-photo-slider">
+                                    <div class="wrapper">
+                                        <div class="dots">
+                                            <div class="dot" ng-repeat="slide in slides">
+                                                <a ng-class="{'active':isCurrentSlideIndex($index)}"
+                                                   ng-click="setCurrentSlideIndex($index);" ng-src="{{slide.image}}">
+                                                    {{slide.description}}
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
                             </div>
                         </div>
-                        
-    
+                    
                     </div>
                     <div class="col-xs-12 col-sm-8 col-md-8">                    
                         <div class="text" ng-bind-html="mainText">
@@ -55,6 +43,35 @@
                         <ul ng-repeat="item in mainList">
                             <li>{{ item.texto }}</li>
                         </ul>
+                    </div>
+                    
+                </div>
+                <div class="text page-collumn row">
+                    <div class="col-xs-12 col-sm-12 col-md-12" style="margin: 10px" >
+                       
+                        <div ng-bind-html="video">
+                        </div>
+                    <!--
+                        <video width="320" height="240"  
+                               ng-show="conteudo[contentSelected].video[0].type=='video'"     
+                               controls>
+                             <source ng-src="conteudo[contentSelected].video[0].url" tyxpe="video/mp4">
+                             <source ng-src="conteudo[contentSelected].video[0].url" type="video/ogg">
+                         Your browser does not support the video tag.
+                        </video>
+                        <iframe width="320" height="240" 
+                                ng-src="{{ sce.trustAsResourceUrl(conteudo[contentSelected].video[0].url) }}" 
+                        </iframe>
+                             <source src="http://static.videogular.com/assets/videos/videogular.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        <video width="320" height="240"  controls controls="controls" name="Video Name" src="{{video.url | trustUrl}}">
+                        </video>
+                        -->        
+                        <video width="480" height="360" type="video/webm" controls controls="controls" name="Video Name"
+                               style="display:block;margin: 0 auto;"
+                               ng-src="{{video | trustUrl}}">
+                        </video>
+                        <video width="480" height="360" type="video/webm" controls controls="controls" name="Video Name" style="display:block;margin: 0 auto;" src="videos/small.webm">
                     </div>
                 </div>
             </td>

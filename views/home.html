@@ -7,7 +7,7 @@
                 <div class="page-collumn row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="titulo-home"><strong>O que é a Fisioterapia</strong></div>
-                        <div class="quemsomos-section">
+                        <div class="section">
                             <div class="quemsomos-img" style="vertical-align: middle;">
                                 <img src="img/icons/fisioterapia.png">
                             </div>
@@ -23,20 +23,31 @@
                     </div>
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="titulo-home"><strong>Destaques</strong></div>
-                        <div class="quemsomos-section">
+                        <div class="section">
                            <!-- <div class="quemsomos-img" style="vertical-align: middle;">
                                 <img src="img/icons/fisioterapia.png">
                             </div>-->
                             <div class="text">
-                                  <p>
-    Promover a prestação de serviços de Fisioterapia com a melhor qualidade, de forma personalizada e humana para optimizar a intervenção nas suas diferentes componentes relacionadas com a prevenção, aconselhamento, avaliação, tratamento e/ou reabilitação funcional das pessoas.
-                                    </p>
-                                    <p>
-    Garantir a excelência dos nossos serviços através de uma intervenção responsável e autónoma, baseada nas melhores práticas clínicas actuais da Fisioterapia.
-                                    </p>
-                                    <p>
-    Fomentar a investigação clínica aplicada, em parceria com centros de investigação científica nacionais e internacionais.
-                                    </p>
+                                <div class="row" style="display: flex;" ng-repeat="destaque in destaques"
+                             ng-swipe-right="nextDestaque()" ng-swipe-left="prevDestaque()"
+                             ng-hide="!isCurrentSlideIndex($index)" style="padding:0 auto">
+                                    <div class="arrow-container col-md-1 col-sm-1 col-xs-1">
+                                        <img class="arrow-destaque prev" ng-click="prevDestaque()"></img>
+                                    </div>
+                                    <div class="destaque-container col-md-10 col-sm-10 col-xs-10" ui-sref="destaques({destaque_id: '1'})">
+                                        <div class="titulo-destaque col-md-12 col-sm-12 col-xs-12">
+                                            {{destaque.titulo}}
+                                        </div>
+                                        <img class="img-destaque col-md-4 col-sm-42 col-xs-4" 
+                                             ng-src="{{ destaque.foto }}"></img>  
+                                        <div class="resumo-destaque col-md-8 col-sm-8 col-xs-8">
+                                            {{destaque.resumo}}
+                                        </div>
+                                    </div>
+                                    <div class="arrow-container col-md-1 col-sm-1 col-xs-1">
+                                        <img class="arrow-destaque next" ng-click="nextDestaque()"></img>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -74,7 +85,7 @@
                     </div> 
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="titulo-home"><strong>Missão</strong></div>
-                        <div class="quemsomos-section">
+                        <div class="section">
                            <!-- <div class="quemsomos-img" style="vertical-align: middle;">
                                 <img src="img/icons/fisioterapia.png">
                             </div>-->
@@ -91,7 +102,7 @@
                             </div>
                         </div>
                          <div class="titulo-home"><strong>Valores</strong></div>
-                        <div class="quemsomos-section">
+                        <div class="section">
                            <!-- <div class="quemsomos-img" style="vertical-align: middle;">
                                 <img src="img/icons/fisioterapia.png">
                             </div>-->
