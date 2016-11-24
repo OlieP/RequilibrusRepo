@@ -1,3 +1,13 @@
+URGENTE:
+-Videos a funcionar com URL de variavel.
+- Caixas de destaques no home
+- Caixas de destaques na pagina de destaques
+- Gifs nos serviços
+- CAROLINA: Apresentação para os terapeutas.
+- JOAO: Criar CV para o nutricionista
+- PEDIR: Conteudos para todas as páginas.
+
+
 TODO
 
 Geral:

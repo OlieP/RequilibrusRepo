@@ -6,15 +6,13 @@ App.controller('DestaquesController', ['$scope', '$sce', '$stateParams','dataSer
    $scope.showMore = function(index){
         $scope.contentSelected = index;
         document.body.style.overflow="hidden";
-        console.log($scope.contentSelected);
-       // $('.teste').openDOMWindow({ eventType:'click', loader:1, loaderImagePath:'animationProcessing.gif', loaderHeight:16, loaderWidth:17 });
+        console.log($scope.conteudo[contentSelected]);
     }
 
     $scope.showNoMore = function(){
         document.body.style.overflowY="visible";
         document.body.style.overflowX="hidden";
         $scope.contentSelected = -1;
-        console.log($scope.contentSelected);
     }
 
     $scope.showNext = function(){    

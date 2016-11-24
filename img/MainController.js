@@ -1,22 +1,5 @@
 App.controller('MainController', ['$scope', '$location',function ($scope, $location) {
     
-    //If mobile change css settings!
-   // $scope.cssMain = getStyleSheet('main');
-    
-     for(var i=0; i < document.styleSheets.length; i++) 
-    { 
-        if(document.styleSheets[i].title == 'main') 
-        {
-            $scope.cssMain = document.styleSheets[i];
-            if (/Mobi/.test(navigator.userAgent)) {
-                $scope.cssMain.insertRule(".text { font-size: 30px;}",0);
-            }else{
-                $scope.cssMain.insertRule(".text { font-size: 20px;}",0);
-            }
-            console.log($scope.cssMain);
-        }
-    }
-
     $scope.path = $location.path();
 
     document.body.style.overflow="hidden";
@@ -25,8 +8,6 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
         document.body.style.overflowY="visible";
         document.body.style.overflowX="hidden";
     }
-    
-
     //inicializa header 
     if($scope.path == '')
     {
@@ -97,19 +78,5 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
             }
         }
     });
-    
-    
-    //Class manipulation methods
-    $scope.getStyleSheet = function(unique_title)
-    {
-        for(var i=0; i < document.styleSheets.length; i++) 
-        { 
-            if(document.styleSheets[i].title == unique_title) 
-            {
-                return document.styleSheets[i];
-            }
-        }
-    }
-    
     
 }]);

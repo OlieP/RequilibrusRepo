@@ -69,7 +69,7 @@ CREATE TABLE cvitem (
 
 CREATE TABLE img (
     id SERIAL PRIMARY KEY,
-    path varchar(100),
+    path varchar(500),
     nome varchar(50),
     descricao varchar(100),
     entidade varchar(30),
@@ -293,6 +293,7 @@ VALUES (
 	to_date('2016-10-03', 'YYYY-MM-DD')
 );
 
+
 INSERT INTO destaque 
 	(titulo, 
 	resumo, 
@@ -301,9 +302,9 @@ INSERT INTO destaque
 	creation_dt, 
 	destaque_dt) 
 VALUES (
-	'Diogo Rocha e Miguel Oliveira Vencem 3º Campionato Nacional de Paddle', 
-	'Diogo Rocha e Miguel Oliveira Vencem 3º Campionato Nacional de Paddle.', 
-	'Diogo Rocha e Miguel Oliveira Vencem 3º Campionato Nacional de Paddle.', 
+	'Requilibrius representada no Seminário Instabilidade Dinâmica no Membro Inferior', 
+	'No passado dia 12 de Novembro, os Fisioterapeutas João Rocha Vaz e Raúl Oliveira estiveram presentes no Seminário Instabilidade Dinâmica no Membro Inferior, organizado pelo Laboratório de Comportamento Motor da FMH.', 
+	'No passado dia 12 de Novembro, os Fisioterapeutas João Rocha Vaz e Raúl Oliveira estiveram presentes no Seminário Instabilidade Dinâmica no Membro Inferior, organizado pelo Laboratório de Comportamento Motor da FMH.', 
 	true, 
 	now(),
 	to_date('2016-10-03', 'YYYY-MM-DD')
@@ -354,6 +355,12 @@ INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecn
 INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/educacao.jpg', 'tec1', '', 'tecnica', (SELECT id FROM tecnica WHERE nome = 'Educação e aconselhamento'));
 
 
+
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/destaques/destaque1_raul.jpg', 'Terapeuta João Vaz', '', 'destaque', (SELECT id FROM destaque WHERE titulo = 'Requilibrius representada no Seminário /Instabilidade Dinâmica no Membro Inferior/'));
+INSERT INTO img (path, nome, descricao, entidade, entidade_id) VALUES ('img/destaques/destaque1_joao.jpg', 'Terapeuta Raúl de Oliveira', '', 'destaque', (SELECT id FROM destaque WHERE titulo = 'Requilibrius representada no Seminário Instabilidade Dinâmica no Membro Inferior'));
+
+
+	
 
 
 INSERT INTO video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia nas Alteração Posturais', 'servico', (SELECT id FROM servico WHERE pagina = 'ap'));

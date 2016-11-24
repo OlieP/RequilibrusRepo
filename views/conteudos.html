@@ -11,17 +11,14 @@
     <tr>
         <td>
             <div class="row page-collumn equipa-nav">
-                <div ng-repeat="c in conteudo" class="conteudo col-md-6  col-sm-6 col-xs-12">
-                    <div class="row">
+                <div ng-repeat="c in conteudo" class="conteudo thumbnail col-md-6  col-sm-6 col-xs-12">
+                    <div class="row" ng-click="showMore($index)">
                         <div class="titulo-conteudo col-md-12 col-sm-12 col-xs-12">
                             {{c.titulo}}
                         </div>
-                        <img class="img-conteudo col-md-4 col-sm-42 col-xs-4" ng-src="{{ c.foto }}"></img>  
-                        <div class="resumo-conteudo col-md-8 col-sm-8 col-xs-8">
+                        <img class="img-conteudo col-md-4 col-sm-42 col-xs-4" ng-src="{{ c.img[0].path }}"></img>  
+                        <div class="resumo-conteudo text col-md-8 col-sm-8 col-xs-8">
                             {{c.resumo}}
-                        </div>
-                        <div class="col-md-12 col-sm-12 col-xs-12 teste">
-                            <img src="img/icons/sabermais.png" class="sabermais-conteudo" ng-click="showMore($index)" }}>
                         </div>
                     </div>
                 
@@ -32,40 +29,42 @@
     </tr> 
 </table>
 
-<div class="conteudo-todo" ng-hide="contentSelected == -1">
-    <div class="close" ng-click="showNoMore()"><img src="img/icons/close.png" class="close-img"></div>
-    <div class="titulo-conteudo-grande col-md-12 col-sm-12 col-xs-12">
-        {{ conteudo[contentSelected].titulo }}
-    </div>
-    <img class="img-conteudo col-md-4 col-sm-42 col-xs-4" ng-src="{{ conteudo[contentSelected].foto }}"></img>  
-    <div class="resumo-conteudo col-md-8 col-sm-8 col-xs-8">
-        {{ conteudo[contentSelected].texto}}
-    </div>
+<div class="conteudo-todo-shadow" ng-hide="contentSelected == -1">
+    <div class="close" ng-click="showNoMore()"><img src="img/icons/close.png" ></div>
+    <div class="conteudo-todo">
+        <div class="titulo-conteudo-selected col-md-12 col-sm-12 col-xs-12">
+            {{ conteudo[contentSelected].titulo }}
+        </div>
+        <img class="img-conteudo-selected col-md-4 col-sm-42 col-xs-4" ng-src="{{ conteudo[contentSelected].img[0].path }}"></img>  
+        <div class="text col-md-8 col-sm-8 col-xs-8">
+            {{ conteudo[contentSelected].texto}}
+        </div>
 
-    <div class="col-md-12 col-sm-12 col-xs-12" id="video-container" ng-show="conteudo[contentSelected].video.length > 0">
-        <!--
-        <video width="320" height="240"  
-               ng-show="conteudo[contentSelected].video[0].type=='video'"     
-               controls>
-             <source ng-src="conteudo[contentSelected].video[0].url" tyxpe="video/mp4">
-             <source ng-src="conteudo[contentSelected].video[0].url" type="video/ogg">
-         Your browser does not support the video tag.
-        </video>
-        <iframe width="320" height="240" 
-                ng-src="{{ sce.trustAsResourceUrl(conteudo[contentSelected].video[0].url) }}" 
-        </iframe>
-         <iframe width="480" height="360" 
-                 style="display:block;margin: 0 auto;"
-                ng-src="{{ sce.trustAsResourceUrl(conteudo[contentSelected].video[0].url) }}" 
-        </iframe>
-        -->
-        <video width="480" height="360" style="display:block;margin: 0 auto;" type="video/webm" controls controls="controls" name="Video Name" 
-                               src="videos/small.webm">
-        </video>
+        <div class="col-md-12 col-sm-12 col-xs-12" class="video-container" ng-show="conteudo[contentSelected].video.length > 0">
+            <!--
+            <video width="320" height="240"  
+                   ng-show="conteudo[contentSelected].video[0].type=='video'"     
+                   controls>
+                 <source ng-src="conteudo[contentSelected].video[0].url" tyxpe="video/mp4">
+                 <source ng-src="conteudo[contentSelected].video[0].url" type="video/ogg">
+             Your browser does not support the video tag.
+            </video>
+            <iframe width="320" height="240" 
+                    ng-src="{{ sce.trustAsResourceUrl(conteudo[contentSelected].video[0].url) }}" 
+            </iframe>
+             <iframe width="480" height="360" 
+                     style="display:block;margin: 0 auto;"
+                    ng-src="{{ sce.trustAsResourceUrl(conteudo[contentSelected].video[0].url) }}" 
+            </iframe>
+            -->
+            <video width="480" height="360" style="display:block;margin: 0 auto;" type="video/webm" controls controls="controls" name="Video Name" 
+                                   src="videos/small.webm">
+            </video>
+        </div>
+    <!--
+        <a class="arrow next" ng-click="showNext()"></a>
+        <a class="arrow previous" ng-click="showPrevious()"></a>
+    -->
     </div>
-<!--
-    <a class="arrow next" ng-click="showNext()"></a>
-    <a class="arrow previous" ng-click="showPrevious()"></a>
--->
 </div>
 

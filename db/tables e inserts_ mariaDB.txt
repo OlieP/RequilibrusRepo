@@ -87,7 +87,7 @@ CREATE TABLE requilib_website.cvitem (
 
 CREATE TABLE requilib_website.img (
     id smallint AUTO_INCREMENT PRIMARY KEY,
-    path varchar(100),
+    path varchar(500),
     nome varchar(50),
     descricao varchar(100),
     entidade varchar(30),
@@ -131,7 +131,7 @@ INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Andreia
 INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Carolina Oliveira', 'ft','Fisioterapeuta licenciado em ...... ');
 INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('João Rocha Vaz', 'ft','Fisioterapeuta licenciado em ...... ');
 INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('', 'ft','Fisioterapeuta licenciado em ...... ');
-INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Diogo Ferreira', 'nu', 'Dietista membro da Ordem dos Nutricionistas (cédula nº1268D), licenciado em Dietética e Nutrição pela Escola Superior de Tecnologia da Saúde de Lisboa (EstesL) em 2009. Desde cedo dedicou a carreira à área desportiva: entre 2010 e 2012 trabalhou enquanto Dietista “freelancer” na empresa "Blos - Centro de competências alimentares”, tendo desenvolvido projetos ligados à nutrição e Desporto, artigos técnicos, rastreios de composição corporal, palestras e consultas de Nutrição a população comunitária e atletas de variadas modalidades.<br>Paralelamente, escreveu para a revista “O Praticante” e foi docente convidado no âmbito do “Curso de Nutrição no Desporto” realizado na EstesL e do módulo de nutrição do “Curso Avançado de Preparação Física Contextualizada em Futebol” realizado pelo Instituto Superior de Ciências Educativas (ISCE). Desde 2012 que exerce funções de Nutricionista-Dietista no Sport Lisboa e Benfica ao nível do futebol profissional (2012-2013 equipa B e 2013-2015 equipa A), sendo atualmente consultor e coordenador técnico da área de Nutrição do Benfica LAB. Ao nível da prática privada, disponibiliza serviços de consultoria coletiva e individual, incluindo consultas de Nutrição a atletas e pessoas ativas de todas as idades.');
+INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Diogo Ferreira', 'nu', 'Dietista membro da Ordem dos Nutricionistas (cédula nº1268D), licenciado em Dietética e Nutrição pela Escola Superior de Tecnologia da Saúde de Lisboa (EstesL) em 2009. Desde cedo dedicou a carreira à área desportiva: entre 2010 e 2012 trabalhou enquanto Dietista “freelancer” na empresa Blos - Centro de competências alimentares”, tendo desenvolvido projetos ligados à nutrição e Desporto, artigos técnicos, rastreios de composição corporal, palestras e consultas de Nutrição a população comunitária e atletas de variadas modalidades.<br>Paralelamente, escreveu para a revista “O Praticante” e foi docente convidado no âmbito do “Curso de Nutrição no Desporto” realizado na EstesL e do módulo de nutrição do “Curso Avançado de Preparação Física Contextualizada em Futebol” realizado pelo Instituto Superior de Ciências Educativas (ISCE). Desde 2012 que exerce funções de Nutricionista-Dietista no Sport Lisboa e Benfica ao nível do futebol profissional (2012-2013 equipa B e 2013-2015 equipa A), sendo atualmente consultor e coordenador técnico da área de Nutrição do Benfica LAB. Ao nível da prática privada, disponibiliza serviços de consultoria coletiva e individual, incluindo consultas de Nutrição a atletas e pessoas ativas de todas as idades.');
 INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('', 'ad', '');
 INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('', 'ad', '');
 INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('', 'ad', '');
@@ -322,9 +322,9 @@ INSERT INTO requilib_website.destaque
 	creation_dt, 
 	destaque_dt) 
 VALUES (
-	'Diogo Rocha e Miguel Oliveira Vencem 3º Campionato Nacional de Paddle', 
-	'Diogo Rocha e Miguel Oliveira Vencem 3º Campionato Nacional de Paddle.', 
-	'Diogo Rocha e Miguel Oliveira Vencem 3º Campionato Nacional de Paddle.', 
+	'Fisioterapeutas da R\'equilibrius participaram no Seminário Instabilidade Dinâmica no Membro Inferior',
+	'No passado dia 12 de Novembro, os Fisioterapeutas João Rocha Vaz e Raúl Oliveira estiveram presentes no Seminário Instabilidade Dinâmica no Membro Inferior, organizado pelo Laboratório de Comportamento Motor da FMH.', 
+	'No passado dia 12 de Novembro, os Fisioterapeutas João Rocha Vaz e Raúl Oliveira estiveram presentes no Seminário Instabilidade Dinâmica no Membro Inferior, organizado pelo Laboratório de Comportamento Motor da FMH.', 
 	true, 
 	NOW(),
 	STR_TO_DATE('05,10,2016', '%d,%m,%Y')
@@ -372,6 +372,11 @@ INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) 
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/MC.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Meios de compensação e substituição'));
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/electroterapia.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Electroterapia'));
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/tecnicas/educacao.jpg', 'tec1', '', 'tecnica', (SELECT id FROM requilib_website.tecnica WHERE nome = 'Educação e aconselhamento'));
+
+
+
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/15203184_1221381287932149_546476678957154558_n.jpg?oh=fde01c89e74e34c8b6ab3180ccd80fbd&oe=58D5943B', 'Terapeuta João Vaz', '', 'destaque', (SELECT id FROM requilib_website.destaque WHERE titulo = 'Fisioterapeutas da R\'equilibrius participaram no Seminário Instabilidade Dinâmica no Membro Inferior'));
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/15178240_1221381394598805_8897051556421410141_n.jpg?oh=ade4940cf43e30f76952cb04b14b094f&oe=58D3FBDC', 'Terapeuta Raúl de Oliveira', '', 'destaque', (SELECT id FROM requilib_website.destaque WHERE titulo = 'Fisioterapeutas da R\'equilibrius participaram no Seminário Instabilidade Dinâmica no Membro Inferior'));
 
 
 
