@@ -3,19 +3,7 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
     //If mobile change css settings!
    // $scope.cssMain = getStyleSheet('main');
     
-     for(var i=0; i < document.styleSheets.length; i++) 
-    { 
-        if(document.styleSheets[i].title == 'main') 
-        {
-            $scope.cssMain = document.styleSheets[i];
-            if (/Mobi/.test(navigator.userAgent)) {
-                $scope.cssMain.insertRule(".text { font-size: 30px;}",0);
-            }else{
-                $scope.cssMain.insertRule(".text { font-size: 20px;}",0);
-            }
-            console.log($scope.cssMain);
-        }
-    }
+    
 
     $scope.path = $location.path();
 

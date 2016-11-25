@@ -8,23 +8,55 @@
 
         </td>
     </tr> 
+    
+    
+   
+<div ng-repeat="product in productList">
+     <div ng-if="$index % 3 === 0" 
+         ng-init="group = productList.slice($index, $index + 3)">
+        <div class="products-row">
+             <div class="product-tile" ng-repeat="grItem in group">
+             {{grItem}}
+             </div>
+         </div>
+    </div>
+</div>
+    
+
     <tr>
         <td>
             <div class="row page-collumn equipa-nav">
-                <div ng-repeat="c in conteudo" class="conteudo thumbnail col-md-6  col-sm-6 col-xs-12">
-                    <div class="row" ng-click="showMore($index)">
-                        <div class="titulo-conteudo col-md-12 col-sm-12 col-xs-12">
-                            {{c.titulo}}
-                        </div>
-                        <img class="img-conteudo col-md-4 col-sm-42 col-xs-4" ng-src="{{ c.img[0].path }}"></img>  
-                        <div class="resumo-conteudo text col-md-8 col-sm-8 col-xs-8">
-                            {{c.resumo}}
+                <div class="col-md-6  col-sm-6 col-xs-12">
+                    <div ng-repeat="c in conteudo" class="conteudo thumbnail">
+                        <div ng-click="showMore($index)" class="row">
+                            <div class="titulo-conteudo col-md-12 col-sm-12 col-xs-12">
+                                {{c.titulo}}
+                            </div>
+                            <img class="img-conteudo col-md-4 col-sm-42 col-xs-4" ng-src="{{ c.img[0].path }}"></img>  
+                            <div class="resumo-conteudo text col-md-8 col-sm-8 col-xs-8">
+                                {{c.resumo}}
+                            </div>
                         </div>
                     </div>
-                
-                
                 </div>
-            </div>            
+                
+                
+                <div class="col-md-6  col-sm-6 col-xs-12">
+                    <div ng-repeat="c in conteudo" class="conteudo thumbnail">
+                        <div ng-click="showMore($index)" class="row">
+                            <div class="titulo-conteudo col-md-12 col-sm-12 col-xs-12">
+                                {{c.titulo}}
+                            </div>
+                            <img class="img-conteudo col-md-4 col-sm-42 col-xs-4" ng-src="{{ c.img[0].path }}"></img>  
+                            <div class="resumo-conteudo text col-md-8 col-sm-8 col-xs-8">
+                                {{c.resumo}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            
+            </div>           
         </td>
     </tr> 
 </table>

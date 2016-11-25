@@ -42,3 +42,9 @@ App.filter("trustUrl", ['$sce', function ($sce) {
         return $sce.trustAsResourceUrl(recordingUrl);
      };
 }]);
+
+App.filter('reverse', function() {
+     return function(items) {
+        return items.slice().reverse();
+     };
+});

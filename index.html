@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/libs/bootstrap.min.css">
-    <link rel="stylesheet" href="css/upbar.css">
-    <link rel="stylesheet" href="css/footer.css">
+
     <link rel="stylesheet" href="css/photoslider.css">
-   
-	
-<!-- Libraries
+    <link rel="stylesheet" href="css/upbar.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+<!--
+    Libraries
     <script type="text/javascript" src="js/libs/jquery-1.11.3.min.js"></script>
     <script src="js/libs/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/libs/loadsh.min.js"></script>
@@ -55,6 +56,9 @@
     <script type="text/javascript" src="js/libs/angular-google-maps.min.js"></script>
     <script src='//maps.googleapis.com/maps/api/js?sensor=false'></script>
     
+    <!--display adapter-->
+    <script src="js/setCss.js"></script>
+    
     <!-- angular scripts -->
     <script src="js/App.js"></script>
     <script src="js/routes.js"></script>
@@ -83,7 +87,6 @@
 <body>
     
     <div style="width:100%" ng-controller="MainController">
-    <link rel="stylesheet" href="css/main.css" title="main">
         <header class="header" ng-show="path == '' ">
             <img src="img/logo.jpg" class='header-img'>
         </header>                    
