@@ -5,13 +5,8 @@ var App = angular.module("App", ['ngResource',
                                  'naif.base64', 
                                  'uiGmapgoogle-maps',
                                  'ngAnimate',
-                                 'ngSanitize',
-                                 "com.2fdevs.videogular",
-                                 "com.2fdevs.videogular.plugins.controls",
-                                 "com.2fdevs.videogular.plugins.overlayplay",
-                                 "com.2fdevs.videogular.plugins.poster",
-                                 "com.2fdevs.videogular.plugins.buffering",
-                                 "info.vietnamcode.nampnq.videogular.plugins.youtube"
+                                 'ngTouch',
+                                 'ngSanitize'
                                 ]);
 
 App.directive('servicoTemplate', function () {

@@ -6,7 +6,7 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
     
 
     $scope.path = $location.path();
-
+    console.log($scope.path);
     document.body.style.overflow="hidden";
 
     window.onload = function () {  
@@ -85,8 +85,55 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
             }
         }
     });
+   
     
-    
+    $scope.goToPreviousPage = function()
+    {
+        alert("rigth");
+       if($location.path() == '/equipa')
+        { 
+            $location.path() = '/';
+        }
+        else if($location.path() == '/espaco')
+        { 
+            $location.path() = '/equipa';
+        }
+        else if($location.path() == '/destaques')
+        { 
+            $location.path() = '/espaco';
+        }
+        else if($location.path() == '/contactos')
+        { 
+            $location.path() = '/destaques';
+        }else{//home
+            $location.path() = '/contactos';
+        }
+    }
+     
+    $scope.goToNextPage = function()
+    {
+          alert("left");
+        if($location.path() == '/equipa')
+        { 
+            $location.path() = '/espaco';
+        }
+        else if($location.path() == '/espaco')
+        { 
+            $location.path() = '/destaques';
+        }
+        else if($location.path() == '/destaques')
+        { 
+            $location.path() = '/contactos';
+        }
+        else if($location.path() == '/contactos')
+        { 
+            $location.path() = '/';
+        }else if( $location.path() == '' || $location.path() == '/' || $location.path() == '/#'  ){//home
+            $location.path() = '/equipa';
+        }
+        
+    }
+      
     //Class manipulation methods
     $scope.getStyleSheet = function(unique_title)
     {
