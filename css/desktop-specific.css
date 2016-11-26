@@ -37,3 +37,24 @@
 .referencia{
     font-size: 18px;
 }
+
+.sabermais-conteudo{
+    float: right;
+    height: 40px;
+    padding-bottom: 5px;
+}
+
+.icon-contacts{
+    height:30px;
+} 
+
+
+.text-contacts-small{
+     font-size: 16px;
+   /** text-indent: 3em;**/
+}
+
+.text-contacts{
+     font-size: 22px;
+   /** text-indent: 3em;**/
+}

@@ -40,3 +40,24 @@
 .image-person{
 	display:none;
 }
+
+
+.sabermais-conteudo{
+    float: right;
+    height: 80px;
+    padding-bottom: 10px;
+}
+
+.icon-contacts{
+    height:60px;
+} 
+
+.text-contacts-small{
+     font-size: 44px;
+   /** text-indent: 3em;**/
+}
+
+.text-contacts{
+     font-size: 32px;
+   /** text-indent: 3em;**/
+}

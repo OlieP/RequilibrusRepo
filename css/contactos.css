@@ -1,18 +1,23 @@
 
 .angular-google-map-container { 
-    
-    height: 300px; 
-
+    height: 400px; 
 }
 
 .icon-contacts{
-    
-    height:20px;
-    
 } 
 
 textarea.form-control {
-    display: inline-block;
- height: 100%;
- width: 100%;
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
+
+.text-contacts-small{
+     text-align: left;
+   /** text-indent: 3em;**/
+}
+
+.text-contacts{
+     text-align: left;
+   /** text-indent: 3em;**/
 }
