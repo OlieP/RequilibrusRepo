@@ -14,7 +14,7 @@
 }
 
 .subtitulo{
-	font-size: 28px;
+	font-size: 36px;
 }
 
 .servico-text{
@@ -63,4 +63,8 @@
 .text-contacts{
      font-size: 22px;
    /** text-indent: 3em;**/
+}
+
+.itemcv-nome{
+	font-size:28px;
 }

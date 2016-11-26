@@ -3,18 +3,18 @@
 <div>
     <table style="width:100%">
         <tr>
-            <td colspan="2" class="titulo">
+            <td>
                 <div class="titulo page-collumn">
                     Espaço
                 </div>
             </td>
         </tr>
 
-        <tr clas="row">  
+        <tr>  
             <td>
-                <div class="page-collumn page-collumn-special row">
+                <div class="page-collumn page-collumn-special">
                     <div ng-controller="PhotoSliderController" class="col-md-6 col-sm-12 col-xs-12">
-                        <div class="page-collumn" ng-show="slides.length > 0">
+                        <div ng-show="slides.length > 0">
                             <div class="container slider image-big">
                                 <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
                                      ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"

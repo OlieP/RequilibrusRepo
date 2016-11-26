@@ -87,63 +87,66 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
     
     $scope.goToPreviousPage = function()
     {
-        alert("rigth");
-       if($location.path() == '/equipa')
-        { 
-            $location.url('/');
-            $scope.setColors(document.getElementById('home-btn'));
-        }
-        else if($location.path() == '/espaco')
-        { 
-            $location.url('/equipa');
-            $scope.setColors(document.getElementById('equipa-btn'));
-        }
-        else if($location.path() == '/destaques')
-        { 
-            $location.url('/espaco');
-            $scope.setColors(document.getElementById('espaco-btn'));
-        }
-        else if($location.path() == '/contactos')
-        { 
-            $location.url('/destaques');
-            $scope.setColors(document.getElementById('destaques-btn'));
-         }
-        else if( $location.path() == '' || $location.path() == '/' || $location.path() == '/#'  )
-        {//home
-            $location.url('/contactos');
-            $scope.setColors(document.getElementById('contactos-btn'));
-        }
+        if (/Mobi/.test(navigator.userAgent))
+		{
+			if($location.path() == '/equipa')
+			{ 
+				$location.url('/');
+				$scope.setColors(document.getElementById('home-btn'));
+			}
+			else if($location.path() == '/espaco')
+			{ 
+				$location.url('/equipa');
+				$scope.setColors(document.getElementById('equipa-btn'));
+			}
+			else if($location.path() == '/destaques')
+			{ 
+				$location.url('/espaco');
+				$scope.setColors(document.getElementById('espaco-btn'));
+			}
+			else if($location.path() == '/contactos')
+			{ 
+				$location.url('/destaques');
+				$scope.setColors(document.getElementById('destaques-btn'));
+			 }
+			else if( $location.path() == '' || $location.path() == '/' || $location.path() == '/#'  )
+			{//home
+				$location.url('/contactos');
+				$scope.setColors(document.getElementById('contactos-btn'));
+			}
+		}
     }
      
     $scope.goToNextPage = function()
     {
-        alert($location.path());
-        if($location.path() == '/equipa')
-        { 
-            $location.url('/espaco');
-            $scope.setColors(document.getElementById('espaco-btn'));
+        if (/Mobi/.test(navigator.userAgent))
+		{
+			if($location.path() == '/equipa')
+			{ 
+				$location.url('/espaco');
+				$scope.setColors(document.getElementById('espaco-btn'));
+			}
+			else if($location.path() == '/espaco')
+			{ 
+				$location.url('/destaques');
+				$scope.setColors(document.getElementById('destaques-btn'));
+			}
+			else if($location.path() == '/destaques')
+			{ 
+				$location.url('/contactos');
+				$scope.setColors(document.getElementById('contactos-btn'));
+			}
+			else if($location.path() == '/contactos')
+			{ 
+				$location.url('/');
+				$scope.setColors(document.getElementById('home-btn'));
+			}
+			else if( $location.path() == '' || $location.path() == '/' || $location.path() == '/#'  )
+			{//home
+				$location.url('/equipa');
+				$scope.setColors(document.getElementById('equipa-btn'));
+			}
         }
-        else if($location.path() == '/espaco')
-        { 
-            $location.url('/destaques');
-            $scope.setColors(document.getElementById('destaques-btn'));
-        }
-        else if($location.path() == '/destaques')
-        { 
-            $location.url('/contactos');
-            $scope.setColors(document.getElementById('contactos-btn'));
-        }
-        else if($location.path() == '/contactos')
-        { 
-            $location.url('/');
-            $scope.setColors(document.getElementById('home-btn'));
-        }
-        else if( $location.path() == '' || $location.path() == '/' || $location.path() == '/#'  )
-        {//home
-            $location.url('/equipa');
-            $scope.setColors(document.getElementById('equipa-btn'));
-        }
-        
     }
       
     //Class manipulation methods

@@ -25,8 +25,8 @@
         </tr>
         <tr>
             <td>
-                <div class="titulo page-collumn">
-                    Equipa de Fisioterapia
+                <div class="subtitulo page-collumn">
+                    Terapeutas
                 </div>
             
             </td>
@@ -61,7 +61,7 @@
                         <img src="img/icons/sabermais.png" class="sabermais-conteudo" ng-click="fullCV = true" ng-show="!fullCV"}}>        
                         <img src="img/icons/sabermenos.png" class="sabermais-conteudo" ng-click="fullCV = false"  ng-show="fullCV"}}>
                         <span ng-show="fullCV == false">
-                            <div class='subtitulo' ><strong>{{ terapeutaMain.nome }}</strong></div>
+                            <div class='itemcv-nome' ><strong>{{ terapeutaMain.nome }}</strong></div>
                             <br>
                             <span>
                                 <div class="text" ng-bind-html="terapeutaMain.resumo"></div>

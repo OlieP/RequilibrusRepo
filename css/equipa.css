@@ -38,8 +38,7 @@
     margin: auto;
 }
 
-
-
+	
 /****
 PHOTO SLIDE
 ***/
@@ -56,6 +55,14 @@ PHOTO SLIDE
 /****
 CV
 ****/
+.itemcv-nome{
+    color:orange;
+    width: 95%;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:5%;
+}
+
 .itemcv-basico{
     padding: 5px;
 }

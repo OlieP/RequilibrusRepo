@@ -7,7 +7,6 @@ if (/Mobi/.test(navigator.userAgent))
 else
 {
     setCss('css/desktop-specific.css');
-    alert('desktop');
 }
         /**
         if (/Mobi/.test(navigator.userAgent)) {
