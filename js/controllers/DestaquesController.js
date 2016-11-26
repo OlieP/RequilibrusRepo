@@ -1,5 +1,6 @@
 App.controller('DestaquesController', ['$scope', '$sce', '$stateParams','dataService', function ($scope, $sce, $stateParams, dataService) {
     
+    $scope.$parent.setColors(document.getElementById('destaques-btn'));//selecionar côr do butao
     $scope.titulo = "Destaques";
     $scope.contentSelected = -1; 
 

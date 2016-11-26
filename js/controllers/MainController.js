@@ -29,20 +29,15 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
 
     //MENU OPTION SELECTION
     $(".nav li").on("click", function() {
-
-        //Permite manter a cor na opção selecionada depois de se clicar em outra coisa
-        $(".nav li").removeClass("active");
-        $(this).addClass("active");
-
-        //actualiza o path
-        $scope.path = $location.path();
-
+        //Garantir que a cor da opção selecionados no menu se mantem
+        $scope.setColors(this);
+                
         //Retirar header       
         $('body').css('padding-top', '0px');
 
         //Scroll to top
         $('body').scrollTop(0);
-
+        
         //Garantir que se o user carrega no menu com conteudo de destaque ou formação aberto se desbloqueia o scroll
         document.body.style.overflowY="visible";//previne que o scroll fique bloqueado depois de sair de um setaque
         document.body.style.overflowX="hidden";//previne que o scroll fique bloqueado depois de sair de um setaque
@@ -54,6 +49,11 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
     $(window).resize(function() {
 
         $scope.path = $location.path();
+        
+        //actualiza o path
+        $scope.path = $location.path();
+
+        
         //Resize ao header
         if($scope.path == ''){
             $('body').css('padding-top', window.innerHeight+'px');
@@ -92,44 +92,58 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
         alert("rigth");
        if($location.path() == '/equipa')
         { 
-            $location.path() = '/';
+            $location.url('/');
+            $scope.setColors(document.getElementById('home-btn'));
         }
         else if($location.path() == '/espaco')
         { 
-            $location.path() = '/equipa';
+            $location.url('/equipa');
+            $scope.setColors(document.getElementById('equipa-btn'));
         }
         else if($location.path() == '/destaques')
         { 
-            $location.path() = '/espaco';
+            $location.url('/espaco');
+            $scope.setColors(document.getElementById('espaco-btn'));
         }
         else if($location.path() == '/contactos')
         { 
-            $location.path() = '/destaques';
-        }else{//home
-            $location.path() = '/contactos';
+            $location.url('/destaques');
+            $scope.setColors(document.getElementById('destaques-btn'));
+         }
+        else if( $location.path() == '' || $location.path() == '/' || $location.path() == '/#'  )
+        {//home
+            $location.url('/contactos');
+            $scope.setColors(document.getElementById('contactos-btn'));
         }
     }
      
     $scope.goToNextPage = function()
     {
-          alert("left");
+        alert($location.path());
         if($location.path() == '/equipa')
         { 
-            $location.path() = '/espaco';
+            $location.url('/espaco');
+            $scope.setColors(document.getElementById('espaco-btn'));
         }
         else if($location.path() == '/espaco')
         { 
-            $location.path() = '/destaques';
+            $location.url('/destaques');
+            $scope.setColors(document.getElementById('destaques-btn'));
         }
         else if($location.path() == '/destaques')
         { 
-            $location.path() = '/contactos';
+            $location.url('/contactos');
+            $scope.setColors(document.getElementById('contactos-btn'));
         }
         else if($location.path() == '/contactos')
         { 
-            $location.path() = '/';
-        }else if( $location.path() == '' || $location.path() == '/' || $location.path() == '/#'  ){//home
-            $location.path() = '/equipa';
+            $location.url('/');
+            $scope.setColors(document.getElementById('home-btn'));
+        }
+        else if( $location.path() == '' || $location.path() == '/' || $location.path() == '/#'  )
+        {//home
+            $location.url('/equipa');
+            $scope.setColors(document.getElementById('equipa-btn'));
         }
         
     }
@@ -144,6 +158,15 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
                 return document.styleSheets[i];
             }
         }
+    }
+    
+    //Colocar a cor correta na upbar
+    $scope.setColors = function(element)
+    {
+        //Permite manter a cor na opção selecionada depois de se clicar em outra coisa
+        $(".nav li").removeClass("active");
+        $(element).addClass("active");
+
     }
     
     

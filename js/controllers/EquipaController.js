@@ -1,5 +1,6 @@
 App.controller('EquipaController', ['$scope', 'dataService', function ($scope, dataService) {
     
+    $scope.$parent.setColors(document.getElementById('equipa-btn'));//selecionar côr do butao
     $scope.terapeutaSelected = 1;
     $scope.terapeutaHover = null;
     $scope.slides = null;

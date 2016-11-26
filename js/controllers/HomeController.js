@@ -1,5 +1,7 @@
 App.controller('HomeController', ['$scope', 'dataService',function ($scope,dataService) {
     
+    $scope.$parent.setColors(document.getElementById('home-btn'));//selecionar côr do butao
+    
     //getDATA
    dataService.getTecnicas().then(function(response) {
         $scope.tecnicas = response.data;      

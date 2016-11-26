@@ -1,5 +1,7 @@
 App.controller('ServicosController', ['$scope', 'dataService', '$location', '$sce', '$timeout', function ($scope, dataService, $location, $filter, $timeout) {
     
+    $scope.$parent.setColors(document.getElementById('servicos-btn'));//selecionar côr do butao
+    
     $('body').scrollTop(0);
     $scope.path = $location.path();
     $scope.slides;

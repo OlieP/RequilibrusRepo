@@ -1,5 +1,6 @@
 App.controller('EspacoController', ['$scope', 'dataService', function ($scope, dataService) {
     
+    $scope.$parent.setColors(document.getElementById('espaco-btn'));//selecionar côr do butao
      $scope.fotos = [
             {image: 'img/espaco/IMG_7267.jpg', description: 'Image 00'},
             {image: 'img/espaco/IMG_7268.jpg', description: 'Image 01'},
