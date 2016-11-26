@@ -3,8 +3,6 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
     //If mobile change css settings!
    // $scope.cssMain = getStyleSheet('main');
     
-    
-
     $scope.path = $location.path();
     console.log($scope.path);
     document.body.style.overflow="hidden";

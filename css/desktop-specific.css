@@ -1,0 +1,39 @@
+.text{
+	 font-size: 22px;
+   /** text-indent: 3em;**/
+}
+
+.titulo{
+	font-size: 36px;
+}
+
+.subtitulo{
+	font-size: 28px;
+}
+
+.servico-text{
+    font-size:50;
+}
+
+.tecnicas{
+	font-size: 20px;
+}
+
+.tecnicas-detalhes{
+    font-size:17px;
+}
+
+.titulo-destaque{
+    font-size: 24px;
+}
+
+.titulo-conteudo{
+	font-size: 24px;
+}
+.titulo-conteudo-selected{
+    font-size: 24px;
+}
+
+.referencia{
+    font-size: 18px;
+}

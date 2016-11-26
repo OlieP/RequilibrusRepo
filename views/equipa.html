@@ -55,7 +55,7 @@
         <tr>
             <td>
                 <div class="row page-collumn">
-                    <div class="col-xs-8 col-sm-8 col-md-8">
+                    <div class="col-xs-12 col-sm-12 col-md-8">
                         <img src="img/icons/sabermais.png" class="sabermais-conteudo" ng-click="fullCV = true" ng-show="!fullCV"}}>        
                         <img src="img/icons/sabermenos.png" class="sabermais-conteudo" ng-click="fullCV = false"  ng-show="fullCV"}}>
                         <span class='txt' ng-show="fullCV == false">
@@ -74,7 +74,7 @@
                             
                         </span>
                     </div>
-                    <div class="images col-xs-4 col-sm-4 col-md-4" ng-controller="PhotoSliderController">
+                    <div class="images image-person col-xs-12 col-sm-12 col-md-4" ng-controller="PhotoSliderController">
                         <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage "
                              ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
                              ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.path}}" style="padding:0 auto">

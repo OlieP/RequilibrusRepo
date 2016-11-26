@@ -1,14 +1,12 @@
 
 if (/Mobi/.test(navigator.userAgent)) 
 {
-    setCss('css/main-mobile.css');
-    setCss('css/home-mobile.css');
+    setCss('css/mobile-specific.css');
     alert('mobile');
 }
 else
 {
-    setCss('css/main-desktop.css');
-    setCss('css/home-desktop.css');
+    setCss('css/desktop-specific.css');
     alert('desktop');
 }
         /**
