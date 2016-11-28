@@ -101,7 +101,8 @@
 
 /**QUEM SOMOS**/
 .quemsomos-img{
-    height: 100%;
+    /**height: 100%;**/
+    width: 35%;
     float:left;
     margin-right: 20px;
 }

@@ -27,7 +27,12 @@
         <td>
             <div class="row page-collumn equipa-nav">
                 <div class="col-md-6  col-sm-12 col-xs-12">
-                    <div ng-repeat="c in conteudo" class="conteudo thumbnail">
+                    <div ng-repeat="c in conteudo" class="conteudo thumbnail" 
+                         ng-if="(
+                                    (($index % 2 == 0) && (width > 991)) 
+                                      ||  
+                                    (width <= 991)
+                                )">
                         <div ng-click="showMore($index)" class="row">
                             <div class="titulo-conteudo col-md-12 col-sm-12 col-xs-12">
                                 {{c.titulo}}
@@ -41,7 +46,10 @@
                 </div>
                 
                 <div class="col-md-6  col-sm-12 col-xs-12">
-                    <div ng-repeat="c in conteudo" class="conteudo thumbnail">
+                    <div ng-repeat="c in conteudo" class="conteudo thumbnail" 
+                         ng-if="(
+                                    (($index % 2 == 1) && (width > 991)) 
+                                )" >
                         <div ng-click="showMore($index)" class="row">
                             <div class="titulo-conteudo col-md-12 col-sm-12 col-xs-12">
                                 {{c.titulo}}

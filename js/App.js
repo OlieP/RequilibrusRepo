@@ -43,3 +43,14 @@ App.filter('reverse', function() {
         return items.slice().reverse();
      };
 });
+
+App.filter('tituloFuncionario', function() {
+     return function(equipa) {
+         
+         if(equipa == 'ft'){
+             return 'Fisioterapeuta'
+         }else if(equipa == 'nu'){
+             return 'Nutricionista';
+         }
+     };
+});

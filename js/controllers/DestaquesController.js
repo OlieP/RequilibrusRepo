@@ -1,10 +1,15 @@
-App.controller('DestaquesController', ['$scope', '$sce', '$stateParams','dataService', function ($scope, $sce, $stateParams, dataService) {
-    
-    $scope.$parent.setColors(document.getElementById('destaques-btn'));//selecionar côr do butao
+App.controller('DestaquesController', ['$scope', '$sce', '$stateParams','dataService', '$window', function ($scope, $sce, $stateParams, dataService, $window) {
+      
+    $scope.$parent.setColors(document.getElementById('destaques-btn'));//selecionar côr do butao do navbar
     $scope.titulo = "Destaques";
+    $scope.width = $window.outerWidth;//para ordenar notocias
     $scope.contentSelected = -1; 
 
-   $scope.showMore = function(index){
+    $(window).resize(function() {
+         $scope.width = $window.outerWidth;//para ordenar notocias
+    });
+    
+    $scope.showMore = function(index){
         $scope.contentSelected = index;
         document.body.style.overflow="hidden";
         console.log($scope.conteudo[contentSelected]);
@@ -15,6 +20,9 @@ App.controller('DestaquesController', ['$scope', '$sce', '$stateParams','dataSer
         document.body.style.overflowX="hidden";
         $scope.contentSelected = -1;
     }
+
+
+    
 
     $scope.showNext = function(){    
         if( ($scope.contentSelected + 1) == $scope.contedoSize ){

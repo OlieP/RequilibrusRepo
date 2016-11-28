@@ -5,6 +5,7 @@ App.controller('EquipaController', ['$scope', 'dataService', function ($scope, d
     $scope.terapeutaHover = null;
     $scope.slides = null;
     $scope.fullCV = false;
+    
     dataService.getEquipa().then(function(response) {
 
         $scope.equipa = response.data;
@@ -12,7 +13,7 @@ App.controller('EquipaController', ['$scope', 'dataService', function ($scope, d
         $scope.$watch('terapeutaMain', function() {
             $scope.slides = $scope.terapeutaMain.img;
 
-        });
+        });      
     
         $scope.terapeutaMain = $scope.equipa[$scope.terapeutaSelected - 1];
         $scope.terapeutaBefore;   
