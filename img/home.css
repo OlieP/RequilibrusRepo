@@ -235,50 +235,32 @@
     right: 0;
     bottom: 0;
     background: url(../assets/img/blank.gif) no-repeat;
+    width: 30px;
+    height: 80px;
 }
-/*
-
-
-.arrow-container{
-    align-items: stretch;
-    text-align: center;
-    display: inline-block;
- vertical-align: middle;
-}
-
-.arrow-destaque {
-    position: absolute;
-    vertical-align: middle;
-    z-index: 1002;
-    display: block;
-    top: 50%;
-    width: 36px;
-    height: 71px;
-    outline: none;
-    cursor: pointer;
-    background: url(../assets/img/blank.gif) no-repeat;
-}
-*/
 
 
 .arrow-destaque.prev {
     opacity: 0.8;
-    background-image: url(../assets/img/paddle_prev_999.png);
+    background-image: url(../assets/img/arrow-right.png);
     transition: 0.2s linear all;
 }
 
+
+
 .arrow-destaque.next {
     opacity: 0.8;
-    background-image: url(../assets/img/paddle_next_999.png);
+    background-image: url(../assets/img/arrow-left.png);
     transition: 0.2s linear all;
+    
 }
 
 .arrow-destaque.prev:hover {
     opacity: 1;
-    background-image: url(../assets/img/paddle_prev_fff.png);
+    background-image: url(../assets/img/arrow-right.png);
 }
 
 .arrow-destaque.next:hover {
     opacity: 1;
-    background-image: url(../assets/img/paddle_next_fff.png);
+    background-image: url(../assets/img/arrow-left.png);
 }

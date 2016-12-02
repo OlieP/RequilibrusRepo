@@ -19,8 +19,12 @@
                                 <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage"
                                      ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
                                      ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.image}}" style="padding:0 auto">
-                                <a class="arrow-espaco arrow prev" ng-click="nextSlide()"></a>
-                                <a class="arrow-espaco arrow next" ng-click="prevSlide()"></a>
+                                <div class="arrow-espaco arrow-container arrow-prev">
+                                    <img src="assets/img/arrow-left.png" class="arrow arrow" ng-click="nextSlide()"></img>
+                                </div>
+                                <div class="arrow-espaco arrow-container arrow-next" >
+                                    <img src="assets/img/arrow-right.png" class="arrow" ng-click="prevSlide()"></img>
+                                </div>
                                 <nav class="nav-photo-slider">
                                     <div class="wrapper">
                                         <div class="dots">

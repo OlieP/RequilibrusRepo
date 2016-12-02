@@ -26,13 +26,11 @@ App.controller('PhotoSliderController', function ($scope) {
 
         $scope.prevSlide = function () {
             $scope.direction = 'left';
-            alert('photo changing...');
             $scope.currentIndex = ($scope.currentIndex < $scope.slides.length - 1) ? ++$scope.currentIndex : 0;
         };
 
         $scope.nextSlide = function () {
             $scope.direction = 'right';
-            alert('photo changing...');
             $scope.currentIndex = ($scope.currentIndex > 0) ? --$scope.currentIndex : $scope.slides.length - 1;
         };
     })/**.animation('.slide-animation', function () {

@@ -56,7 +56,7 @@
         </tr>
         <tr>
             <td>
-                <div class="row page-collumn">
+                <div class="row page-collumn" style="min-height:300px">
                     <div class="col-xs-12 col-sm-12 col-md-8">
                         <img src="img/icons/sabermais.png" class="sabermais-conteudo" ng-click="fullCV = true" ng-show="!fullCV"}}>        
                         <img src="img/icons/sabermenos.png" class="sabermais-conteudo" ng-click="fullCV = false"  ng-show="fullCV"}}>
@@ -80,9 +80,12 @@
                         <img ng-repeat="slide in slides" class="slide slide-animation nonDraggableImage "
                              ng-swipe-right="nextSlide()" ng-swipe-left="prevSlide()"
                              ng-hide="!isCurrentSlideIndex($index)" ng-src="{{slide.path}}" style="padding:0 auto">
-
-                        <a class="arrow prev" ng-click="nextSlide()"></a>
-                        <a class="arrow next" ng-click="prevSlide()"></a>
+                        <div class="arrow-container arrow-prev">
+                            <img src="assets/img/arrow-left.png" class="arrow arrow" ng-click="nextSlide()"></img>
+                        </div>
+                        <div class="arrow-container arrow-next" >
+                            <img src="assets/img/arrow-right.png" class="arrow" ng-click="prevSlide()"></img>
+                        </div>
                         <nav class="nav-photo-slider">
                             <div class="wrapper">   
                                 <div class="dots">

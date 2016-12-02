@@ -1,37 +1,16 @@
 .footer {
-    font-size: 16px;
     display: block;
     box-sizing: border-box;
-    
     margin-bottom: 0px;
-  
     border-top: 3px solid #333;
-     
     background: linear-gradient(
       rgba(51, 51, 51, 0.85), 
       rgba(51, 51, 51, 0.60)
-
-    ), url("../img/backgrounds/b45.png") ;
-
-   
-    
+    ), url("../img/backgrounds/b45.png") ;  
 }
 
 #footer-container{
     width: 100%;
-    padding-top: 10px;
-      
-}
-
-.footer-list{
-    width: 25%;
-    display: inline-block;
-    float:left;
-    color:  #f4f4f4;
-}
-
-.footer li{
-    line-height: 25px;
 }
 
 .footer li a{ color:   #f4f4f4;}
@@ -48,120 +27,7 @@ li{
 
 
 .standard-h4title{
-    font-size: 20px;
     text-transform: uppercase;
     text-align: left;
     color: #f4f4f4;
 }
-
-.line3{
-    border-bottom: 2px solid darkorange;
-    display: block;
-    margin: 0px 20px 15px;
-    padding-bottom: 5px;
-}
-
-
-
-/**footer*
-.footer {
-    font-size: 16px;
-    display: block;
-    box-sizing: border-box;
-    background-color: #797979;
-    height: auto;
-    margin-bottom: 0px;
-    padding: 30px 0 0 0;
-    border-top: 1px solid #f4f4f4;
-    
-}
-
-.footer {
-    border-top: 1px solid #E0E0E0;
-    position: relative;
-    text-align: center;
-    clear:both; 
-    left: 0;
-    bottom: 0;
-    height: 100px;
-    width: 100%;
-}
-
-.container{
-    width: 90%;
-        margin-right: 5%;
-    margin-right: 5%;
-}
-
-.footer-list{
-    width: 25%;
-    display: inline-block;
-    float:left;
-    color: #FFA500;
-}
-
-.footer li{
-    line-height: 25px;
-}
-
-.footer ul{
-    list-style: none;
-    margin-left: 9%;
-    padding: 0;
-}
-
-li{
-    display: list-item;
-}
-
-ul{
-    display: block;
-    -webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-}
-
-.standard-h4title{
-    font-size: 20px;
-    text-transform: uppercase;
-    text-align: left;
-}
-
-.line3{
-    border-bottom: 2px solid #919191;
-    display: block;
-    margin: 0px 20px 15px;
-    padding-bottom: 5px;
-}
-
-
-a{color: #f4f4f4;}
-
-h1,h2,h3,h4,h5,h6{
-    font-family: inherit;
-    font-weight: bold;
-    line-height: 23px;
-    color:#919191;
-    text-rendering: optimizeLegibility;
-}
-
-h4{
-    -webkit-margin-before: 1.33em;
-    -webkit-margin-after: 1.33em;
-    -webkit-margin-start: 0px;
-    -webkit-margin-end: 0px;
-}
-
-.row. footer-list{
-    width: 23.076923076923077%;
-}
-
-.row [class*=*"footer-list"]{
-    display: block;
-    float: left;
-    min-height: 30px;
-    margin-left:  2.564102564102564%;
-    box-sizing: border-box;
-}
-*/

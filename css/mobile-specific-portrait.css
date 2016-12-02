@@ -1,27 +1,24 @@
 .text{
-	 font-size: 22px;
+	 font-size: 44px;
    /** text-indent: 3em;**/
 }
 
 .text-centered{
-	 font-size: 22px;
+	 font-size: 44px;
    /** text-indent: 3em;**/
 }
 
 .section{
-	margin-top:15px;
+	margin-top:35px;
 }
 
+
 .titulo{
-	font-size: 36px;
+	font-size: 72px;
 }
 
 .subtitulo{
-	font-size: 40px;
-}
-
-.servico-text{
-    font-size:50;
+	font-size: 80px;
 }
 
 .box-servico{
@@ -30,18 +27,18 @@
 
 
 .box-servico-hover{
-   height: 300px;
+   height: 400px;
 }
 
 .box-servico-nothover{
-   height: 300px;
+   height: 400px;
 }
 
 .servico-video-hover{
 	overflow:hidden;
-	height: 280px;
-    margin-top: 10px;
-    margin-right: 10px;
+	height: 360px;
+    margin-top: 20px;
+    margin-right: 20px;
 }
 
 .servico-video-nohover{
@@ -50,41 +47,55 @@
 }
 
 .tecnicas{
-	font-size: 20px;
+	font-size: 45px;
 }
 
 .tecnicas-detalhes{
-    font-size:17px;
+	font-size:40px;
 }
 
 .titulo-destaque{
-    font-size: 24px;
+	font-size: 48px;
 }
 
 .resumo-destaque{
-	font-size: 18px;
-}
-
-.titulo-conteudo{
-	font-size: 24px;
-}
-.titulo-conteudo-selected{
-    font-size: 24px;
+	font-size: 38px;
 }
 
 .referencia{
-    font-size: 18px;
+    font-size: 44px;
 }
+.titulo-conteudo{
+	font-size: 50px;
+}
+.titulo-conteudo-selected{
+    font-size: 50px;
+}
+
+.image-person{
+	display:none;
+}
+
 
 .sabermais-conteudo{
     float: right;
-    height: 40px;
-    padding-bottom: 5px;
+    height: 80px;
+    padding-bottom: 10px;
 }
 
 .icon-contacts{
-    height:30px;
+    height:60px;
 } 
+
+.text-contacts-small{
+     font-size: 32px;
+   /** text-indent: 3em;**/
+}
+
+.text-contacts{
+     font-size: 44px;
+   /** text-indent: 3em;**/
+}
 
 .close{ 
 	margin-right:10px;
@@ -92,84 +103,74 @@
 }
 
 .image-close{ 
-    height:150px; 
-	width:150px; 
-}
-
-
-.text-contacts-small{
-     font-size: 16px;
-   /** text-indent: 3em;**/
-}
-
-.text-contacts{
-     font-size: 22px;
-   /** text-indent: 3em;**/
+    height:250px; 
+	width:250px; 
 }
 
 .itemcv-nome{
-	font-size:28px;
+	font-size:64px;
 }
 
 .itemcv-basico{
-	font-size:24px;
+	font-size:48px;
 }
-	
+
 
 .arrow-container {
-	width: 30px;
-    height: 80px;
+	width: 60px;
+    height: 160px;
 }
 
 
 
 /*footer*/
-.standard-h4title{
-    font-size: 22px;
-}
-
 .footer{
-	 font-size: 18px;
+	 font-size: 36px;
+}
+	
+.standard-h4title{
+	font-size: 44px;
 }
 
 .footer li{
-    line-height: 25px;
+    line-height: 50px;
 }
 
 .line3{
-    border-bottom: 2px solid rgba(247,143,30,1);
+    border-bottom: 3px solid rgba(247,143,30,1);
     display: block;
-    margin: 0px 20px 15px;
-    padding-bottom: 5px;
+    margin: 0px 20px 60px;
+    padding-bottom: 10x;
 }
 
 
 #footer-container{
-    padding-top: 10px;
+    padding-top: 20px;
 }
+
 
 /*Navbar*/
 .main {
-	padding-top: 70px;
+	padding-top: 280px;
 }
 
 .navbar{
-		margin-bottom: -70px;
+		margin-bottom: -140px;
 }
 
 .navbar-default .navbar-brand{
-    font-size:30px;
+    font-size:70px;
     padding-top:40px;
 }
 
 .navbar-default .navbar-brand:hover, 
 .navbar-default .navbar-brand:focus {
-    font-size:28px;
-    padding-top:40px;
+    font-size:70px;
+    padding-top:100px;
 }
 
 .navbar-toggle {
-    margin-top:20px;
+    margin-top:40px;
 }
 
 .r-navabar{
@@ -177,41 +178,42 @@
 }
 
 .navbar-default .navbar-nav > li > a{
-    font-size:17px;
-    height: 70px;
-    line-height: 70px; /* <-- this is what you must define */
+    font-size:40px;
+    height: 140px;
+    line-height: 140px; /* <-- this is what you must define */
 }
 
 .navbar-default .navbar-nav > li > a:focus,
 .navbar-default .navbar-nav > li > a:hover{
-    font-size:18px;
+    font-size:42px;
     color:white;
-    line-height: 70px; /* <-- this is what you must define */
+    line-height: 140px; /* <-- this is what you must define */
 }
 
 .navbar-default .navbar-nav{
-     height: 70px;
+    height: 280px;
+	margin-top:40px;
 }
 
 .navbar-default .navbar-nav > .active > a, 
 .navbar-default .navbar-nav > .active > a:focus, 
 .navbar-default .navbar-nav > .active > a:hover{
-     height: 70px;
+     height: 140px;
 }
 
 nav .container {
-    height: 70px;
+    height: 140px;
 
 }
 
 nav ul li:hover > ul{
-    width: 220px;
+    width: 500px;
 }
 
 nav ul li:hover > ul a{
-    width: 220px;
+    width: 500px;
 }
 
 nav ul li:hover > ul a{
-	font-size:16px;
+	font-size:38px;
 }
