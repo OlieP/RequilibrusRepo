@@ -68,6 +68,11 @@
 .titulo-conteudo{
 	font-size: 24px;
 }
+
+.resumo-conteudo{
+	font-size: 18px;
+}
+
 .titulo-conteudo-selected{
     font-size: 24px;
 }
@@ -95,7 +100,6 @@
     height:150px; 
 	width:150px; 
 }
-
 
 .text-contacts-small{
      font-size: 16px;

@@ -23,6 +23,9 @@ body{
     overflow-x: hidden;
 }
 
+.thumbnail{
+	border-radius:0px;
+}
 * {
     box-sizing: border-box;
 }
