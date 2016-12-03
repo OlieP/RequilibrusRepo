@@ -88,8 +88,8 @@
     
     <div style="width:100%" ng-controller="MainController">
         <div ng-swipe-right="goToPreviousPage()" ng-swipe-left="goToNextPage()">
-            <header class="header" ng-show="path == '' ">
-                <img src="img/logo.jpg" class='header-img'>
+            <header class="header" ng-show="path == '' ">                    
+                <img id="header-image" src="img/logo.jpg" class='header-img'>
             </header>                    
             <nav id="upbar" ng-class="{ 'navbar': path == '', 'navbar-no-header': path != '' }" class="navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">

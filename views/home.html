@@ -5,8 +5,8 @@
         <tr>
             <td>
                  <div class="row page-collumn">
-                    <div class="col-xs-12 col-sm-12 col-md-6" style="display: inline-block;">
-                        <div class="titulo-home subtitulo"><strong>Destaques</strong></div>
+                    <div id="right-col" class="col-xs-12 col-sm-12 col-md-6" style="display: inline-block;">
+                        <div class="titulo-home"><strong>Destaques</strong></div>
                        <!-- <div class="quemsomos-img" style="vertical-align: middle;">
                             <img src="img/icons/fisioterapia.png">
                         </div>-->
@@ -36,7 +36,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="titulo-home subtitulo"><strong>Quem Somos</strong></div>             
+                                <div class="titulo-home"><strong>Quem Somos</strong></div>             
                                 <div>
                                     <img class="img-centered" src="img/equipa/groupPhoto.jpg" alt="foto de grupo">
                                 </div>
@@ -59,11 +59,11 @@
                             </div> 
                         </div> 
                     </div> 
-                    <div class="col-xs-12 col-sm-12 col-md-6">
+                    <div id="left-col" class="col-xs-12 col-sm-12 col-md-6">
                         <div class="row">
 
                             <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="titulo-home subtitulo"><strong>Missão</strong></div>
+                                <div class="titulo-home"><strong>Missão</strong></div>
                                    <!-- <div class="quemsomos-img" style="vertical-align: middle;">
                                         <img src="img/icons/fisioterapia.png">
                                     </div>-->
@@ -78,7 +78,7 @@
         Fomentar a investigação clínica aplicada, em parceria com centros de investigação científica nacionais e internacionais.
                                         </p>
                                 </div>
-                                <div class="titulo-home subtitulo"><strong>Valores</strong></div>
+                                <div class="titulo-home"><strong>Valores</strong></div>
                                <!-- <div class="quemsomos-img" style="vertical-align: middle;">
                                     <img src="img/icons/fisioterapia.png">
                                 </div>-->
@@ -90,7 +90,7 @@
                                 </div>
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12">
-                                <div class="titulo-home subtitulo"><strong>O que é a Fisioterapia</strong></div>
+                                <div class="titulo-home"><strong>O que é a Fisioterapia</strong></div>
                                 <div class="quemsomos-img" style="vertical-align: middle;">
                                     <img src="img/icons/fisioterapia.png">
                                 </div>
@@ -110,7 +110,7 @@
         <tr>
             <td>
                 <div class="page-collumn row">
-                    <div class="titulo-home subtitulo col-xs-12 col-sm-12 col-md-12">
+                    <div class="titulo-home titulo-servicos col-xs-12 col-sm-12 col-md-12">
                         <strong>Serviços</strong>
                     </div>
                     <div id="box-servicos" ng-mouseleave="unhoverServicos()" class="col-xs-12 col-sm-12 col-md-12">
@@ -123,7 +123,7 @@
                         </div>
                         <div class="box-servico box-servico2 transicao" ng-class="{ 'box-servico-hover': servicoHover == 2, 'box-servico-nothover': servicoHover != 2 && servicoHover != 0 }" ng-mouseover="hoverServico(2);" ng-mouseleave="unhoverServico(1)" ng-click="hoverServico(2);">
                             <div class="transicao servico-text" ng-class="{ 'servico-text-hover': servicoHover == 2, 'servico-video-nothover': servicoHover != 2 && servicoHover != 0 }">
-                                Ft. <br>no <br>Desporto
+                                Fisioterapia <br>no <br>Desporto
                             </div>
                              <div class="transicao" ng-class="{ 'servico-video-hover': servicoHover == 2, 'servico-video-nothover': servicoHover != 2 && servicoHover != 0 }" ui-sref="desporto">
                             </div>
@@ -152,11 +152,11 @@
              </td>
         <tr>
             <td>
-                <div class="page-collumn row tecnicas-row">
+                <div class="row page-collumn page-collumn-blue tecnicas-row">
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="row">
                             <div ng-repeat="tec in tecnicas" 
-                                 class="tecnicas col-md-12 col-sm-12 col-xs-12" 
+                                 class="thumbnail tecnicas col-md-12 col-sm-12 col-xs-12" 
                                  ng-animate="custom"  ng-if="($index % 2 == 0)">
                                 <div class="row">
                                     <div ng-click="show2 = !show2" class="tecnica-main">
@@ -183,7 +183,7 @@
                     <div class="col-md-6 col-sm-12 col-xs-12">
                         <div class="row">
                             <div ng-repeat="tec in tecnicas" 
-                                 class="tecnicas col-md-12 col-sm-12 col-xs-12" 
+                                 class="thumbnail tecnicas col-md-12 col-sm-12 col-xs-12" 
                                  ng-animate="custom"  ng-if="($index % 2 == 1)">
                                 <div class="row">
                                     <div ng-click="show2 = !show2" class="tecnica-main">

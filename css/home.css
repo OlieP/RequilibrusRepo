@@ -11,19 +11,19 @@
 }
 
 .box-servico1{
-    background-color: #fef190;
+    background-color: #054950;
 }
 
 .box-servico2{
-    background-color: #ffbb40;
+    background-color: #789A9F;
 }
 
 .box-servico3{
-    background-color: #ff880c;
+    background-color: #EDF4F5;
 }
 
 .box-servico4{
-    background-color: #cf3401;
+    background-color: #F78F1E;
 }
 
 .transicao { transition: all 0.4s ease-in-out; }
@@ -51,10 +51,11 @@
     padding-top:10px;
     padding-left:7%;
     float:left;
-    font-size:50;
-    font-weight: bold;
+	font:lato;
+    font-size:50px;
     color:darkblue;
-    text-align: left
+	text-transform:uppercase;
+    text-align: center;
 }
 
 .servico-text-hover{
@@ -83,8 +84,11 @@
 }
 
 .titulo-home{
-    padding-top:10px;
+    color: rgba(247,143,30,1);
     text-align: center;
+    text-transform: uppercase;
+	text-decoration:underline;
+	font:lato;
 }
 
 .section{
@@ -108,7 +112,7 @@
     background-clip: padding-box;
     display:inline-block; 
     border: 5px solid transparent;
-    background-color: white;
+    background-color: rgba(202,217,218,1);
 }
 
 .tecnicas-detalhes{

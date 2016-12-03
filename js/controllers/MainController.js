@@ -70,12 +70,13 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
 
         //home, navbar
         if($scope.path == ''){
-
-
+            
+            $scope.hdr = $('.header').height(); 
+            var hdrImg = document.getElementById("header-image");
+            hdrImg.style.top = -(window.pageYOffset/2)+"px";
     //TODO:  RETIRAR AS 3 linhas de baixo e colocar no resize window. Ver se tem acesso as variavies 
             $scope.mn = $(".navbar");
-            $scope.mns = "navbar-scrolled";
-            $scope.hdr = $('.header').height();    
+            $scope.mns = "navbar-scrolled"; 
             if( $(this).scrollTop() > $scope.hdr ) {
                 $scope.mn.addClass($scope.mns);
             } else {
