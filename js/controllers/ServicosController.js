@@ -64,17 +64,13 @@ App.controller('ServicosController', ['$scope', 'dataService', '$location', '$sc
                 console.log($scope.servicos[i].pagina);
                 if($pagina == $scope.servicos[i].pagina){
                     $scope.titulo =  $scope.servicos[i].titulo;
-                    $scope.mainText = '<p>' + $scope.servicos[i].texto.replace(new RegExp('<br>','g'), '<p></p>') + '</p>';
+                    $scope.mainText = $scope.servicos[i].texto;
                     $scope.mainList =  $scope.servicos[i].items;
                     $scope.videos = $scope.servicos[i].video;
                     $scope.video = 'videos/small.webm';
+                   // $scope.video = 'http://static.videogular.com/assets/videos/videogular.webm';
                     console.log( $scope.video);
                     $scope.slides = $scope.servicos[i].img;
-                    console.log($scope.titulo);
-                    console.log($scope.mainPhoto);
-                    console.log($scope.mainText );
-                    console.log($scope.video.url );
-                    console.log($scope.slides );
                     break;
 
                 }

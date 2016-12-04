@@ -4,7 +4,7 @@
     <table style="width:100%">
         <tr>
             <td>
-                <div class="titulo page-collumn">
+                <div class="subtitulo page-collumn">
                     {{ titulo }}
                 </div>      
             </td>
@@ -35,14 +35,15 @@
                                 </nav>
                             </div>
                         </div>
-                    
                     </div>
                     <div class="col-xs-12 col-sm-8 col-md-8">                    
-                        <div class="text" ng-bind-html="mainText">
+                        <div class="text" ng-bind-html="mainText | textFromDB">
                         </div>
-                        <ul ng-repeat="item in mainList">
-                            <li>{{ item.texto }}</li>
-                        </ul>
+                        <div ng-show="mainList.length > 0">
+                            <ul ng-repeat="item in mainList" >
+                                <li>{{ item.texto }}</li>
+                            </ul>
+                        </div>
                     </div>
                     
                 </div>

@@ -72,8 +72,7 @@
             {{ conteudo[contentSelected].titulo }}
         </div>
         <img class="img-conteudo-selected col-md-4 col-sm-42 col-xs-4" ng-src="{{ conteudo[contentSelected].img[0].path }}"></img>  
-        <div class="text col-md-8 col-sm-8 col-xs-8">
-            {{ conteudo[contentSelected].texto}}
+        <div class="text col-md-8 col-sm-8 col-xs-8" ng-bind-html="conteudo[contentSelected].texto | textFromDB">
         </div>
 
         <div class="col-md-12 col-sm-12 col-xs-12" class="video-container" ng-show="conteudo[contentSelected].video.length > 0">

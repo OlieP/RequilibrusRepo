@@ -127,7 +127,7 @@ CREATE TABLE requilib_website.servico_item (
 
 #EQUIPA
 #Raúl Oliveira
-INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Raúl Oliveira', 'ft','Fisioterapeuta licenciado em ...... <br>Especializado em .....');
+INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Raúl Oliveira', 'ft','Fisioterapeuta licenciado pela Escola Superior do Alcoitão (1982).<br>Mestrado em Desenvolvimento Motor (Faculdade de Motricidade Humana, UL - 1999)<br>Doutoramento em Ciências da Motricidade, na especialidade de Ciências da Fisioterapia (Faculdade de Motricidade Humana, UL)<br>Coordena desde cedo a prática clínica com a investigação científica e com o ensino superior. <br>Autor de diversos artigos em revistas e livros nacionais/internacionais e preletor em diversos seminários e conferências específicas da área.<br>Prática e vocação profissional direcionada para as áreas neuro-músculo-esquelética, com interesse específico na identificação, prevenção e intervenção em fatores de risco de lesão, alterações da qualidade do movimento e funcionalidade.<br> ');
 
 #Raul Oliveira CV Items
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'Raúl Oliveira'), 10 , 'Formação', 'Doutoramento em Ciências da Motricidade, na especialidade de Ciências da Fisioterapia – Faculdade de Motricidade Humana, UL');
@@ -149,7 +149,7 @@ INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) 
 
 
 #Fátima Sancho
-INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Fátima Sancho', 'ft','Fisioterapeuta licenciado em ...... ');
+INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Fátima Sancho', 'ft','Fisioterapeuta Licenciada pela Escola Superior de Saúde do Alcoitão.<br>Mestrado em Fisioterapia vertente Saúde da Mulher ( Escola Superior de Saúde do Alcoitão).<br>Presidente do Grupo de Interesse de Fisioterapia na Saúde da Mulher , coordenadora e docente da Pós graduação de Fisioterapia na Saúde da Mulher e professora convidada em diferentes instituições de ensino.<br>Formação específica na área da saúde da Mulher nomeadamente na preparação para o parto, pós parto, massagem do bebé, incontinência urinária feminina e masculina.<br>Autora de várias pequenas publicações e vídeos relativos à preparação para o parto e incontinência urinária.');
 
 #Fátima Sancho CV Items
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'Fátima Sancho'), 10 , 'titulo', 'Presidente do Grupo de interesse em Fisioterapia na Saúde da Mulher da Associação Portuguesa de Fisioterapeutas');
@@ -168,7 +168,7 @@ INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) 
 
 
 #Ana Azevedo
-INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Ana Azevedo', 'ft','Fisioterapeuta licenciado em ...... ');
+INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Ana Azevedo', 'ft','Fisioterapeuta licenciada pela Escola Superior do Alcoitão (2005).<br>Doutoranda em Motricidade Humana, especialidade de Comportamento Motor (Faculdade de Motricidade Humana).<br>Pós-graduação em Fisioterapia no Desporto (Faculdade de Motricidade Humana – 2008).<br>Interesse científico vocacionado para a área da terapia manual, controlo motor , biomecânica e prevenção de lesões. <br>Percurso profissional com especial interesse na área da Dança - vasta experiência na orientação e reabilitação de bailarinos, assim como preletor em diversos eventos na área da Dança e Prevenção de Lesões em Bailarinos.');
 
 #Ana Azevedo CV Items
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'Ana Azevedo'), 20 , 'Formação', 'Pós-graduação em Fisioterapia no Desporto – Faculdade de Motricidade Humana, UL');
@@ -180,7 +180,7 @@ INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) 
 
 
 #David Pires
-INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('David Pires', 'ft','Fisioterapeuta licenciado em ...... ');
+INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('David Pires', 'ft','Fisioterapeuta do circuito ATP Ténis, licenciado pela Escola Superior do Alcoitão (2005).<br>Percurso profissional com especial interesse para o Desporto (Ténis) - vasta experiência na orientação e reabilitação de atletas, assim como preletor em diversos eventos na área da Prevenção de Lesões e Ténis.<br>Interesse científico vocacionado para a área da terapia manual, controlo motor e prevenção de lesões.');
 
 #David Pires CV Items
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'David Pires'), 10 , 'titulo', 'Fisioterapeuta do Circuito ATP – Ténis');
@@ -203,7 +203,7 @@ INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) 
 
 
 #Andreia Schlechter
-INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Andreia Schlechter', 'ft','Fisioterapeuta licenciado em ...... ');
+INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Andreia Schlechter', 'ft','Fisioterapeuta licenciada pela Escola Superior do Alcoitão (2005).<br>Prática e vocação profissional direccionada para as áreas músculo-esquelética, saúde do idoso e terapia manual.');
 
 #Andreia Schlechter CV Items
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'Andreia Schlechter'), 10 , 'Formação', 'Licenciatura em Fisioterapia (2005) – Escola Superior de Saúde de Alcoitão');
@@ -216,7 +216,7 @@ INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) 
 
 
 #Carolina Oliveira
-INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Carolina Oliveira', 'ft','Fisioterapeuta licenciado em ...... ');
+INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('Carolina Oliveira', 'ft','Fisioterapeuta licenciada pela Escola Superior do Alcoitão (2011).<br>Mestrado de Fisioterapia em Condições Músculo-Esqueléticas (Escola Superior de Saúde do Alcoitão – 2015)<br>Prática e vocação profissional direcionada para as áreas neuro-músculo-esquelética, terapia manual, com especial interesse nas áreas de prevenção de lesões desportivas e biomecânica.');
 
 #Carolina Oliveira CV Items
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'), 10 , 'Formação', 'Mestrado de Fisioterapia em Condições Músculo-Esqueléticas (2015), Escola Superior de Saúde do Alcoitão.');
@@ -235,7 +235,7 @@ INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) 
 INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('img/equipa/CO/4.jpg', 'CO', '4', 'funcionario', (SELECT id FROM requilib_website.funcionario WHERE nome = 'Carolina Oliveira'));
 
 #João Rocha Vaz
-INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('João Rocha Vaz', 'ft','Fisioterapeuta licenciado em ...... ');
+INSERT INTO requilib_website.funcionario (nome, equipa, resumo) VALUES ('João Rocha Vaz', 'ft','Fisioterapeuta licenciado pela Escola Superior de Tecnologia da Saúde de Lisboa (2013). <br>Doutoramento em Motricidade Humana na especialidade de Comportamento Motor (Faculdade de Motricidade Humana – 2016) <br>Licenciatura em Reabilitação Psicomotora–(Faculdade de Motricidade Humana – 2009).<br>Atualmente coordena a prática clínica com a investigação científica e com o ensino superior. <br>Autor de diversos artigos científicos em revistas internacionais, nas áreas: Lesões Desportivas, Prevenção de Lesões, Biomecânica, Coordenação Muscular, Variabilidade.');
 
 #João Rocha Vaz CV Items
 INSERT INTO requilib_website.cvitem (funcionario_id, seq, field, content) VALUES ((SELECT id FROM requilib_website.funcionario WHERE nome = 'João Rocha Vaz'), 10 , 'Formação', 'Doutoramento em Motricidade Humana, na especialidade de Comportamento Motor – Faculdade de Motricidade Humana, UL');

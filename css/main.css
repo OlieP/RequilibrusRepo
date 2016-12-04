@@ -100,15 +100,25 @@ footer{
     margin-bottom:0px;
 }
 
-.page-collumn-blue{
-
+.page-collumn-vcentered{
+	display: -ms-flex; 
+	display: -webkit-flex; 
+	display: flex;
 }
 
-.page-cell{
-    display: -webkit-flex;
-     display: -ms-flexbox;
-     display: flex;
+.page-collumn-vcentered>div{ 
+	flex:1; 
 }
+
+.page-collumn-vcentered>div>p{ 
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 auto;
+	right: 0;
+	left: 0;
+}
+
 
 .two-col { 
     -moz-column-count: 2; 
@@ -137,6 +147,8 @@ footer{
 	text-transform:uppercase;
     width: 80%;
     padding-top:10px;
+    padding-bottom:0px;
+    margin-bottom:20px;
     margin-left:10%;
     text-align: center;
 	border-bottom:2px solid rgba(247,143,30,1);
@@ -147,10 +159,7 @@ footer{
    /** text-indent: 3em;**/
 }
 
-.text-centered{
-    display: flex;
-    justify-content: center; 
-    flex-direction: column;
+.text-centered {
 }
 
 
@@ -163,7 +172,7 @@ footer{
     padding-top:20px;
     padding-bottom:20px;
     padding-left:5%;
-	text-align:center
+	text-align:center;
 }
 
 /**must be bellow .page-collumn**/

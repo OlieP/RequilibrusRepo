@@ -34,15 +34,14 @@ App.directive('resizeSmallImg', function() {
 
 App.filter("trustUrl", ['$sce', function ($sce) {
      return function (recordingUrl) {
-        return $sce.trustAsResourceUrl(recordingUrl);
+         if(typeof recordingUrl === 'undefined' || recordingUrl === null){
+            return recordingUrl;
+        }else{
+            return $sce.trustAsResourceUrl(recordingUrl);
+        }
      };
 }]);
 
-App.filter('reverse', function() {
-     return function(items) {
-        return items.slice().reverse();
-     };
-});
 
 App.filter('tituloFuncionario', function() {
      return function(equipa) {
@@ -54,3 +53,14 @@ App.filter('tituloFuncionario', function() {
          }
      };
 });
+
+App.filter('textFromDB', function() {
+    return function(texto) {       
+        if(typeof texto === 'undefined' || texto === null){
+            return texto;
+        }else{
+            return '<p>' + texto.replace(new RegExp('<br>','g'), '<p></p>') + '</p>';
+        }
+     };
+});
+
