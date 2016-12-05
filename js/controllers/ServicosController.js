@@ -5,8 +5,10 @@ App.controller('ServicosController', ['$scope', 'dataService', '$location', '$sc
     $('body').scrollTop(0);
     $scope.path = $location.path();
     $scope.slides;
-    $scope.video = '<video width="480" height="360" type="video/webm" controls controls="controls" name="Video Name" style="display:block;margin: 0 auto;" src="' + "videos/small.webm" +'">';
+    console.log($scope);
     
+                        $scope.videos = 'videos/me.mp4';
+
     dataService.getServico().then(function(response) {
         $scope.servicos = response.data;   
         console.log($scope.servicos);
@@ -14,7 +16,7 @@ App.controller('ServicosController', ['$scope', 'dataService', '$location', '$sc
    
 
     });
-    
+     
     
     
         $scope.set_content = function($scope){
@@ -64,10 +66,9 @@ App.controller('ServicosController', ['$scope', 'dataService', '$location', '$sc
                 console.log($scope.servicos[i].pagina);
                 if($pagina == $scope.servicos[i].pagina){
                     $scope.titulo =  $scope.servicos[i].titulo;
+                    $scope.path = $location.path();
                     $scope.mainText = $scope.servicos[i].texto;
                     $scope.mainList =  $scope.servicos[i].items;
-                    $scope.videos = $scope.servicos[i].video;
-                    $scope.video = 'videos/small.webm';
                    // $scope.video = 'http://static.videogular.com/assets/videos/videogular.webm';
                     console.log( $scope.video);
                     $scope.slides = $scope.servicos[i].img;

@@ -64,3 +64,14 @@ App.filter('textFromDB', function() {
      };
 });
 
+
+App.filter('destaqueImageFilter', function() {
+    return function(path) {       
+        if(typeof path === 'undefined' || path === null){
+            return 'img/logo-quad.jpg';
+        }else{
+            return path;
+        }
+     };
+});
+

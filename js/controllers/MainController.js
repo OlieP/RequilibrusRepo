@@ -22,7 +22,7 @@ App.controller('MainController', ['$scope', '$location',function ($scope, $locat
     }
     else
     {
-        $('body').css('padding-top', '0px');
+        //$('body').css('padding-top', '0px');
     }
 
     //MENU OPTION SELECTION

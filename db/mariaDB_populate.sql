@@ -384,41 +384,19 @@ INSERT INTO requilib_website.servico_item ( seq, texto, servico_id) VALUES ( 2, 
 
 
 
-#Imagens Dummy
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/15203184_1221381287932149_546476678957154558_n.jpg?oh=fde01c89e74e34c8b6ab3180ccd80fbd&oe=58D5943B', 'Terapeuta João Vaz', '', 'destaque', (SELECT id FROM requilib_website.destaque WHERE titulo = 'Fisioterapeutas da R\'equilibrius participaram no Seminário Instabilidade Dinâmica no Membro Inferior'));
-INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/15178240_1221381394598805_8897051556421410141_n.jpg?oh=ade4940cf43e30f76952cb04b14b094f&oe=58D3FBDC', 'Terapeuta Raúl de Oliveira', '', 'destaque', (SELECT id FROM requilib_website.destaque WHERE titulo = 'Fisioterapeutas da R\'equilibrius participaram no Seminário Instabilidade Dinâmica no Membro Inferior'));
 
 
-
-#VIDEOS DUMMY
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia nas Alteração Posturais', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'ap'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('https://www.youtube.com/watch?v=_tyszHg96KI', 'mp4', '', 'Fisioterapia no Desporto', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'd '));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia musculo-esquelética', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'me'));
+#VIDEOS DUMMY SERVIÇOS
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('videos/small.webm', 'mp4', '', 'Fisioterapia nas Alteração Posturais', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'ap'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('videos/small.webm', 'mp4', '', 'Fisioterapia no Desporto', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'd '));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('videos/small.webm', 'mp4', '', 'Fisioterapia musculo-esquelética', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'me'));
 INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Nutrição', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'n '));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia neuro-muscular', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'nm'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Saúde na criança', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'sc'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Saúde na Mulher', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'sm'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Saúde no Idoso', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'si'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Fisioterapia na dança', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'fd'));
-INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('http://static.videogular.com/assets/videos/videogular.mp4', 'mp4', '', 'Domicílio', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'do'));
-
-INSERT INTO requilib_website.video (
-	url, 
-	type, 
-	nome, 
-	descricao, 
-	entidade, 
-	entidade_id
-) VALUES (
-	'https://www.youtube.com/watch?v=WUquTU96v6Y', 
-	'link', 
-	'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle', 
-	'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle.', 
-	'destaque', 
-	(SELECT id FROM requilib_website.destaque WHERE titulo = 'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle.')
-);
-
-
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('videos/small.webm', 'mp4', '', 'Fisioterapia neuro-muscular', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'nm'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('videos/small.webm', 'mp4', '', 'Saúde na criança', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'sc'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('videos/small.webm', 'mp4', '', 'Saúde na Mulher', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'sm'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('videos/small.webm', 'mp4', '', 'Saúde no Idoso', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'si'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('videos/small.webm', 'mp4', '', 'Fisioterapia na dança', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'fd'));
+INSERT INTO requilib_website.video (url, type, nome, descricao, entidade, entidade_id) VALUES ('videos/small.webm', 'mp4', '', 'Domicílio', 'servico', (SELECT id FROM requilib_website.servico WHERE pagina = 'do'));
 
 
 
@@ -456,4 +434,46 @@ VALUES (
 	NOW(),
 	STR_TO_DATE('05,10,2016', '%d,%m,%Y')
 );
+
+
+
+
+#Imagens Dummy
+INSERT INTO requilib_website.img (path, nome, descricao, entidade, entidade_id) VALUES ('https://scontent-lhr3-1.xx.fbcdn.net/v/t1.0-9/15203184_1221381287932149_546476678957154558_n.jpg?oh=fde01c89e74e34c8b6ab3180ccd80fbd&oe=58D5943B', 'Terapeuta João Vaz', '', 'destaque', (SELECT id FROM requilib_website.destaque WHERE titulo = 'Fisioterapeutas da R\'equilibrius participaram no Seminário Instabilidade Dinâmica no Membro Inferior'));
+
+INSERT INTO requilib_website.video (
+	url, 
+	type, 
+	nome, 
+	descricao, 
+	entidade, 
+	entidade_id
+) VALUES (
+	'https://www.youtube.com/embed/WUquTU96v6Y', 
+	'link', 
+	'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle', 
+	'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle.', 
+	'destaque', 
+	(SELECT id FROM requilib_website.destaque WHERE titulo = 'Diogo Rocha e Miguel Oliveira Vencem 4º Campionato Nacional de Paddle.')
+);
+
+
+
+INSERT INTO requilib_website.video (
+	url, 
+	type, 
+	nome, 
+	descricao, 
+	entidade, 
+	entidade_id
+) VALUES (
+	'videos/small.webm', 
+	'mp4',
+	'Fisioterapeutas da R\'equilibrius participaram no Seminário Instabilidade Dinâmica no Membro Inferior', 
+	'Fisioterapeutas da R\'equilibrius participaram no Seminário Instabilidade Dinâmica no Membro Inferior', 
+	'destaque', 
+	(SELECT id FROM requilib_website.destaque WHERE titulo = 'Fisioterapeutas da R\'equilibrius participaram no Seminário Instabilidade Dinâmica no Membro Inferior')
+);
+
+
 

@@ -68,12 +68,10 @@
                             </span>
                         </span>
                         <span ng-repeat="f in terapeutaMain.cv" class='itemcv-basico' ng-show="fullCV == true">
-                            <div><strong>{{ f.field }}</strong></div>
-                            <br>
-                            <span ng-repeat="c in f.content" >
-                                <div>{{ c }}</div>
-                            </span>
-                            
+                            <div class="cv-field"><strong>{{ f.field }}</strong></div>
+                            <ul class="cv-content" ng-repeat="c in f.content" >
+                                <li>{{ c }}</li>
+                            </ul>  
                         </span>
                     </div>
                     <div class="images image-person col-xs-12 col-sm-12 col-md-4" ng-controller="PhotoSliderController">

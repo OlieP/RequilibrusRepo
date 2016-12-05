@@ -49,8 +49,6 @@
                 </div>
                 <div class="text page-collumn row">
                     <div class="col-xs-12 col-sm-12 col-md-12" style="margin: 10px" >
-                       
-                        <div ng-bind-html="video">
                         </div>
                     <!--
                         <video width="320" height="240"  
@@ -67,13 +65,23 @@
                             Your browser does not support the video tag.
                         <video width="320" height="240"  controls controls="controls" name="Video Name" src="{{video.url | trustUrl}}">
                         </video>
-                        -->        
                         <video width="480" height="360" type="video/webm" controls controls="controls" name="Video Name"
-                               style="display:block;margin: 0 auto;"
-                               ng-src="{{video | trustUrl}}">
+                               style="display:block;margin: 20px auto"
+                               ng-src="videos | trustUrl">
                         </video>
-                        <video width="480" height="360" type="video/webm" controls controls="controls" name="Video Name" style="display:block;margin: 0 auto;" src="videos/small.webm">
-                    </div>
+                        -->
+                    {{videos}}
+                        <div ng-show="titulo == 'Fisioterapia Musculo-esquelética '">
+                            <video  
+                                   width="480" 
+                                   height="360" 
+                                   type="video/webm"  
+                                   controls="controls"            
+                                   name="Video Name"
+                                   style="display:block;margin: 20px auto;"
+                                   ng-src="videos/me.mp4">
+                            </video>
+                        </div>
                 </div>
             </td>
         </tr>

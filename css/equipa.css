@@ -71,3 +71,16 @@ CV
 .sabermais-conteudo{
     float: right;
 }
+
+.cv-field{
+    text-align:center;
+    color:rgba(247,143,30,1);
+    width: 95%;
+	font-family: lato;
+	text-transform:uppercase;
+    padding-left:5%;
+}
+
+.cv-content{
+    text-align:left;
+}

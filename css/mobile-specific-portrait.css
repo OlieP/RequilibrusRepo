@@ -62,11 +62,12 @@
 }
 
 .tecnicas{
-	font-size: 45px;
+	font-size: 48px;
 }
 
-.tecnicas-detalhes{
-	font-size:40px;
+.tecnica-detalhe{
+    font-size:38px;
+	line-height: 40px;
 }
 
 .titulo-destaque{
@@ -137,6 +138,17 @@
 .itemcv-basico{
 	font-size:48px;
 }
+
+.cv-field{
+    padding-top:40px;
+    padding-bottom:20px;
+	letter-spacing: 3px;
+}
+
+.cv-content{
+	
+}
+
 
 
 .arrow-container {

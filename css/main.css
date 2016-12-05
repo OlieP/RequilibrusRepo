@@ -100,26 +100,6 @@ footer{
     margin-bottom:0px;
 }
 
-.page-collumn-vcentered{
-	display: -ms-flex; 
-	display: -webkit-flex; 
-	display: flex;
-}
-
-.page-collumn-vcentered>div{ 
-	flex:1; 
-}
-
-.page-collumn-vcentered>div>p{ 
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	margin: 0 auto;
-	right: 0;
-	left: 0;
-}
-
-
 .two-col { 
     -moz-column-count: 2; 
     -moz-column-gap: 3em; 

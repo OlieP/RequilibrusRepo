@@ -3,6 +3,30 @@
    /** text-indent: 3em;**/
 }
 
+@media screen and (min-width: 991px) {
+ 
+	.page-collumn-vcentered{
+		display: -ms-flex; 
+		display: -webkit-flex; 
+		display: flex;
+	}
+
+	.page-collumn-vcentered>div{ 
+		flex:1; 
+	}
+
+	.page-collumn-vcentered>div>p{ 
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		margin: 0 auto;
+		right: 0;
+		left: 0;
+	}
+
+}
+
+
 .text-centered{
 	 font-size: 22px;
    /** text-indent: 3em;**/
@@ -73,11 +97,12 @@
 }
 
 .tecnicas{
-	font-size: 20px;
+	font-size: 24px;
 }
 
-.tecnicas-detalhes{
-    font-size:17px;
+.tecnica-detalhe{
+    font-size:18px;
+	line-height: 20px;
 }
 
 .titulo-destaque{
@@ -145,6 +170,16 @@
 	font-size:24px;
 }
 	
+.cv-field{
+    padding-top:20px;
+    padding-bottom:10px;
+	letter-spacing: 3px;
+}
+
+.cv-content{
+	
+}
+
 
 .arrow-container {
 	width: 30px;

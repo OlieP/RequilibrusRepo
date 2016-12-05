@@ -71,7 +71,7 @@
         <div class="titulo-conteudo-selected col-md-12 col-sm-12 col-xs-12">
             {{ conteudo[contentSelected].titulo }}
         </div>
-        <img class="img-conteudo-selected col-md-4 col-sm-42 col-xs-4" ng-src="{{ conteudo[contentSelected].img[0].path }}"></img>  
+        <img class="img-conteudo-selected col-md-4 col-sm-42 col-xs-4" ng-src="{{ conteudo[contentSelected].img[0].path | destaqueImageFilter }}"></img>  
         <div class="text col-md-8 col-sm-8 col-xs-8" ng-bind-html="conteudo[contentSelected].texto | textFromDB">
         </div>
 
@@ -87,15 +87,22 @@
             <iframe width="320" height="240" 
                     ng-src="{{ sce.trustAsResourceUrl(conteudo[contentSelected].video[0].url) }}" 
             </iframe>
-             <iframe width="480" height="360" 
-                     style="display:block;margin: 0 auto;"
-                    ng-src="{{ sce.trustAsResourceUrl(conteudo[contentSelected].video[0].url) }}" 
-            </iframe>
-            -->
+            
             <video width="480" height="360" style="display:block;margin: 0 auto;" type="video/webm" controls controls="controls" name="Video Name" src="videos/small.webm">
             </viddeo>
-            <video width="480" height="360" style="display:block;margin: 0 auto;" type="video/webm" controls controls="controls" name="Video Name" ng-src="{{ conteudo[contentSelected].video[0].url | trustUrl}}">
-            </viddeo>
+            -->
+             <video ng-show="conteudo[contentSelected].video[0].type == 'mp4'" 
+                    width="480" height="360" 
+                    style="display:block;margin: 0 auto;" 
+                    type="video/mp4" 
+                    controls controls="controls" name="Video Name" 
+                    ng-src="{{ conteudo[contentSelected].video[0].url | trustUrl }}">
+            </video>
+            <iframe ng-show="conteudo[contentSelected].video[0].type == 'link'" 
+                    width="480" height="360" 
+                    style="display:block;margin: 0 auto;"
+                    ng-src="{{ conteudo[contentSelected].video[0].url | trustUrl }}" 
+            </iframe>          
         </div>
     <!--
         <a class="arrow next" ng-click="showNext()"></a>
